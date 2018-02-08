@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luxsens</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+        *,*:before, *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body, p {
+            font-size: 14px;
+            margin: 0;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, hr, ol, ul {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        h5 {
+            font-size: 14px;
+        }
+
+        h6 {
+            font-size: 12px;
+        }
+        ul{
+            list-style: none;
+            text-decoration: none;
+        }
+
+        a {
+            -webkit-transition: color 0.3s ease-in;
+            -moz-transition: color 0.3s ease-in;
+            -o-transition: color 0.3s ease-in;
+            transition: color 0.3s ease-in;
+        }
+
+        a, a:visited, a:hover, a:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            color: #00ACED;
+        }
+
+        button {
+            border: 0;
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+        }
+
+        button:hover {
+            background: #f7dfd8;
+            color: #99DEF8;
+        }
+
+        button a:hover {
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            border: 0;
+        }
+        #mobileMenu + label{padding:10px 15px;}
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 9px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .desktop-hide {
+            display: none;
+        }
+
+        .label {
+            display: inline-block;
+            margin: 0 0 -1px;
+            /*padding: 10px 5.66em;*/
+            padding: 10px 64px 10px 94px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .label:hover, .thumbnailLabel:hover {
+            cursor: pointer;
+        }
+
+        header {
+            border-bottom: 1px solid #c2c2c2;
+            padding-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        #logo {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        #logo img {
+            vertical-align: middle;
+            padding: 15px 0;
+            max-width: 124px;
+        }
+
+        .nav {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .nav > li, .nav > li > a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #mobileMenu:checked ~ .nav {
+            display: block;
+        }
+
+        #mobileMenu:checked + label {
+            margin-bottom: 10px;
+        }
+
+        nav .label {
+            display: none;
+            width: 91px;
+            margin: 0 auto;
+            color: #fff;
+            background: #000;
+            letter-spacing: 2px;
+        }
+
+        nav .label:hover {
+            background: #00ACED;
+            color: #fff;
+        }
+
+        .inline-items {
+            margin-top: 0;
+        }
+
+        .inline-items li {
+            margin-left: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .inline-items li:first-child {
+            margin-left: 0;
+            border: none;
+            padding-left: 0;
+            padding-right: 10px;
+        }
+
+        .inline-items li:last-child {
+            padding-right: 0;
+        }
+
+        #content {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mainImage {
+            float: right;
+        }
+
+        .mainImage img {
+            max-width: 457px;
+            width: 100%;
+            height: auto;
+            margin-left: 15px;
+        }
+
+        .thumbnails {
+            float: left;
+        }
+
+        #productImages li {
+            list-style: none;
+            padding: 1px;
+            margin: 0 1px;
+        }
+
+        #productImages li img {
+            max-width: 74px;
+            height: auto;
+        }
+
+        .images img {
+            display: none;
+            max-width: 464px;
+            width: 100%;
+            height: auto;
+        }
+
+        #productDescription ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sku {
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+
+        #productImages label {
+            float: left;
+        }
+
+        #productImages label + img {
+            display: none;
+            width: 83.33%;
+            float: right;
+        }
+
+        #thumbnail1:checked ~ img[data-id="image1"], #thumbnail2:checked ~ img[data-id="image2"], #thumbnail3:checked ~ img[data-id="image3"], #thumbnail4:checked ~ img[data-id="image4"], #thumbnail5:checked ~ img[data-id="image5"], #thumbnail6:checked ~ img[data-id="image6"], #thumbnail7:checked ~ img[data-id="image7"], #thumbnail8:checked ~ img[data-id="image8"], #thumbnail9:checked ~ img[data-id="image9"], #thumbnail10:checked ~ img[data-id="image10"] {
+            display: block;
+        }
+
+        .thumbnailImages li {
+            float: left;
+            list-style: none;
+            margin: 0 1px;
+        }
+
+        .thumbnailImages li img {
+            max-width: 66px;
+            width: 100%;
+            height: auto;
+        }
+
+        .tabs {
+            background: #fff;
+            color: #373737;
+        }
+
+        .tabs > div {
+            display: none;
+            border: 1px solid #ddd;
+        }
+
+        .tabs ul {
+            margin-left: 40px;
+            padding-left: 0;
+        }
+
+        #info input, nav input, #productImages input {
+            display: none;
+        }
+
+        #info .label {
+            color: #bbb;
+            border: 1px solid transparent;
+            background: #ececec;
+            position: relative;
+        }
+
+        /*#info .label:hover {*/
+            /*color: #000;*/
+        /*}*/
+
+        #info input:checked + label {
+            color: #000;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-bottom: 1px solid #fff;
+        }
+        #info .label>i{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 58px;
+            top:3px;
+            background: url(img/images1.png) no-repeat -2px -28px;
+        }
+        /*#info .label:hover i{*/
+            /*display: inline-block;*/
+            /*width: 30px;*/
+            /*height: 30px;*/
+            /*position: absolute;*/
+            /*left: 45px;*/
+            /*top:3px;*/
+            /*background: url(img/images2.png) no-repeat -9px -7px;*/
+        /*}*/
+        @media only screen and (min-width: 768px) {
+            #info input:checked + label.label>i{
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: 58px;
+                top:3px;
+                background: url(img/images1.png) no-repeat -2px 0px;
+            }
+            #info .label > i.i2 {
+                background-position: -36px -28px;
+            }
+            #info input:checked + label.label>i.i2{background-position: -36px 0px;}
+
+            #info .label > i.i3 {
+                background-position: -74px -28px;
+            }
+            #info input:checked + label.label>i.i3{background-position: -74px 0px;}
+
+            #info .label > i.i4 {
+                background-position: -112px -28px;
+            }
+            #info input:checked + label.label>i.i4{background-position: -112px 0px;}
+
+            #info .label > i.i5 {
+                background-position: -148px -28px;
+            }
+            #info input:checked + label.label>i.i5{background-position: -148px 0px;}
+        }
+        @media only screen and (max-width: 767px) {
+            #info label.label>i{
+                background: url(img/images2.png) no-repeat 0px -29px;
+            }
+            #info input:checked + label.label>i{
+                background: url(img/images2.png) no-repeat -4px -2px;
+            }
+            #info label.label>i{
+                background: url(img/images2.png) no-repeat -4px -29px;
+            }
+            #info .label>i.i1{left: 33%;}
+            #info .label>i.i2{left: 35%;background-position: -63px -29px;}
+            #info .label>i.i3{left: 35%;background-position: -32px -29px;}
+            #info .label>i.i4{left: 35%;background-position: -88px -29px;}
+            #info .label>i.i5{left: 30%;background-position: -120px -29px;}
+            #info input:checked + label.label>i.i1{left: 33%;}
+            #info input:checked + label.label>i.i2{left: 35%;background-position: -63px -2px;}
+            #info input:checked + label.label>i.i3{left: 35%;background-position: -32px -2px;}
+            #info input:checked + label.label>i.i4{left: 35%;background-position: -88px -2px;}
+            #info input:checked + label.label>i.i5{left: 30%;background-position: -120px -2px;}
+        }
+
+        #tab1:checked ~ .tabs #tabContent1, #tab2:checked ~ .tabs #tabContent2, #tab3:checked ~ .tabs #tabContent3, #tab4:checked ~ .tabs #tabContent4, #tab5:checked ~ .tabs #tabContent5, #tab6:checked ~ .tabs #tabContent6, #tab7:checked ~ .tabs #tabContent7 {
+            display: block;
+        }
+        @media only screen and (min-width: 768px) {
+            #productImages>div.row:last-child{width: 487px;}
+        }
+        /***************************商品属性css************************************/
+        .block_head{
+            position: relative;
+            padding: .35em .5em .35em 8px;
+            border-top: 1px solid #ccc;
+        }
+        .table {
+            width: 100%;
+            max-width: 100%;
+        }
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+            text-align: left;
+        }
+        .table>tbody>tr>td, .table>tbody>tr>th{
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: middle;
+            border-top: 1px solid #ddd;
+        }
+        div.col-12 h4:first-child + div>.table>tbody>tr:last-child>th{border:0;}
+        @media only screen and (min-width: 768px) {
+            .table > tbody > tr > th {
+                padding-left: 35px;
+            }
+            .block_head{
+                position: relative;
+                padding: .35em .5em .35em 35px;
+                border-top: 1px solid #ccc;
+            }
+            div.col-12 h4:first-child + div>.table>tbody>tr>td>span:nth-child(2){padding: 0 40px;}
+            div.col-12 h4:first-child + div>.table>tbody>tr>td>{padding-left: 10px;}
+            .table>tbody>tr>td{padding: 8px 8px 8px 68px;}
+        }
+        .text-muted {
+            color: #858585;
+            font-size: small;
+        }
+        div.col-6>div.row>div.col-12:nth-child(5){padding: 0 8px!important;}
+        h4.block_head>span:first-child{
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            color: #fff;
+            background-color: #000000;
+            text-align: center;
+            margin: 0 5% 0 18%;
+            line-height: 34px;
+        }
+        h4.block_head>span:last-child{
+            font-size: 14px;
+            font-weight: 100;
+        }
+/*         .text-active {
+            color:#000;
+            font-weight: bold;
+            font-size: 14px;
+        } */
+        @media only screen and (min-width: 769px) {
+            table > tbody > tr.text-muted > th {
+                text-align: center;
+                padding-left: 43px;
+            }
+
+            table > tbody > tr.text-muted > td {
+                padding-left: 18%;
+            }
+
+            /*table > tbody > tr.text-active > th {*/
+                /*text-align: center;*/
+                /*padding-left: 43px;*/
+            /*}*/
+
+            /*table > tbody > tr.text-active > td {*/
+                /*padding-left: 18%;*/
+            /*}*/
+        }
+        @media only screen and (max-width: 768px) {
+            table > tbody > tr.text-muted > th {
+                padding-left:32px;
+            }
+
+            table > tbody > tr.text-muted > td {
+                padding-left: 12%;
+            }
+            h4.block_head>span:first-child{margin: 0 2% 0 6%;width: 40px;height: 26px;line-height: 26px;}
+            h4.block_head>span:last-child{font-size: 12px;}
+
+            /*table > tbody > tr.text-active > th {*/
+                /*padding-left: 32px;*/
+            /*}*/
+
+            /*table > tbody > tr.text-active > td {*/
+                /*padding-left: 12%;*/
+            /*}*/
+        }
+
+
+        .col-6>.row>.col-12>h4{
+            padding-top: 12px;
+            margin-bottom: 5px;
+        }
+        .col-6>.row>.col-12>h4:first-child{border: 0;}
+        div>.table>tbody>tr>th>span{font-size:12px;font-weight:100;display: inline-block;transform-origin: left; transform: scale(0.8);}
+        footer {
+            border-top: 1px solid #dddddd;
+            background: #eeeeee;
+            padding: 20px 0;
+        }
+
+        [class*="col-"] {
+            width: 100%;
+        }h
+
+        @media only screen and (max-width: 1220px) {
+            #content .row {
+                width: 100%;
+                max-width: 960px;
+                margin: 0 auto;
+            }
+
+            #productImages li img {
+                width: 66px;
+                margin: 0;
+            }
+
+            .desktopThumbnails {
+                display: none;
+            }
+
+            .mobileThumbnails {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 980px) {
+            #content .row {
+                max-width: 720px;
+            }
+
+            #productImages li img {
+                width: 49px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .mobile-show {
+                display: block;
+            }
+
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .images {
+                width: 100%;
+            }
+
+            .images img {
+                margin: 0 auto;
+            }
+
+            .mainImage {
+                width: 83.33%;
+            }
+
+            .mainImage img {
+                margin-left: 0;
+            }
+
+            .thumbnails {
+                width: 16.66%;
+            }
+
+            #productImages li img {
+                width: 82px;
+            }
+
+            #productDescription h3, #productDescription h4:first-of-type {
+                text-align: center;
+            }
+
+            #info .label {
+                display: block;
+                border: 1px solid #ddd;
+                padding-left: 100px;
+            }
+
+            nav .label {
+                display: block;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .nav h5 {
+                margin-top: 10px;
+            }
+
+            .nav > li, .nav > li > a {
+                display: block;
+            }
+
+            .nav > li:hover {
+                background: #efefef;
+            }
+
+            .inline-items li {
+                padding: 2px 0 !important;
+            }
+
+            .nav ul {
+                margin-bottom: 0;
+            }
+
+            .inline-items li:first-child {
+                /*border-top: 1px solid #c2c2c2;*/
+            }
+
+            .inline-items li:last-child {
+                margin-bottom: -10px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            #productImages li img {
+                width: 56px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .col-m-1 {
+                width: 8.33%;
+            }
+
+            .col-m-2 {
+                width: 16.66%;
+            }
+
+            .col-m-3 {
+                width: 25%;
+            }
+
+            .col-m-4 {
+                width: 33.33%;
+            }
+
+            .col-m-5 {
+                width: 41.66%;
+            }
+
+            .col-m-6 {
+                width: 50%;
+            }
+
+            .col-m-7 {
+                width: 58.33%;
+            }
+
+            .col-m-8 {
+                width: 66.66%;
+            }
+
+            .col-m-9 {
+                width: 75%;
+            }
+
+            .col-m-10 {
+                width: 83.33%;
+            }
+
+            .col-m-11 {
+                width: 91.66%;
+            }
+
+            .col-m-12 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+            .offset-1 {
+                margin-left: 18.33%;
+            }
+        }    </style>
+</head>
+</head>
+<body>
+  <header class="center">
+    <div id="logo">
+        <img src="img/logo.png" alt="">
+    </div>
+    <nav>
+        <input type="checkbox" id="mobileMenu">
+        <label for="mobileMenu" class="label">MENU</label>
+        <ul class="nav inline-items">
+            <li>
+                <a href="#">
+                    <h5>CLUTCHES</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h5>WALLETS</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h5>TOTES</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h5>SHOULDERS BAGAS</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h5>BACKPACKS</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h5>BRIEFCASES</h5>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h5>LUGGAGE AND TRAVELLING BAGS</h5>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+  <section id="content">
+    <div class="row">
+        <article class="col-12" id="product">
+            <div class="row">
+                <div class="col-6" id="productImages">
+                    <div class="row">
+                        <div class="images col-12">
+                            <input type="radio" id="thumbnail1" name="images" checked="checked">
+                            <input type="radio" id="thumbnail2" name="images">
+                            <input type="radio" id="thumbnail3" name="images">
+                            <input type="radio" id="thumbnail4" name="images">
+                            <input type="radio" id="thumbnail5" name="images">
+                            <input type="radio" id="thumbnail6" name="images">
+                            <input type="radio" id="thumbnail7" name="images">
+                            <input type="radio" id="thumbnail8" name="images">
+                            <input type="radio" id="thumbnail9" name="images">
+                            <input type="radio" id="thumbnail10" name="images">
+                            <img src="img/1.jpg" data-id="image1">
+                            <img src="img/2.jpg" data-id="image2">
+                            <img src="img/3.jpg" data-id="image3">
+                            <img src="img/4.jpg" data-id="image4">
+                            <img src="img/5.jpg" data-id="image5">
+                            <img src="img/6.jpg" data-id="image6">
+                            <img src="img/7.jpg" data-id="image7">
+                            <img src="img/8.jpg" data-id="image8">
+                        </div>
+                        <div class="mobileThumbnails desktop-hide mobile-show col-12">
+                            <label for="thumbnail1" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/1.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail2" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/2.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail3" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/3.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail4" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/4.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail5" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/5.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail6" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/6.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail7" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/7.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail8" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/8.jpg" alt="">
+                                </li>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="desktopThumbnails thumbnailImages mobile-hide col-12">
+                            <label for="thumbnail1" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/1.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail2" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/2.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail3" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/3.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail4" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/4.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail5" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/5.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail6" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/6.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail7" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/7.jpg" alt="">
+                                </li>
+                            </label>
+                            <label for="thumbnail8" class="thumbnailLabel">
+                                <li>
+                                    <img src="img/8.jpg" alt="">
+                                </li>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-6" id="productDescription">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-12">-->
+                            <!--<h3></h3>-->
+                            <!--<p></p>-->
+                            <!--<ul>-->
+                                <!--<li>-->
+                                    <!--<strong>Color:</strong>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<strong>Made in:</strong>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<strong>Fabric Content:</strong>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<strong>Condition:</strong>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                            <!--<h4>Measurements & Sizing*:</h4>-->
+                            <!--<ul>-->
+                                 <!--<li>-->
+                                     <!--<strong>Handle Length:</strong>-->
+                                 <!--</li>-->
+                                 <!--<li>-->
+                                     <!--<strong>Handle Drop:</strong>-->
+                                 <!--</li>-->
+                                 <!--<li>-->
+                                     <!--<strong>Height:</strong>-->
+                                 <!--</li>-->
+                                 <!--<li>-->
+                                     <!--<strong>Length:</strong>-->
+                                 <!--</li>-->
+                                 <!--<li>-->
+                                     <!--<strong>Width:</strong>-->
+                                 <!--</li>-->
+                            <!--</ul>-->
+                            <!--<p>-->
+                                <!--<em></em>-->
+                            <!--</p>-->
+                            <!--<p id="sku">-->
+                                <!--<strong>Item #:</strong>-->
+                            <!--</p>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="desktopThumbnails thumbnailImages mobile-hide col-12">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail1" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/1.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail2" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/2.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail3" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/3.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail4" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/4.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail5" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/5.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail6" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/6.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail7" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/7.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="thumbnail8" class="thumbnailLabel">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img src="img/8.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="block_head">ITEM DESCRIPTION</h4>
+                            <div style="clear:both;">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td>Chanel Shoulder Bag</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Style</th>
+                                        <td>Totes</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Brand</th>
+                                        <td>Chanel</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Collection</th>
+                                        <td>Cabon</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Color</th>
+                                        <td>Black / White</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Material</th>
+                                        <td>Leather</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Year</th>
+                                        <td>2007</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Size(cm)</th>
+                                        <td><span>Width : 33</span> &nbsp;&nbsp;  <span>Height : 33</span> &nbsp;&nbsp; <span>Depth : 32</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>Handle Drop 56.2 - 121.7  <span>Strap Drop 33</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4 class="block_head">ITEM DETAILS</h4>
+                            <div style="clear:both;">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <th>Corner</th>
+                                        <td>Stains: Minor</td>
+                                        <td>Scratches: Minor</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Edge</th>
+                                        <td>Stains: Minor</td>
+                                        <td>Scratches: -</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Handle</th>
+                                        <td>Stains: Minor</td>
+                                        <td>Scratches: -</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Hardware</th>
+                                        <td>Stains: Minor</td>
+                                        <td>Scratches:-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Surface</th>
+                                        <td>Stains: Minor</td>
+                                        <td>Scratches: -</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Other</th>
+                                        <td>Stains: Minor</td>
+                                        <td>Scratches:-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4 class="block_head">GRADE <span>A</span><span>Good, Few Scratches Or Stains</span></h4>
+                            <div style="clear:both;">
+                                <table class="table">
+                                    <tbody>
+                                    <tr class="text-muted">
+                                        <th>N</th>
+                                        <td>Brand New Not Used</td>
+                                    </tr>
+                                    <tr class="text-muted">
+                                        <th>S</th>
+                                        <td>Almost New</td>
+                                    </tr>
+                                    <tr class="text-muted">
+                                        <th>A</th>
+                                        <td>Good, Few Scratches Or Stains</td>
+                                    </tr>
+                                    <tr class="text-muted">
+                                        <th>B</th>
+                                        <td>Fair, 0bviously Used</td>
+                                    </tr>
+                                    <tr class="text-muted">
+                                        <th>C</th>
+                                        <td>Poor, But Still Acceptable</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="row">
+        <article class="col-12" id="info">
+
+            <input type="radio" id="tab1" checked="checked" name="tabs">
+            <label for="tab1" class="label"><i class="i1"></i>AUTHENTIC</label>
+            <div class="tabs desktop-hide mobile-show">
+                <div id="tabContent1" class="row">
+                    <div class="col-m-12">
+                        <p>Do you guarantee authenticity?</p>
+                        <p>Yes. LUXSENS guarantees that all items sold on our site are 100% authentic. All products we accept are inspected for brand-specific guidelines and are put through a rigorous authenticity test process before sold online. </p>
+                        <p>Please note, brands sold are not partnered with or affiliated with LUXSENS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" id="tab2" name="tabs">
+            <label for="tab2" class="label"><i class="i2"></i>PAYMENT</label>
+            <div class="tabs desktop-hide mobile-show">
+                <div id="tabContent2" class="row">
+                    <div class="col-m-12">
+                        <p>We only accept payment for all transactions via PayPal through eBay checkout only. Payments cannot be split into multiple payment methods and we require immediate payment for all Fixed-Price or Buy it Now items. We only accept one form of payment per transaction.</p>
+                        <p>We offer combined shipping as long as all items are paid for within a 2 day period. Please do not pay until you are finished shopping. Payment must be made within 4 days of accepting an offer to avoid an unpaid item case from being opened against your account. </p>
+                        <p>*ALL prices for items are priced in the United States Dollar*</p>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" id="tab3" name="tabs">
+            <label for="tab3" class="label"><i class="i3"></i>SHIPPING</label>
+            <div class="tabs desktop-hide mobile-show">
+                <div id="tabContent3" class="row">
+                    <div class="col-m-12">
+                        <p>Paypal currently only approves buyers from US, UK, & CA to have confirmed address. You can have confirmed address after adding a credit card to your paypal account and the confirmed address will automatically be your credit card's billing address (Email us before buying if you want to send to an UNCONFIRMED address) </p>
+                        <p>We use either EMS (3 to 5 days), Fedex (2 to 3 days) or Registered Air Mail (4 to 10 days) with signature confirmation. </p>
+                        <p>EMS www.hongkongpost.com is express shipping with signature confirmation and online tracking number. The package will be handled by your countries' local government speed post service </p>
+                        <p>Escrow - Payment is only allowed to buyer with good history and ratings; Please email me before bidding! Buyer is responsible for escrow fee. </p>
+                        <p>Since all our items showing on this ebay store are also displayed in our HK retail shops as well, your order would be canceled if the item has been sold. The successful bidders should settle the payment within 3 business days and we will ship within 3 business days after confirmation of payment. </p>
+                        <p>Please note. The picture was taken when the bag is formed by putting something inside.</p>
+                        <p>
+                            PC color photographs may not accurately display and lighting products to the environment. Customers should understand the circumstances before bidding. If you have any questions or doubts, please contact us. </p>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" id="tab4" name="tabs">
+            <label for="tab4" class="label"><i class="i4"></i>RETURN</label>
+            <div class="tabs desktop-hide mobile-show">
+                <div id="tabContent4" class="row">
+                    <div class="col-m-12">
+                        <p>All sales are final. We strive to provide the most accurate descriptions and photos as possible. </p>
+                        <p>If you feel that you have received an item that is not as described, you must contact us directly within three days of receipt either via eBay message or email to obtain return authorization and chat with a Customer Service Representative about your eBay order. </p>
+                        <p>If you contact us after this period, we will be unable to accept the return. </p>
+                        <P>Brand New Items or any items over $2,500 USD can not be returned.</P>
+                        <P>Any item approved for return other than for an item that is not as described will incur a 20% restocking fee. Buyer is responsible for return shipping fee.</P>
+                        <P>*LUXSENS is not the owner or seller of the items for sale. LUXSENS specifically disclaims all warranties or representations, and does not provide any warranties of fitness for a specific purpose, or of title of merchantability.</P>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" id="tab5" name="tabs">
+            <label for="tab5" class="label"><i class="i5"></i>CONTACT US</label>
+            <div class="tabs desktop-hide mobile-show">
+                <div id="tabContent5" class="row">
+                    <div class="col-m-12">
+                        <p>If you have any question send email to info@luxsens.com,or phone at +86-138-1774-0683 to contact our customer service</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <div id="tabContent1" class="row mobile-hide">
+                    <div class="col-m-12">
+                        <p>Do you guarantee authenticity?</p>
+                        <p>Yes. LUXSENS guarantees that all items sold on our site are 100% authentic. All products we accept are inspected for brand-specific guidelines and are put through a rigorous authenticity test process before sold online. </p>
+                        <p>Please note, brands sold are not partnered with or affiliated with LUXSENS.</p>
+                    </div>
+                </div>
+
+                <div id="tabContent2" class="row mobile-hide">
+                    <div class="col-m-12">
+                        <p>We only accept payment for all transactions via PayPal through eBay checkout only. Payments cannot be split into multiple payment methods and we require immediate payment for all Fixed-Price or Buy it Now items. We only accept one form of payment per transaction.</p>
+                        <p>We offer combined shipping as long as all items are paid for within a 2 day period. Please do not pay until you are finished shopping. Payment must be made within 4 days of accepting an offer to avoid an unpaid item case from being opened against your account. </p>
+                        <p>*ALL prices for items are priced in the United States Dollar*</p>
+                    </div>
+                </div>
+
+                <div id="tabContent3" class="row mobile-hide">
+                    <div class="col-m-12">
+                        <p>Paypal currently only approves buyers from US, UK, & CA to have confirmed address. You can have confirmed address after adding a credit card to your paypal account and the confirmed address will automatically be your credit card's billing address (Email us before buying if you want to send to an UNCONFIRMED address) </p>
+                        <p>We use either EMS (3 to 5 days), Fedex (2 to 3 days) or Registered Air Mail (4 to 10 days) with signature confirmation. </p>
+                        <p>EMS www.hongkongpost.com is express shipping with signature confirmation and online tracking number. The package will be handled by your countries' local government speed post service </p>
+                        <p>Escrow - Payment is only allowed to buyer with good history and ratings; Please email me before bidding! Buyer is responsible for escrow fee. </p>
+                        <p>Since all our items showing on this ebay store are also displayed in our HK retail shops as well, your order would be canceled if the item has been sold. The successful bidders should settle the payment within 3 business days and we will ship within 3 business days after confirmation of payment. </p>
+                        <p>Please note. The picture was taken when the bag is formed by putting something inside.</p>
+                        <p>
+                            PC color photographs may not accurately display and lighting products to the environment. Customers should understand the circumstances before bidding. If you have any questions or doubts, please contact us. </p>
+                    </div>
+                </div>
+
+                <div id="tabContent4" class="row mobile-hide">
+                    <div class="col-m-12">
+                        <p>All sales are final. We strive to provide the most accurate descriptions and photos as possible. </p>
+                        <p>If you feel that you have received an item that is not as described, you must contact us directly within three days of receipt either via eBay message or email to obtain return authorization and chat with a Customer Service Representative about your eBay order. </p>
+                        <p>If you contact us after this period, we will be unable to accept the return. </p>
+                        <P>Brand New Items or any items over $2,500 USD can not be returned.</P>
+                        <P>Any item approved for return other than for an item that is not as described will incur a 20% restocking fee. Buyer is responsible for return shipping fee.</P>
+                        <P>*LUXSENS is not the owner or seller of the items for sale. LUXSENS specifically disclaims all warranties or representations, and does not provide any warranties of fitness for a specific purpose, or of title of merchantability.</P>
+                    </div>
+                </div>
+
+                <div id="tabContent5" class="row mobile-hide">
+                    <div class="col-m-12">
+                        <p>If you have any question send email to info@luxsens.com,or phone at +86-138-1774-0683 to contact our customer service</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+  <footer>
+    <div class="row center">
+        <div class="col-2 offset-1">
+            <h5><a href="#">HOME</a></h5>
+        </div>
+        <div class="col-2">
+            <h5><a href="#">ABOUT US</a></h5>
+        </div>
+        <div class="col-2">
+            <h5><a href="#">CONTACT US</a></h5>
+        </div>
+        <div class="col-2">
+            <h5><a href="#">FOLLOW US</a></h5>
+        </div>
+    </div>
+    <div class="row center">
+        <div class="col-12">
+            <img src="https://cdn.shopify.com/s/files/1/1568/1995/files/visa.png?16323396681364010820" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/1568/1995/files/mastercard.png?16323396681364010820" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/1568/1995/files/amex.png?16323396681364010820" alt="">
+            <img src="https://cdn.shopify.com/s/files/1/1568/1995/files/paypa.png?16323396681364010820" alt="">
+        </div>
+    </div>
+    <div class="row center">
+        <div class="col-12">
+            <p>Copyright @ 2017 LUXSENS. All right reserved</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
