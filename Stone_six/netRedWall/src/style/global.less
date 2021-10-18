@@ -1,0 +1,196 @@
+html,
+body {
+  // height: 100vh;
+  // background:linear-gradient(180deg,rgba(54,67,111,1) 0%,rgba(31,35,68,1) 100%);
+  user-select: null;
+}
+
+body.modal-open {
+  position: fixed;
+  width: 100%;
+}
+
+.tac {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+.flex_c {
+  display: flex;
+  flex-direction: column;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+
+.flexc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish_icon {
+  position: fixed;
+  bottom: 162px;
+  right: 22px;
+  width: 100px;
+  height: 100px;
+  //background-image: url('~@/assets/images/publish.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.videoplayThumb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.videoplayContainer {
+  position: relative;
+}
+
+.videoplayContainer:after {
+  content: '';
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg');
+}
+
+.common-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.common-desc {
+  text-align: justify;
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.common-desc3 {
+  .common-desc;
+  -webkit-line-clamp: 3;
+}
+
+.common-desc4 {
+  .common-desc;
+  -webkit-line-clamp: 4;
+}
+
+.common-icon {
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.common-bg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+// 修复 vant ui
+.van-search__action:active {
+  background-color: transparent !important;
+}
+
+.part{
+  // background: url("../assets/index/bottom_bg.png") repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  //padding: 50px 0px;
+  img{
+    width: 100%;
+    //height: auto;
+    height: 800px;
+  }
+  .close{
+    position: absolute;
+    right: 40px;
+    top:40px;
+    img{
+      width: 68px;
+      height: 68px;
+    }
+  }
+  .text-wrap{
+    box-sizing: border-box;
+    padding: 10px 48px 0px 48px;
+    display: flow;
+    flex-direction: column;
+    justify-content: flex-start;
+    .detail{
+      font-size: 32px;
+      font-family: Helvetica, Helvetica-Regular;
+      font-weight: 400;
+      color: #ffffff;
+      text-align: left;
+    }
+    .title{
+      text-align: left;
+      span{
+        &:nth-child(1){
+          font-size: 48px;
+          font-family: PingFangSC, PingFangSC-Regular;
+          font-weight: 400;
+          text-align: left;
+          color: #ffffff;
+          margin-right: 40px;
+        }
+        &:nth-child(2){
+          font-size: 28px;
+          font-family: PingFangSC, PingFangSC-Regular;
+          font-weight: 400;
+          text-align: left;
+          color: #ffffff;
+          line-height: 66px;
+        }
+      }
+    }
+  }
+  .title3{
+    font-size: 32px;
+    font-family: PingFangSC, PingFangSC-Regular;
+    font-weight: 400;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 45px;
+    cursor: pointer;
+    margin-bottom: 100px;
+    img{
+      width: 352px;
+      height: 80px;
+    }
+  }
+}
