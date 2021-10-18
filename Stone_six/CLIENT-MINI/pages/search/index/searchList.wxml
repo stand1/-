@@ -1,0 +1,66 @@
+<!--pages/detail/searchList/searchList.wxml-->
+<!-- <text>pages/detail/searchList/searchList.wxml</text> -->
+
+<view class="searchList">
+  <tabHeader titleStr="搜索" isShow="{{true}}"></tabHeader>
+
+	<view class="search_header">
+		<view class="left">
+			<!-- <img src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-FH-red_7_jm1ndu4.svg" alt="" @click="$router.back()"> -->
+			<!-- <image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-FH-red_7_jm1ndu4.svg"></image> -->
+		</view>
+		<view class="middle">
+			<input value="{{keyword}}" bindinput="changeTxt" type="text" ref="getFocus" class="keyword" bindconfirm="gosearch" />
+			<!-- <input value="{{keyword}}" bindinput="changeTxt" type="text" ref="getFocus" class="keyword" @keyup.13="goToDetail()"> -->
+			<image wx:if="{{showFlag}}" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200414/icons_ShiYongZhongDe_Clear_2x_1_zm5mdq5.png" bindtap="setEmpty" class="empty"></image>
+		</view>
+
+		<view class="cancel" bindtap="goBack">取消</view>
+	</view>
+
+
+	<view wx-if="{{!showResultFlag}}">
+		<view class="record">
+			<view class="title">
+				<view class="left">{{title}}</view>
+				<image wx:if="{{imgShow}}" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/dele.png" bindtap="handleDelete"></image>
+			</view>
+			<view class="tab-block">
+				<view class="tab-item" wx:for="{{list}}" wx:key="index" data-item="{{item}}" bindtap="handleTagUser">
+					#{{item.searchText}}
+				</view>
+			</view>
+		</view>
+
+
+		<view class="record fire">
+			<view class="title hot">
+				<view class="left">热门搜索 </view>
+				<image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icon-Flame.svg"></image>
+			</view>
+
+			<view class="item" wx:for="{{hotList}}" wx:key='index' data-item="{{item}}" bindtap="handleClickHot">
+				<view class="left">
+					<view class="index">
+						<text wx:if="{{index>2}}">{{index+1}}</text>
+						<image wx:if="{{index==0}}" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icon-PH_1.svg"></image>
+						<image wx:if="{{index==1}}" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icon-PH_2.svg"></image>
+						<image wx:if="{{index==2}}" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icon-PH_3.svg"></image>
+					</view>
+					<view class="content">{{item.search_text}}</view>
+				</view>
+				<view class="count">{{item.c}} 热度</view>
+			</view>
+		</view>
+
+	</view>
+  <view wx-if="{{showResultFlag}}">
+  <view class="list_item" wx:for="{{resultList}}" wx:key='index' data-tagName="{{item.tagName}}" bindtap="handleShowDetail">
+      <image src="../../../img/search.png"></image>
+      <!-- <img src="../../../img/search.png" alt=""> -->
+      <view class="content">{{item.tagName}}</view>
+    </view>
+
+  </view>
+  
+</view>

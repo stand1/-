@@ -1,0 +1,21 @@
+<wxs module="filter" src="../../../api/filter.wxs"></wxs>
+
+<view class="search">
+  <tabHeader titleStr="搜索" isShow="{{true}}" startBarHeight="{{heights}}" navHeight="{{navHeight}}"></tabHeader>
+  <view class="inpus" catchtap="goSearch">
+    {{text}}
+    <image catchtap="clearfn"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200414/icons_ShiYongZhongDe_Clear_2x_1_zm5mdq5.png">
+    </image>
+  </view>
+  <text bindtap="goPre">取消</text>
+</view>
+<view class="nav">
+  <view class="text {{param.searchArticleType == item.id?'act':''}}" wx:for="{{nav}}" bindtap="changefn"
+    data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}</view>
+  <!-- <view class="text">贴子</view> -->
+</view>
+
+<view class="main">
+  <commCard></commCard>
+</view>

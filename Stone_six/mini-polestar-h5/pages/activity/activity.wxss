@@ -1,0 +1,45 @@
+/* pages/activity/activity.wxss */
+.activity{
+  width: 100%;
+  padding-top: 112rpx;
+}
+.nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  color: #979dad;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  height: 88rpx;
+}
+.nav .navItem{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.nav .active{
+  color: #000000;
+}
+.nav .navItem .txt{
+  margin-right: 8rpx;
+}
+.triangleUp{
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-bottom: 20rpx solid #000;
+}
+.triangleDown{
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 20rpx solid #979dad;
+}

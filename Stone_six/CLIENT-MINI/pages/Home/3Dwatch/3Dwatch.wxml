@@ -1,0 +1,41 @@
+<tabHeader titleStr="{{titleStr}}" isdown="{{true}}" carTypeList="{{carTypeList}}" bind:PickerChange="PickerChange"></tabHeader>
+<wxs module="filter" src="../../../api/filter.wxs"></wxs>
+<view class="contain">
+  <scroll-view scroll-x="true" style="width: 100%" enhanced="true" paging-enabled="true" show-scrollbar="{{false}}">
+    <view class="nav">
+      <view class="block {{index==cindex?'act':''}}" wx:for="{{taglist}}" data-index="{{index}}" bindtap="choseTag">
+        <!-- <image src="/static/tabs/1.png" wx:if="{{index!=0}}"></image>
+        <image src="/static/tabs/select1.png" wx:if="{{index==0}}"></image> -->
+        {{item.resourceName}}
+        <i></i>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="dImg">
+    <watchImage imgSrc="{{carObj.optionDetails?carObj.optionDetails[0].imgList:[]}}"></watchImage>
+  </view>
+
+  <view class="color">
+    <picker bindchange="bindPickerChange" value="{{0}}" range="{{carList}}" range-key="name">
+    <view class="picker">
+      
+    <view class="tit">
+      {{carObj.name}} <b></b>
+    </view>
+    </view>
+  </picker>
+  
+    <view class="select">
+      <!-- 车颜色 -->
+      <view class="block" wx:for="{{carObj.optionDetails}}" data-id="{{item.id}}">
+        <image src="{{item.img}}"></image>
+      </view>
+    </view>
+  </view>
+
+</view>
+<imgCard wx:for="{{watList}}" detail="{{item}}"></imgCard>
+
+
+<recommend></recommend>

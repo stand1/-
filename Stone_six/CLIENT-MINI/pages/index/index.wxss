@@ -1,0 +1,147 @@
+/* pages/index/index.wxss */
+page{
+  color: #000;
+  /* padding-bottom: 120rpx; */
+}
+.swiperClass{
+  height: 592rpx;
+}
+swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+.search_bar{
+  position: absolute;
+  /* top: 4%; */
+  left: 32rpx;
+  width: 496rpx;
+  height: 64rpx;
+  background-color: #fff;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search_bar image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.search_bar text{
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #AFAFAF;
+  line-height: 32rpx;
+}
+.scroll-view-box{
+  display: flex;
+}
+.car_type_box .scroll-view-box{
+  width: auto;
+  height: 320rpx;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.scroll-view-box .item-box{
+  flex: none;
+  width: 250rpx;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.scroll-view-box image{
+  width: 166rpx;
+  height: 76rpx;
+  /* background-color: yellow; */
+  margin-bottom: 8rpx;
+}
+.car_type_box{
+  margin-top: 22rpx;
+}
+.scroll-view-box text{
+  color: #000;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+.title-bar{
+  height: 60rpx;
+  padding: 0 32rpx;
+  /* margin-top: 64rpx; */
+  margin-bottom: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-bar .title{
+  font-weight: bold;
+  font-size: 44rpx;
+}
+.title-bar .right-option{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-bar text{
+  font-size: 28rpx;
+  color: #BDBEC7;
+  font-weight: bold;
+}
+.title-bar image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 4rpx;
+}
+
+.recently-box{
+  width: 100%;
+  /* height: 480rpx; */
+  white-space: nowrap;
+  margin-bottom: 32rpx;
+}
+.recently-box .item-box{
+  display: inline-block;
+  width: 384rpx;
+  height: 480rpx;
+  position: relative;
+  margin-right: 40rpx;
+}
+.recently-box .item-box:nth-child(1){
+  margin-left: 32rpx;
+}
+.recently-box .item-box image{
+  width: 100%;
+  height: 100%;
+  border-radius: 40rpx;
+}
+.recently-box .item-box .label{
+  color: #fff;
+  background: rgba(255, 255, 255, 0.28);
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 24rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 24rpx;
+  border-radius: 60rpx;
+  font-weight: bold;
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+.recently-box .item-box .like{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 40rpx;
+  bottom: 40rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}
+.recently-box .item-box .like image{
+  width: 40rpx;
+  height: 40rpx;
+}

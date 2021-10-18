@@ -1,0 +1,20 @@
+<!-- 关联应用 -->
+<view class="relation" wx:if="{{isapp}}">
+  <view class="task"></view>
+  <view class="box">
+    <view class="title">关联应用</view>
+    <scroll-view scroll-y="true"  style="height:80%">
+      <view class="block" wx:for="{{appList}}" bindtap="chosefn" data-index="{{index}}">
+        <image
+          src="{{item.appIcon}}">
+        </image>
+        <view class="text">
+          <view class="tit">{{item.appName}}</view>
+          <view class="desp">{{item.remark}}</view>
+        </view>
+      </view>
+    </scroll-view >
+
+  </view>
+  <image src="/static/img/close_1.png" class="close" bindtap="closefn"></image>
+</view>

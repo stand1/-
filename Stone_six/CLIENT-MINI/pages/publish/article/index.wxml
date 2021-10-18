@@ -1,0 +1,62 @@
+<!--pages/publish/article/index.wxml-->
+<scroll-view class="scroll_container" scroll-y="true">
+	<view class="post_cover_box flex" style="background-image: url({{postCoverSrc}})">
+		<view class="upload_box" bindtap="chooseCoverImage">
+			<image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_icon-xiangji@3x.png" alt=""></image>
+			<view class="tip">点击设置封面图</view>
+		</view>
+	</view>
+	<view class="edit_wrap">
+		<view class="title_box">
+			<input type="text" placeholder="输入标题，6到30字(必填)" value="{{title}}" bindblur="titleInputBlur"></input>
+		</view>
+		<view class="editor_box">
+			<editor id="editor" class="ql-container" placeholder="释放你思想的火花" value="{{articleContent}}" showImgSize showImgToolbar showImgResize bindinput="getEditorValue" bindstatuschange="onStatusChange" bindready="onEditorReady">
+			</editor>
+		</view>
+	</view>
+</scroll-view>
+<view class="fixed">
+	<view class="block" bindtap="openApp">
+		<view class="lf">
+			<image src="/static/img/appIcon.png"></image>
+			{{Appobj.appName||'关联应用'}}
+		</view>
+		<view class="rt">
+			<image src="/static/img/arrow_right.png"></image>
+		</view>
+	</view>
+	<view class="block">
+		<view class="lf">
+			<image src="/static/img/ticop.png"></image>
+			关联直播
+		</view>
+		<view class="rt">
+			<image src="/static/img/arrow_right.png"></image>
+		</view>
+	</view>
+
+	<!-- <view class="block">
+		<view class="lf">
+			<image src="/static/img/car.png"></image>
+			车型选择
+		</view>
+		<view class="rt">
+			<image src="/static/img/arrow_right.png"></image>
+		</view>
+	</view> -->
+</view>
+<view class="foot_row flex">
+	<view class="btn btn_text" bindtap="insertDate"></view>
+	<view class="btn btn_img" bindtap="insertImage"></view>
+	<!-- <view class="btn btn_video" bindtap="handleVideoClick"></view> -->
+	<view class="btn btn_label" bindtap="openLabelSelect" data-name="list" data-value="check"></view>
+
+	<view class="Bbtn">
+		<!-- <view class="isbtn">预览</view>
+		<view class="isbtn">保存</view> -->
+		<view class="isbtn push" bindtap="publish">发布</view>
+	</view>
+</view>
+
+<applications isapp="{{isapp}}" bind:close="closefn" bind:chosefn="chosefn"></applications>

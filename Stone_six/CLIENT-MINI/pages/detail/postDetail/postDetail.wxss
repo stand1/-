@@ -1,0 +1,9 @@
+@import "/static/detail.wxss";
+.headImg{
+  width: 100%;
+  height: 560rpx;
+}
+.detail .status .like .img{
+  
+background: #FF3B30;
+}

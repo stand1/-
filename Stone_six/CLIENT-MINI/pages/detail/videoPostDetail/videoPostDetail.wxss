@@ -1,0 +1,52 @@
+@import "/static/detail.wxss";
+
+.detail video {
+  width: 100%;
+  height: 460rpx;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+}
+
+.videobg1,
+.videobg2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+}
+
+.videobg1 {
+  background-size: cover;
+  background-position: 50%;
+  background: linear-gradient(188deg, rgba(0, 0, 0, 0.7) 0%, rgb(12, 12, 12) 100%);
+  z-index: -2;
+  /* filter: blur(.66667rem); */
+}
+
+.detail .useCard {
+  margin-top: 460rpx;
+}
+
+.detail .return {
+  position: fixed;
+  z-index: 7;
+}
+
+.detail .useCard .tit,
+.detail .useCard .time,
+.detail .dep,
+.detail .title-bar .title,
+.detail .status .name,
+.detail .status .name text {
+
+  color: #fff;
+}
+
+.detail .status .img {
+  background-color: #FF3B30;
+}
+
+.detail .status .remove .img {
+  background: rgba(86, 81, 81, 0.5);
+}

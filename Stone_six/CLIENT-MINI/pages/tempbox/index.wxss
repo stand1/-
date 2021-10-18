@@ -1,0 +1,64 @@
+/* pages/temp/index.wxss */
+.temp{
+  width: 100%;
+  box-sizing: border-box;
+  /* padding-top: 208rpx; */
+}
+.temp .contentBox{
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0rpx;
+  left: 0;
+  z-index: 99;
+  background-color: #fff;
+  padding-top: 52rpx;
+}
+.search_bar{
+  width: 496rpx;
+  height: 64rpx;
+  background: #F2F2F2;
+  border-radius: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 32rpx;
+  box-sizing: border-box;
+}
+.search_bar image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.search_bar text{
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #AFAFAF;
+  line-height: 32rpx;
+}
+.temp .contentBox .nav{
+  width: 100%;
+  /* box-sizing: border-box; */
+  color: #000;
+  padding-left: 32rpx;
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+  overflow-x: scroll;
+  margin-top: 36rpx;
+}
+.nav .navItem{
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #9B9B9B;
+  margin-right: 44rpx;
+}
+.nav .navActive{
+  color: #000;
+  font-size: 44rpx;
+}
+.recommend{
+  width: 100%;
+  box-sizing: border-box;
+}

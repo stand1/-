@@ -1,0 +1,13 @@
+<!--pages/activity/activity.wxml-->
+<view class="activity">
+  <view class="nav">
+     <view class="navItem,{{navNum==item.id?'active':''}}" wx:for="{{navList}}" wx:key="index" data-num="{{item.id}}" bindtap="changeActivityNum">
+      <view class="txt">{{item.name}}</view>
+      <!-- <view class="triangleUp" wx:if="{{navNum==item.id}}"></view>
+      <view class="triangleDown" wx:else></view> -->
+     </view>
+  </view>
+  <view class="content">
+    <activityList activityList="{{dataList}}"></activityList>
+  </view>
+</view>

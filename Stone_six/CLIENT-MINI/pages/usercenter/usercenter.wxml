@@ -1,0 +1,144 @@
+<view class="container1111" style="padding-bottom: 120rpx;">
+  <tabHeader titleStr="{{titles}}">
+  </tabHeader>
+  <!-- 未登录 -->
+  <!-- <button wx:if="{{!hasPhoneNum}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNum"> 微信用户一键登录
+  </button> -->
+  <!-- 已登陆 -->
+  <!-- <block wx:else> -->
+  <!-- <text>{{phoneNum}}</text> -->
+  <!-- </block> -->
+
+  <view class="outer">
+    <!-- 头像 -->
+    <image class="avatar" src="{{avatarUrl==null ? '/icons/nologin.png' :avatarUrl}}" background-size="cover"></image>
+    <!-- <image wx:if="{{avatarUrl==null}}" class="avatar" src="{{avatarUrl==null ? /icons/nologin.png :avatarUrl}}" background-size="cover"></image>
+    <block wx:else>
+      <image class="avatar" src="{{avatarUrl}}" background-size="cover"></image>
+    </block> -->
+    <!-- 昵称 -->
+    <view class="nickName">{{nickName==null ? '我的昵称' :nickName}}</view>
+    <!-- 编辑按钮 -->
+    <image class="edit" src="/icons/usercenter/write@2x.png"></image>
+    <!-- <view class="edit"></view> -->
+    <!-- 简介 -->
+    <view class="introduction">简介</view>
+    <!-- 资料卡片 -->
+    <view class="card" data-methodType="8" bindtap="setting">资料卡</view>
+  </view>
+  <!-- </block> -->
+  <!-- <view class="cards" style="overflow:-Scroll;overflow-x:hidden">
+    <view class="cards-nei">
+      <view class="blank"></view>
+      <image class="img" src="/icons/E3001.png"></image>
+      <view class="blank"></view>
+      <image class="img" src="/icons/E3001.png"></image>
+      <view class="blank"></view>
+      <image class="img" src="/icons/E3001.png"></image>
+      <view class="blank"></view>
+    </view>
+  </view> -->
+
+  <view class="page-section-spacing">
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+      <view class="blank"></view>
+      <image id="demo1" src="/icons/E3001.png" class="scroll-view-item_H demo-text-1" data-methodType="5"
+        bindtap="setting"></image>
+      <view class="blank"></view>
+      <image id="demo2" src="/icons/E3001.png" class="scroll-view-item_H demo-text-2" data-methodType="6"
+        bindtap="setting"></image>
+      <view class="blank"></view>
+      <image id="demo3" src="/icons/E3001.png" class="scroll-view-item_H demo-text-3" data-methodType="7"
+        bindtap="setting"></image>
+      <view class="blank"></view>
+    </scroll-view>
+  </view>
+
+  <view class="bottomCard">
+    <view class="commonSetting">通用设置</view>
+    <view class="mycell" data-methodType="0" bindtap="setting">
+      <view class="leftTitle">隐私设置</view>
+      <image class="rightImg" src="/icons/usercenter/right@2x.png"></image>
+    </view>
+    <view class="mycell" data-methodType="1" bindtap="setting">
+      <view class="leftTitle">账户与安全</view>
+      <image class="rightImg" src="/icons/usercenter/right@2x.png"></image>
+    </view>
+    <view class="mycell" data-methodType="2" bindtap="setting">
+      <view class="leftTitle">绑定手机号</view>
+      <image class="rightImg" src="/icons/usercenter/right@2x.png"></image>
+    </view>
+    <view class="mycell" data-methodType="3" bindtap="setting">
+      <view class="leftTitle">反馈</view>
+      <image class="rightImg" src="/icons/usercenter/right@2x.png"></image>
+    </view>
+    <view class="mycell" data-methodType="4" bindtap="setting">
+      <view class="leftTitle">关于</view>
+      <image class="rightImg" src="/icons/usercenter/right@2x.png"></image>
+    </view>
+    <!-- <view class="exit">退出登录</view> -->
+    <!-- <view class="exit" wx:if="{{!hasPhoneNum}}"> -->
+      <button class="exi" wx:if="{{!isLogin}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNum">
+        登录
+      </button>
+    <!-- </view> -->
+    <block wx:else>
+      <view class="exit">退出登录</view>
+    </block>
+
+  </view>
+  <!-- </block> -->
+  <!-- <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+        duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}">
+              <image src='https://hbimg.huabanimg.com/9abd8e7d768e6bb070de86c09671b73c81de118d43df2-xahAjO_fw658'
+                mode='widthFix'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">指示点</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">自动播放</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section page-section-spacing">
+      <view class="page-section-title">
+        <text>幻灯片切换时长(ms)</text>
+        <text class="info">{{duration}}</text>
+      </view>
+      <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000" />
+      <view class="page-section-title">
+        <text>自动播放间隔时长(ms)</text>
+        <text class="info">{{interval}}</text>
+      </view>
+      <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000" />
+    </view>
+  </view> -->
+
+  <!-- wx:if="{{!hasUserInfo && canIUse}}" -->
+  <!-- <button wx:if="{{!hasPhoneNum}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNum"> 微信用户一键登录
+  </button>
+  <block wx:else>
+    <text>{{phoneNum}}</text>
+  </block>
+
+  <text>{{phoneNum}}</text> -->
+</view>

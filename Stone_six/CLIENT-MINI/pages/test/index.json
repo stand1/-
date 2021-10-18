@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "推荐",
+  "usingComponents": {
+    "tabbar": "../../components/tabbar1/tabbar",
+    "van-button": "@vant/weapp/button/index",
+    
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+  }
+}

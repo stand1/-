@@ -1,0 +1,6 @@
+<!-- 这是自定义组件的内部WXML结构 -->
+<view class="inner" bindtap="customMethod">
+  <image src="{{innerImage}}"></image>
+  <view class="innerText">{{innerText}}</view>
+</view>
+<slot></slot>

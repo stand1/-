@@ -1,0 +1,72 @@
+.wrapperBox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapperBox .wrapper{
+  width: 690rpx;
+  /* height: 90%; */
+  background: #ffffff;
+  position: relative;
+}
+.top{
+  width: 690rpx;
+  height: 350rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top image{
+  width: 116rpx;
+  height: 120rpx;
+}
+.btm{
+  width: 690rpx;
+  height: 480rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+  position: relative;
+  padding-top: 88rpx;
+}
+.btm .userImg{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -29rpx;
+  left: 296rpx;
+}
+.btm .userName{
+  text-align: center
+}
+.btm .txt{
+  color: #000;
+  font-size: 28rpx;
+  margin: 48rpx 60rpx 64rpx;
+}
+.btm .txt text{
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: bold;
+  color: #000000;
+}
+.btm .btn button{
+  width: 570rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  background: #1aad19;
+  margin: 0 auto;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "watchImage":"/components/3Dwatch/index",
+    "imgCard":"/components/imgCard/imgCard"
+  }
+}

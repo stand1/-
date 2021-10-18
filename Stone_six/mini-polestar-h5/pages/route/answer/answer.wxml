@@ -1,0 +1,41 @@
+<!--pages/route/answer/answer.wxml-->
+<view class="answer">
+  <view class="answerTop">
+    <view class="title">常见问题</view>
+    <view class="answerTopCen">
+      <view class="answerTopCenL">
+        <view class="item active">问题类型</view>
+        <view class="item" wx:for="{{dataList}}" wx:key="index" data-id="{{item.type}}" data-i="{{index}}" bindtap="changeType">{{item.name}}</view>
+      </view>
+      <view class="answerTopCenR">
+        <view class="answerTopCenRBox">
+            <view class="item" bindtap="goAnswerDetails" wx:for="{{answerList}}" wx:key="index" data-str="{{item.answer}}">
+              <view class="txt">{{item.title}}</view>
+              <image src="../../../static/icon/arrowY.png"></image>
+            </view>
+        </view>
+        <view class="itemChange">
+          <!-- <text>换一换</text> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="answerBom">
+    <view class="title">大家在问</view>
+    <view class="answerBomCen">
+      <view class="item" wx:for="{{askedList}}" wx:key="index" data-str="{{item.answer}}" bindtap="goAnswerDetails">
+        <view class="itemT">
+          <view class="txt">{{item.title}}</view>
+          <text>{{item.typeName}}</text>
+        </view>
+        <view class="itemB">
+          <view></view>
+          <text>{{item.createTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view bindtap="goAnswer">我的提问</view>
+  </view>
+</view>

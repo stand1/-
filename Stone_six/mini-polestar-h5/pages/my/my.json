@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "phoneEmpower": "../../component/phoneEmpower/phoneEmpower"
+  },
+  "navigationBarTitleText": "个人中心"
+}

@@ -1,0 +1,7 @@
+<view class="moreUse">
+  <!-- <view class="search">
+    <image src="/static/img/search.png"></image>
+    <text>全民改装行动</text>
+  </view> -->
+</view>
+<recommend></recommend>

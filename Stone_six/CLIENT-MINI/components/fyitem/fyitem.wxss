@@ -1,0 +1,14 @@
+/* components/fyitem/fyitem.wxss */
+.inner{
+  background-color: silver;
+}
+.innerText{
+  text-align: center;
+  width: 100%;
+  color: black;
+}
+
+image{
+  background-color: green;
+  width: 100%;
+}

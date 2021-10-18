@@ -1,0 +1,2 @@
+/* pages/templateDetail/tempCard/tempCardF/tempCardF.wxss */
+@import "../tempCardA//tempCardA.wxss"

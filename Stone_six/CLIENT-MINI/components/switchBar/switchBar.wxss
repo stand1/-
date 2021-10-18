@@ -1,0 +1,59 @@
+/* component/switchBar/switchBar.wxss */
+.switchBar_container{
+  width: 168rpx;
+  height: 44rpx;
+}
+.switchBar_container .bg {
+  width: 168rpx;
+  height: 44rpx;
+  background: #0f0e0e;
+  border-radius: 22rpx;
+  opacity: 0.2;
+  position: relative;
+}
+.switchBar_container .btn {
+  position: absolute;
+  width:84rpx;
+  height:44rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 2rpx 8rpx 0rpx rgba(0,0,0,0.11);
+  border-radius:22rpx;
+}
+.switchBar_container .m_left {
+  left: 0rpx;
+  box-shadow: 0rpx 2rpx 8rpx 0rpx rgba(0, 0, 0);
+}
+.switchBar_container .m_right {
+  left: 84rpx;
+  box-shadow: 0rpx 2rpx 8rpx 0rpx rgba(0, 0, 0);
+}
+.hot {
+  width: 84rpx;
+  height: 44rpx;
+  position: absolute;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #fff;
+  line-height: 44rpx;
+  text-align: center;
+}
+.latest {
+  width: 84rpx;
+  height: 44rpx;
+  position: absolute;
+  left: 84rpx;
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #fff;
+  line-height: 44rpx;
+  text-align: center;
+}
+.isSel{
+  color:#4a4a4a;
+}
+.video_bg{
+  opacity: 0.6;
+}

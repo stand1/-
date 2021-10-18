@@ -1,0 +1,49 @@
+<!--pages/templateDetail/buildTemp/buildTemp.wxml-->
+<view class="buildTemp">
+  <tabHeader titleStr="模板编辑" isShow="{{true}}"></tabHeader>
+  <view class="content">
+    <view class="content_top">
+       <view class="content_top_left">
+         <view bindtap="goRevoke">
+           <image src="../../../static/img/iconRevoke.png"></image>
+           <text>撤销</text>
+         </view>
+         <view bindtap="goRedo">
+           <image src="../../../static/img/iconRedo.png"></image>
+           <text>重做</text>
+         </view>
+       </view>
+       <view class="content_top_right" bindtap="saved"><text>保存</text></view>
+    </view>
+    <!-- <view class="content_img">
+      <image src="{{imgBgUrl}}"></image>
+      合成图片模板图
+      <view class="img_box">
+        <image src="{{imgTopUrl}}"></image>
+      </view>
+    </view> -->
+    <view class="content_img">
+      <canvas style="width:100%;height:100%" canvas-id="myCanvas"></canvas>
+    </view>
+    <view class="content_footer">
+       <view class="newItem" bindtap="changeImg">
+          <view class="imgs"><image src="../../../static/img/tempTh.png"></image></view>
+          <view>替换图片</view>
+       </view>
+    </view>
+    <!-- <view class="content_footer">
+       <view class="item">
+          <view class="imgs"><image></image></view>
+          <view><text>修改文案</text></view>
+       </view>
+       <view class="item items" bindtap="changeImg">
+          <view class="imgs"><image src="../../../static/img/tempTh.png"></image></view>
+          <view><text>替换图片</text></view>
+       </view>
+       <view class="item">
+          <view class="imgs"><image src="../../../static/img/tempAdd.png"></image></view>
+          <view><text>添加</text></view>
+       </view>
+    </view> -->
+  </view>
+</view>

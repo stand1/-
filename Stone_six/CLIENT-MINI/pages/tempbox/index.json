@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "recommend": "../../components/recom/recommend"
+  },
+  "navigationStyle":"custom"
+}

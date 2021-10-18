@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "card":"../../components/card/card",
+    "recommend":"../../components/recommend/recommend",
+    "addCard":"../../components/addCard/addCard"
+  },
+  "navigationStyle": "custom"
+}

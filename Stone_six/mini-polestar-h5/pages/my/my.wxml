@@ -1,0 +1,49 @@
+<!--pages/my/my.wxml-->
+<view class="myContent">
+  <view class="myContentTop">
+    <view class="userImg">
+        <image src="{{userInfo.avatar==null?'/static/img/logo.png':userInfo.avatar}}"></image>
+    </view>
+    <view class="name">
+        <view>{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="myContentB">
+    <view class="item" wx:for="{{itemList}}" wx:key="index" data-id="{{item.id}}" bindtap="changeNav">
+      <view class="itemL">
+        <image src="{{item.icon}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="itemR">
+        <image src="../../static/icon/arrowY.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="txt">
+    <view>*咨询邮箱：polestarhackathon@163.com</view>
+    *参赛作品请在7月18日前提交至邮箱polestarhackathon@163.com并备注报名时填写的姓名和手机号码
+  </view>
+  <!-- 手机号授权 -->
+<!-- <view wx:if="{{ ismyShow }}" style="background: rgba(0,0,0,0.7);position:fixed;top:0;bottom:0;left:0;right:0;">
+    <view class="wrapperBox" style="position:absolute;top:20px;bottom:20px;left:14px;right:14px;background:#fff;width:auto;height:auto;">
+      <view class="wrapper">
+        <view class="top">
+          <image src="/static/img/logoC.png"></image>
+        </view>
+        <view class="btm">
+           <view class="txt" style="width:auto;">
+             <text>极星黑客松</text> 报名参与活动需要您点击授权使用微信绑定的手机号，用于登录/注册极星黑客松
+           </view>
+           <view class="btn" style="text-align:center">
+            <button hover-class="none" plain="true" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键获取手机号</button>
+           </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 手机号授权 -->
+  <view wx:if="{{ ismyShow }}">
+    <phoneEmpower userInfo="{{userInfo}}" bind:cahngeEvent="changeEvents"></phoneEmpower>
+  </view>
+</view>

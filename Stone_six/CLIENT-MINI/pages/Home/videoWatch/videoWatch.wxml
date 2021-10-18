@@ -1,0 +1,23 @@
+<tabHeader isShow="{{false}}" titleStr="外观视频"></tabHeader>
+
+<view class="content">
+  <view class="block">
+  <view class="head">
+    <view class="lf">
+      <image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/1601888607132BR-1.jpg"></image>
+      <view class="name">
+        <view class="tit">XXX</view>
+        4小时
+      </view>
+    </view>
+    <view class="rt">
+      <image src="/static/img/share.png"></image>
+      <image src="/static/img/like_gray.png"></image>
+     </view>
+  </view>
+    <image class="bg" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/1601888607132BR-1.jpg"></image>
+    <image class="videoIcon" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+      </image>
+    <view class="time">03:28 / # 汽车设计</view>
+  </view>
+</view>

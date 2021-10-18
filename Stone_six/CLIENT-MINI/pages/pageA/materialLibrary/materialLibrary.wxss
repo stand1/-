@@ -1,0 +1,169 @@
+/* pages/pageA/materialLibrary/materialLibrary.wxss */
+.materialLibrary{
+  width: 100%;
+  box-sizing: border-box;
+}
+.materialLibrary .header{
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding-left: 22rpx;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.header .back{
+  width: 48rpx;
+  height: 48rpx;
+}
+.header .back image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.header .nav{
+  /* margin-left: 150rpx; */
+  display: flex;
+  align-items: center;
+  width: 582rpx;
+  justify-content: center;
+}
+.header .nav .navItem{
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: bold;
+  color: #9B9B9B;
+  margin-right: 58rpx;
+}
+.header .nav .navItem:last-child{
+  margin-right: 0rpx;
+}
+.header .nav .itemActive{
+  color: #000000;
+}
+.box .search{
+  display: flex;
+  align-items: center;
+  width: 686rpx;
+  height: 72rpx;
+  background: #F2F2F2;
+  border-radius: 36rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 40rpx;
+}
+.box .search image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.box .search input{
+  width: 560rpx;
+  height: 70rpx;
+  border: none;
+  margin-left: 14rpx;
+}
+.box .search .phcolor{
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #AFAFAF;
+}
+.box .navBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 36rpx 0 32rpx;
+}
+.box .navBox .item{
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: bold;
+  color: #8F92A1;
+  padding-bottom: 12rpx;
+  margin-right: 142rpx;
+}
+.box .navBox .item:last-child{
+  margin-right: 0;
+}
+.box .navBox .itemActive{
+  color: #3366FF;
+  border-bottom: 4rpx solid #3366FF;
+}
+.box .setting{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 32rpx 42rpx;
+}
+.setting .picker{
+  width: 200rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box .setting .item{
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #A7A7AA;
+}
+.box .setting .item image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 12rpx;
+}
+.box .content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box .content .item{
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #D2D3D9;
+  margin-right: 76rpx;
+  margin-bottom: 36rpx;
+  text-align: center;
+}
+.box .content .itemActive{
+  margin-right: 0rpx;
+}
+.box .content .item .itemImgs{
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 16rpx;
+  position: relative;
+}
+.box .content .item .itemImgs image{
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 16rpx;
+}
+.box .content .item .itemImgs .txt{
+  width: 108rpx;
+  height: 50rpx;
+  background: #FFC514;
+  border-radius: 16rpx 0rpx 16rpx 0rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: #000000;
+}
+.box .content .item .itemTxt{
+  color: #000000;
+  font-size: 28rpx;
+  margin: 24rpx 0 8rpx;
+}

@@ -1,0 +1,182 @@
+<!--pages/index/index.wxml-->
+<view class="index, {{showAgreement?'indexs':''}}">
+  <!-- 头部导航 -->
+  <view class="indexTop">
+    <view class="swiper">
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
+        <block wx:for="{{swiperList}}" wx:key="index">
+          <swiper-item>
+            <view class="swiper-item" bindtap="goTests" data-index="{{index}}">
+              <image mode="widthFix" src="{{item.imgUrl}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper> 
+    </view>
+  </view>
+  <!-- 我要提问--用户列表 -->
+  <view class="userList">
+    <view class="userListBox">
+      <view class="title">导师阵容</view>
+      <swiper class="userListBoxTop">
+				<block wx:for="{{userList}}" wx:key="index">
+					<swiper-item>
+						<view class="userItem" bindtap="changeUser" data-id="{{item.id}}">
+							<image src="{{item.imgUrl}}"></image>
+							<view class="txt txts">{{item.name}} <text>{{item.company}}</text></view>
+              <view class="txt">{{item.title}}</view>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+      <view class="userListBoxB" bindtap="toAnswer">
+        <view>常见问题</view>
+        <view><image src="../../static/icon/arrowW.png"></image></view>
+      </view>
+    </view>
+  </view>
+  <!-- 试驾 -->
+  <!-- <view class="testDrive">
+    <view class="testDrives testDriveSign">
+      <view class="driveImg"><image src="https://redt.sixeco.com/polestar/Lark20210608-153703.png"></image></view>
+      <view class="driveR driveRs" bindtap="goJoin">
+         <text>我要报名</text>
+         <view><image src="../../static/icon/arrowB.png"></image></view>
+      </view>
+    </view>
+    <view class="testDrives testDriveBox">
+      <view class="driveImg"><image src="https://redt.sixeco.com/polestar/Lark20210608-153703.png"></image></view>
+      <view class="driveR" bindtap="drive">
+         <text>试驾</text>
+         <view class="driveRs"><text>极星Polestar</text><image src="../../static/icon/arrowB.png"></image></view>
+      </view>
+    </view>
+  </view> -->
+  <!-- 试驾 -->
+  <view class="newTestDrive">
+    <view class="item" bindtap="goJoin">
+      <image src="https://redt.sixeco.com/polestar/202106/964j6rtF.png"></image>
+      <view class="txtBox txtBoxs">
+        <text>我要报名</text>
+        <image src="/static/icon/arrowY.png"></image>
+      </view>
+    </view>
+    <view class="item" bindtap="drive">
+      <image src="https://redt.sixeco.com/polestar/202106/wqZCUr96.jpg"></image>
+      <!-- <view class="txtBoxs">
+        <view class="colors">试驾</view>
+        <view class="txtBox colors">
+           <text>极星Polestar</text>
+           <image src="/static/icon/arrowY.png"></image>
+        </view>
+      </view> -->
+      <view class="txtBox txtBoxs">
+        <text>我要试驾</text>
+        <image src="/static/icon/arrowY.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- content -->
+  <view class="content">
+    <!-- <teamList teamList="{{teamList}}"></teamList> -->
+  </view>
+
+  <!-- 协议 -->
+  <!-- <van-overlay show="{{ showAgreement }}" z-index="999">
+    <view class="wrapperBox">
+      <view class="wrapper">
+         <view class="close" bindtap="onClickHide">
+            <image src="/static/img/icon_close.png"></image>
+         </view>
+         <view class="content">
+            <view class="title">请阅读协议</view>
+            <view class="conBox">
+              <image mode="widthFix" src="https://redt.sixeco.com/polestar/202106/Snl2FhBk.png"></image>
+              <image mode="widthFix" src="https://redt.sixeco.com/polestar/202106/XCANrV3y.png"></image>
+              <image mode="widthFix" src="https://redt.sixeco.com/polestar/202106/nRrJHmve.png"></image>
+            </view>
+            <view class="agreementBox">
+               <image src="/static/img/icon_checked.png"></image>
+               <text>我已认真阅读协议，并同意协议内容</text>
+            </view>
+            <view class="btn" bindtap="changeTeam">
+               <text>去报名</text>
+               <image src="/static/icon/arrowW.png"></image>
+            </view>
+         </view>
+      </view>
+    </view>
+  </van-overlay> -->
+  <!-- 团队及个人 -->
+  <van-overlay show="{{ showTeam }}">
+    <view class="wrapperBox">
+      <view class="wrapper wrappers" style="height: 825rpx;">
+         <view class="close" bindtap="onTeamClickHide">
+            <image src="/static/img/icon_close.png"></image>
+         </view>
+         <view class="content cenBox">
+            <view class="title">报名方式</view>
+            <view class="btn" data-type="1" bindtap="goJoinUrl">
+              <text>个人报名</text>
+              <image src="/static/icon/arrowW.png"></image>
+            </view>
+            <view class="btn" data-type="0" bindtap="goJoinUrl">
+              <text>组建团队</text>
+              <image src="/static/icon/arrowW.png"></image>
+            </view>
+            <view class="txts" style="text-align:jusitfy;">
+                <view>*个人报名成功后，依然可以申请加入其他团队，成为队员。</view>
+                <view>*组建团队自动成为队长，可以邀请其他成员。每个团队最多五人。</view>
+                <view>*报名将在2个工作日审核完毕。审核通过后，可自由组队，并准备参赛作品的设计稿或demo，备注姓名和手机号，提交至polestarhackathon@163.com</view> 
+            </view>
+         </view>
+      </view>
+    </view>
+  </van-overlay>
+  <!-- 手机号授权 -->
+  <view wx:if="{{ isShow }}">
+    <phoneEmpower userInfo="{{userInfo}}" bind:cahngeEvent="changeEvents"></phoneEmpower>
+  </view>
+  <!-- <van-overlay show="{{ isShow }}">
+    <view class="wrapperBox">
+      <view class="wrapper">
+        <view class="top">
+          <image src="/static/img/logoC.png"></image>
+        </view>
+        <view class="btm">
+           <view class="txt">
+             <text>极星黑客松</text> 报名参与活动需要您点击授权使用微信绑定的手机号，用于登录/注册极星黑客松
+           </view>
+           <view class="btn">
+            <button hover-class="none" plain="true" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键获取手机号</button>
+           </view>
+        </view>
+      </view>
+    </view>
+  </van-overlay> -->
+  <view class="model" wx:if="{{showAgreement}}">
+    <view class="wrapperBox">
+      <view class="wrapper">
+         <view class="close" bindtap="onClickHide">
+            <image src="/static/img/icon_close.png"></image>
+         </view>
+         <view class="content">
+            <view class="title">请阅读协议</view>
+            <view class="conBox">
+              <image mode="widthFix" src="https://redt.sixeco.com/polestar/202106/Snl2FhBk.png"></image>
+              <image mode="widthFix" src="https://redt.sixeco.com/polestar/202106/XCANrV3y.png"></image>
+              <image mode="widthFix" src="https://redt.sixeco.com/polestar/202106/nRrJHmve.png"></image>
+            </view>
+            <view class="agreementBox">
+               <image src="/static/img/icon_checked.png"></image>
+               <text>我已认真阅读协议，并同意协议内容</text>
+            </view>
+            <view class="btn" bindtap="changeTeam">
+               <text>去报名</text>
+               <image src="/static/icon/arrowW.png"></image>
+            </view>
+         </view>
+      </view>
+    </view>
+  </view>
+</view>

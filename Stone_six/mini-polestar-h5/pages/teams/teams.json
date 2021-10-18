@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "teamList":"../../component/teamList/teamList",
+    "newTeam":"../../component/teams/teams"
+  },
+  "navigationBarTitleText": "团队"
+}

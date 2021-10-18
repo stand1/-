@@ -1,0 +1,9 @@
+<!--pages/route/join/join.wxml-->
+<view class="join">
+  <view class="joinBox">
+    <textarea placeholder="填写申请宣言" value="{{keys}}" bindinput="changeKeys"></textarea>
+  </view>
+  <view class="footer">
+    <view class="apply" bindtap="jionApply">发送申请</view>
+  </view>
+</view>

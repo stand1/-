@@ -1,0 +1,5 @@
+<!--pages/route/imgDetail/imgDetail.wxml-->
+<view class="imgDetail">
+   <image wx:if="{{isShow == 2}}" mode="widthFix" src="https://redt.sixeco.com/polestar/202106/y0sVLvFd.png"></image>
+   <image wx:if="{{isShow == 0}}" mode="widthFix" src="https://redt.sixeco.com/polestar/202106/yKzWqtK9.png"></image>
+</view>

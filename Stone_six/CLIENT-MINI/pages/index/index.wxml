@@ -1,0 +1,55 @@
+<!--pages/index/index.wxml-->
+<swiper class='swiperClass' indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots circular  interval="2000" duration="1000"  autoplay>
+  <block wx:for="{{bannerList}}" wx:key="*this">
+    <swiper-item bindtap="goAct" data-url="{{item.content}}">
+      <image src="{{item.imgUrl}}" class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" mode='aspectFill'></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="search_bar" bindtap="goSearch" style="top:{{statusBarHeight}}px;">
+  <image src="/static/img/search.png"></image>
+  <text>全民改装行动</text>
+</view>
+<view class="car_type_box">
+  <scroll-view scroll-x="true" style="width: 100%"
+    enhanced="true" paging-enabled="true" show-scrollbar="{{false}}">
+    <view class="scroll-view-box">
+      <view class="item-box"  wx:for="{{carTypeList}}" wx:key="index" data-id="{{item.carId}}" data-carname="{{item.carName}}" bindtap="goWatch">
+        <image mode="aspectFill" src="{{item.picUrl}}"></image>
+        <text>{{item.carName}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="title-bar">
+  <view class="title">最近使用</view>
+  <view class="right-option"  bindtap="moreGo">
+    <text>更多</text>
+    <image src="/static/img/arrow_right.png"></image>
+  </view>
+</view>
+<scroll-view class="recently-box" scroll-x="true" style="width: 100%"
+  enhanced="true" paging-enabled="true"  show-scrollbar="{{false}}">
+  <card wx:for="{{isUserlist}}" wx:key="index" width="384rpx" style="margin-left:32rpx;" favoriteType="1" obj="{{item}}"></card>
+  <!-- <view class="item-box"  wx:for="{{5}}" wx:key="index">
+    <image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/160125618074502.png"></image>
+    <view class="label"># 车型外观</view>
+    <view class="like">
+      <image src="/static/img/like_gray.png"></image>
+    </view>
+  </view> -->
+</scroll-view>
+
+
+<view class="title-bar">
+  <view class="title">{{'最新上传'}}</view>
+</view>
+<view style="margin-bottom:40px">
+  <recommend list="{{isNewlist}}" favoriteType="1"></recommend>
+</view>
+
+<view class="add" bindtap="openView">
+  +
+</view>
+<addCard isCard="{{isCard}}" bind:classfn="classfn"></addCard>

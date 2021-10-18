@@ -1,0 +1,14 @@
+ function changeLength(val,len=8) {
+// console.log(val,len,11111)
+   if (val) {
+     if (val.length > len) {
+       return val.slice(0, len)
+     } else {
+       return val
+     }
+   }
+
+ }
+ module.exports = {
+   changeLength: changeLength
+ }

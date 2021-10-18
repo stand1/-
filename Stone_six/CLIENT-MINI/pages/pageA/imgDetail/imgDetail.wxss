@@ -1,0 +1,45 @@
+/* pages/pageA/imgDetail/imgDetail.wxss */
+.imgDetail{
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+}
+.content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 94rpx 32rpx 60rpx;
+}
+.content image{
+  width: 686rpx;
+  height: 992rpx;
+  /* margin-bottom: 128rpx; */
+}
+.content video{
+  width: 686rpx;
+  height: 992rpx;
+  /* margin-bottom: 128rpx; */
+}
+.contentBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contentBtn .item{
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  margin-right: 104rpx;
+}
+.contentBtn .item image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-bottom: 20rpx;
+}
+.contentBtn .itemActive{
+  margin-right: 0rpx;
+}

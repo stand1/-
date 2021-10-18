@@ -1,0 +1,136 @@
+.banner_warp,
+.banner_warp .banner,
+.banner_warp .myImg {
+  height: 264rpx;
+  /* width: 100%; */
+  /* margin-top: 10rpx; */
+  /* padding: 0 15rpx; */
+}
+
+.myImg {
+  /* width: 100%; */
+  /* padding: 0 15rpx; */
+}
+
+.banner_warp {
+  margin-top: 10rpx;
+  /* position: relative; */
+  /* top: 10rpx; */
+  padding: 0 15rpx;
+}
+
+.banner_warp .banner_warp .li {
+  border-radius: 20rpx;
+  /* background:  rgba(255, 0, 0, 1) */
+  /* width: 100%;
+  overflow: hidden;
+  background:  rgba(255, 0, 0, 1) */
+}
+.li{
+  /* width: 100%; */
+  /* padding: 0 15rpx; */
+}
+/* .myImg {
+  width: 100%;
+  padding: 0 15rpx;
+} */
+/* .li {
+  width: 100%;
+} */
+
+.carType {
+  /* background:  rgba(255, 0, 0, 1); */
+  /* margin: 10rpx auto;
+  width: 100%;
+  overflow: hidden; */
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+  border: 1rpx solid orange;
+}
+
+/* .left{
+  float: 1;
+  height: 100%;
+  border: 1rpx solid green;
+} */
+.myItem {
+  /* float: left;
+  display: block;
+  margin: 10rpx;
+  width: 100rpx; */
+  /* height: 150rpx; */
+  /* background-color: blue; */
+  float: 1;
+  height: 100%;
+  width: 33.33333%;
+  border: 1rpx solid green;
+}
+
+.banner_warp .wx-swiper-dot {
+  /* width: 40rpx;
+  height: 6rpx; */
+  /* background: rgba(255, 255, 255, .2);  */
+  /* 可以在这里设置个背景图 */
+  /* border-radius: inherit; */
+}
+
+.banner_warp .wx-swiper-dot-active {
+  /* width: 40rpx;
+  height: 6rpx; */
+  /* background: #fff; */
+}
+
+.banner_warp image {
+  border-radius: 20rpx;
+  /* height: 264rpx; */
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.leftTitle {
+  float: left;
+  width: 10%;
+  /* background-color: blue; */
+}
+
+.searchBody {
+  width: 90%;
+  background-color: red;
+}
+.imgView{
+  margin-top: 280rpx;
+  height: 264rpx;
+  width: 100%;
+  background-color: red;
+}
+.imgtest{
+  /* padding: 0 15rpx;.imgtest */
+  /* width: 100%;
+  height: 100%; */
+  /* margin-left: 15rpx;
+  margin-right: 15rpx; */
+  /* padding: 0 15rpx; */
+  overflow: hidden;
+  /* width: 361rpx; */
+}
+van-image{
+  /* padding: 0 15rpx;.imgtest */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* margin-left: 15rpx;
+  margin-right: 15rpx; */
+  padding: 0 15rpx;
+  /* overflow: hidden; */
+  /* width: 361rpx; */
+}

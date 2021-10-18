@@ -1,0 +1,8 @@
+<!--component/switchBar/switchBar.wxml-->
+<view class="switchBar_container">
+    <view class="bg" bindtap="change">
+      <view class="btn {{isNew?'m_left':'m_right'}}" ></view>
+      <view class="hot {{isNew?'isSel':''}}">最热</view>
+      <view class="latest {{isNew?'':'isSel'}}">最新</view>
+    </view>
+  </view>

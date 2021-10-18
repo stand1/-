@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "imgListArray":"../../../components/imgList/imgList"
+  }
+}

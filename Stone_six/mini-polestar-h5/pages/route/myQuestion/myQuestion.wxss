@@ -1,0 +1,85 @@
+/* pages/route/myQuestion/myQuestion.wxss */
+.myQuestion{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+}
+.myQuestion .content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0;
+}
+.contentBox .item{
+  font-size: 20rpx;
+  color: #666;
+  padding: 20rpx 0 22rpx;
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+}
+.contentBox .item .itemT, .contentBox .item .itemB{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentBox .item .itemT .title{
+  width: 588rpx;
+  font-size: 28rpx;
+  color: #000000;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.noData{
+  font-size: 36rpx;
+  color: #d8d8d8;
+  text-align: center;
+  padding-top: 308rpx;
+}
+.noData .btn{
+  width: 400rpx;
+  height: 96rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 151rpx auto 0;
+}
+.noData .btn image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 29rpx;
+}
+.footer{
+  width: 750rpx;
+  height: 168rpx;
+  background: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: 2rpx solid #e2e3e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footerBtn{
+  width: 280rpx;
+  height: 96rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: bold;
+  color: #ffffff;
+}
+.footer .footerBtn image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 15rpx;
+}

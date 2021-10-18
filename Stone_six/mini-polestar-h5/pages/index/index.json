@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "teamList":"../../component/teamList/teamList",
+    "phoneEmpower": "../../component/phoneEmpower/phoneEmpower",
+    "van-overlay": "@vant/weapp/overlay/index"
+  }
+}

@@ -1,0 +1,86 @@
+.addCard {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0306_redt_fa%402x.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 99;
+}
+
+.addCard .box {
+  position: fixed;
+  bottom: 282rpx;
+  left: 0;
+  width: 100%;
+  color: #595858;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.addCard image {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.addCard .img,
+.video,
+.alt {
+  width: 128rpx;
+  height: 128rpx;
+  background: linear-gradient(200deg, #4B67F2 0%, #6A56F4 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+
+.video {
+  background: linear-gradient(200deg, #02B8CD 0%, #17D2C0 100%);
+}
+
+.alt {
+
+  background: linear-gradient(218deg, #F6584F 0%, #F78F63 100%);
+}
+
+.addCard .tit {
+  width: 128rpx;
+  text-align: center;
+}
+
+.addCard .close {
+  position: fixed;
+  bottom: 72rpx;
+  width: 64rpx;
+  height: 64rpx;
+  left: 50%;
+  margin-left: -32rpx;
+}
+
+.header {
+  position: absolute;
+  top: 162rpx;
+  margin: 0 38rpx 0 68rpx;
+}
+.header h1{
+  display: block;
+font-size: 56rpx;
+font-family: STSongti-SC-Bold, STSongti-SC;
+font-weight: bold;
+color: #4E4D4D;
+}
+.header .dep{
+  font-weight: 400;
+  color: #7B7B7B;
+  font-size: 32rpx;
+  margin-bottom: 68rpx;
+  margin-top: 14rpx;
+}

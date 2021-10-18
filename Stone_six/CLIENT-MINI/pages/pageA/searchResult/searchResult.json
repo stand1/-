@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "commCard":"../../../components/recommend/recommend"
+  },
+  "navigationBarTitleText": "搜索结果页"
+}

@@ -1,0 +1,31 @@
+<headers titleStr="名片海报"></headers>
+<view class="bg">
+  <view class="card">
+    <!-- 左上角 -->
+    <view class="userbg">
+      <image src="http://dashus.oss-cn-shenzhen.aliyuncs.com/DefaultImage/Game/20190313090409/完美9.png"></image>
+      <view class="info">
+        <view class="name">王磊</view>
+        <view class="title">销售顾问</view>
+      </view>
+      <view class="details myflex">
+        <image src="/icons/usercenter/phone@3x.png"></image>
+        <view class="title" style="margin-left:16rpx">136 9482 4093</view>
+      </view>
+      <view class="details myflex">
+        <image src="/icons/usercenter/phone@3x.png"></image>
+        <view class="title" style="margin-left:16rpx">广汽丰田深圳兆方店</view>
+      </view>
+      <view class="details myflex">
+        <image src="/icons/usercenter/address@3x.png"></image>
+        <view class="title" style="margin-left:16rpx">广东省深圳市南山区丽水路1052号</view>
+      </view>
+    </view>
+    <view style="width: 54rpx;height: 8rpx;background: #3366FF;margin-left:48rpx;margin-top:130rpx"></view>
+    <view class="classify">长按识别二维码 收下名片</view>
+    <!-- 二维码 -->
+    <view class="kimage"></view>
+  </view>
+  
+  <view class="share">保存名片后分享</view>
+</view>

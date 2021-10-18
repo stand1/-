@@ -1,0 +1,43 @@
+<!--pages/login/login.wxml-->
+<view class="login" style="font-size: 32rpx;">
+  <view class="loginImg"><image src="/static/img/logo.png"></image></view>
+  <view style="margin: 20rpx 30rpx;">
+    【极星黑客松】是由全球高性能电动汽车品牌极星发起，联合华为、科大讯飞共同举办的创客马拉松赛事。针对极星2电动汽车的车机系统，与全国的创客们来一场最酷的技术与设计的狂欢。
+  </view> 
+  <view style="margin: 20rpx 30rpx;">
+    6/21-7/18为比赛招募期。参赛者在“HMI交互”、“智能座舱”、“智能出行”，三组命题中任选一组，基于极星的车机系统，设计1款App并开发demo。
+  </view>
+  <view style="margin: 20rpx 30rpx;">
+    开发者们可通过小程序查看了解活动详情，并进行报名和自由组队。 
+  </view>
+  <view style="margin: 20rpx 30rpx;">
+    经由导师审核履历和创意后，筛选出线下决赛入围名单。入围者将参加线下为期两天的决赛，对自己提出的创意进行最后的设计和开发，评委全程指导，并根据最终的作品进行评审。
+  </view>
+  <!-- <view class="loginBgImg" style='height:{{windowHeight}}rpx'><image src="/static/img/login_bg.png"></image></view> -->
+  <view class="weChat" style="padding: 20rpx 0 40rpx 0;margin: 0 auto;">
+    <!-- <image src="/static/img/WeChatLogo.png"></image> -->
+    <view class="weChatTxt weChatTxtBg" bindtap="getUserProfile" wx:if="{{isShow == 1}}" style="margin: 0 auto;">微信授权登录</view>
+    <view class="weChatTxt" bindtap="go">取消</view>
+    <!-- <view class="btn" wx:if="{{isShow == 2}}">
+      <button hover-class="none" plain="true" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键获取手机号</button>
+    </view> -->
+  </view>
+  <!-- 手机号授权 -->
+  <!-- <van-overlay show="{{ isShow == 2 }}">
+    <view class="wrapperBox">
+      <view class="wrapper">
+        <view class="top">
+          <image src="/static/img/logoC.png"></image>
+        </view>
+        <view class="btm">
+           <view class="txt">
+             <text>极星黑客松</text> 报名参与活动需要您点击授权使用微信绑定的手机号，用于登录/注册极星黑客松
+           </view>
+           <view class="btn">
+            <button hover-class="none" plain="true" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键获取手机号</button>
+           </view>
+        </view>
+      </view>
+    </view>
+  </van-overlay> -->
+</view>

@@ -1,0 +1,61 @@
+/* pages/route/questions/questions.wxss */
+.questions{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0;
+}
+.questions .inp{
+  width: 690rpx;
+  height: 100rpx;
+  background: #f7f7f7;
+  margin-bottom: 24rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.questions .inp .picker{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questions .inp .picker .colors{
+  color: #666;
+}
+.questions .inp .inpImg{
+  width: 24rpx;
+  height: 24rpx;
+}
+.questions .inp input{
+  height: 100rpx;
+}
+.questions .inps{
+  height: 416px;
+}
+.questions .inps textarea{
+  height: 416rpx;
+  box-sizing: border-box;
+  padding: 30rpx 0rpx;
+}
+.footer{
+  width: 750rpx;
+  height: 168rpx;
+  background: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2rpx solid #e2e3e5;
+}
+.footer view{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  background: #53565a;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: bold;
+  color: #ffffff;
+}

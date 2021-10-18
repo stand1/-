@@ -1,0 +1,136 @@
+/* pages/recommend/recommend.wxss */
+.recomm{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32rpx 0rpx 32rpx 32rpx;
+}
+.recomm .header{
+  width: 100%;
+  padding-right: 32rpx;
+  box-sizing: border-box;
+}
+swiper{
+  width: 100%;
+  height: 326rpx;
+}
+.swiper-item{
+  width: 100%;
+  height: 326rpx;
+  box-sizing: border-box;
+}
+.swiper-item image{
+  width: 686rpx;
+  height: 326rpx;
+  border-radius: 24rpx;
+}
+.tempType{
+  width: 100%;
+  box-sizing: border-box;
+  padding:64rpx 0rpx;
+}
+.title{
+  font-size: 44rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16rpx;
+}
+.title .titleRight{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #BDBEC7;
+}
+.title .titleRight image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 4rpx;
+}
+.tempType .content{
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 32rpx;
+}
+.recently-box{
+  width: 100%;
+  height: 128rpx;
+  white-space: nowrap;
+}
+.recently-box .item-box{
+  display: inline-block;
+  width: 240rpx;
+  height: 128rpx;
+  position: relative;
+  margin-right: 24rpx;
+}
+.recently-box .item-box image{
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+.recently-box .item-box .item-box-txt{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.eventPoster{
+  width: 100%;
+  box-sizing: border-box;
+}
+.eventPoster .content{
+  margin:48rpx 0 60rpx;
+}
+.event-box{
+  width: 100%;
+  height: 480rpx;
+  white-space: nowrap;
+}
+.event-box .item-box{
+  display: inline-block;
+  width: 384rpx;
+  height: 480rpx;
+  position: relative;
+  margin-right: 40rpx;
+}
+.event-box .item-box image{
+  width: 100%;
+  height: 100%;
+  border-radius: 48rpx;
+}
+.businessCard{
+  width: 100%;
+  box-sizing: border-box;
+}
+.businessCard .content{
+  margin:48rpx 0 60rpx;
+}
+.businessCard-box{
+  width: 100%;
+  height: 234rpx;
+  white-space: nowrap;
+}
+.businessCard-box .item-box{
+  display: inline-block;
+  width: 384rpx;
+  height: 234rpx;
+  position: relative;
+  margin-right: 40rpx;
+}
+.businessCard-box .item-box image{
+  width: 100%;
+  height: 100%;
+  border-radius: 28rpx;
+}

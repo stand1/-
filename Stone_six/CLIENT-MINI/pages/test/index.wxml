@@ -1,0 +1,9 @@
+<view class="modals modals-bottom-dialog" bindtap="hideModal" wx:if="{{value}}">
+
+  <view class="modals-cancel"></view>
+
+  <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}"></view>
+
+</view>
+
+<button bindtap="showModal">点我</button>

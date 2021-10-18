@@ -1,0 +1,25 @@
+<!--pages/detail/activityDetail/activityDetails.wxml-->
+<view class="activityDetails">
+  <view class="header">
+     <view class="title">{{datas.title}}</view>
+     <text>{{datas.beginTime}} ~ {{datas.endTime}}</text>
+  </view>
+  <view class="content">
+    <image class="contentImg" mode="widthFix" wx:for="{{datas.contentImgs}}" wx:key="index" src="{{item}}"></image>
+    <view class="txt">{{datas.description}}</view>
+  </view>
+  <view class="bottom">
+    <view class="bottomL">
+      <view class="txt" wx:if="{{datas.status == 0}}">预告</view>
+      <view class="txt txtA" wx:if="{{datas.status == 1}}">进行中</view>
+      <view class="txt txtB" wx:if="{{datas.status == 2}}">已结束</view>
+      <!-- <image src="/static/img/icon_comment.png"></image> -->
+    </view>
+    <view class="bottomR">
+      <view>
+        <button open-type="share" hover-class="none" plain="true" size="mini">分享</button>
+      </view>
+      <!-- <image src="/static/img/icon_fabulous.png"></image> -->
+    </view>
+  </view>
+</view>

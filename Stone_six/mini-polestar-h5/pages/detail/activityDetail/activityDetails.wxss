@@ -1,0 +1,90 @@
+/* pages/detail/activityDetail/activityDetails.wxss */
+.activityDetails{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #6d7278;
+  padding-bottom: 200rpx;
+}
+.activityDetails .header{
+  margin: 40rpx 0;
+  padding-left: 38rpx;
+  box-sizing: border-box;
+}
+.activityDetails .header .title{
+  font-size: 36rpx;
+  color: #000000;
+  font-weight: bold;
+}
+.content{
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 28rpx;
+  color: #000000;
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+}
+.content .contentImg{
+  width: 672rpx;
+  background: #d8d8d8;
+  margin:0 auto 20rpx;
+  display: flex;
+}
+.content .txt{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx 41rpx 38rpx;
+}
+
+.bottom{
+  width: 100%;
+  height: 168rpx;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2rpx solid #e2e3e5;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0 40rpx 0 34rpx;
+}
+.bottomL{
+  display: flex;
+  align-items: center;
+}
+.bottomL .txt{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #333333;
+  color: #fff;
+  font-size: 28rpx;
+  margin-right: 48rpx;
+}
+.bottomL .txtA{
+  background-color: rgba(255,117,0,1);
+}
+.bottomL .txtB{
+  background-color: rgba(109,114,120,1);
+}
+.bottomL image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.bottomR{
+  display: flex;
+  align-items: center;
+}
+.bottomR button{
+  border: none;
+  color: #ff7500;
+  font-size: 24rpx;
+}
+.bottomR image{
+  width: 48rpx;
+  height: 40rpx;
+}

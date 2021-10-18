@@ -1,0 +1,235 @@
+/* pages/route/myTeam/myTeam.wxss */
+.myTeam{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #999999;
+  padding-bottom: 200rpx;
+}
+.myTeamTop{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 50rpx 0 42rpx 44rpx;
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+}
+.myTeamTop .userImg{
+  width: 80rpx;
+  height: 80rpx;
+  background: #d8d8d8;
+  border-radius: 50%;
+  margin-right: 24rpx;
+}
+.userImg image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.myTeamTopL .title{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 8rpx;
+  display: flex;
+  align-items: center;
+}
+.myTeamTopL .title .titleCaptain{
+  width: 80rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  background: #ff7500;
+  border-radius: 4rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #ffffff;
+  margin-left: 24rpx;
+}
+.myTeamTopL text{
+  display: flex;
+}
+.myTeamTitle{
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+  padding: 50rpx 30rpx 40rpx;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+  padding-bottom: 40rpx;
+}
+.nav .item:first-child{
+  margin-right: 48rpx;
+}
+.nav .active{
+  border-bottom: 4rpx solid #ff7500;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: 600;
+  color: #000000;
+}
+.content{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx 30rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+}
+.content .title{
+  font-size: 48rpx;
+  font-weight: bold;
+}
+.content .imgList{
+  margin: 24rpx 0 0;
+}
+.content .imgList image{
+  width: 690rpx;
+  margin-bottom: 24rpx;
+}
+.footer{
+  width: 750rpx;
+  height: 168rpx;
+  background: #ffffff;
+  border-top: 2rpx solid #e2e3e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.footer .btn{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  border: 2rpx solid #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  margin-right: 48rpx;
+}
+.footer .btn:last-child{
+  margin-right: 0;
+}
+.van-popup--center{
+  border-radius: 0!important;
+}
+.van-dialog__message-text{
+  font-weight: bold;
+  color: #000;
+}
+/* 遮罩层 */
+.wrapperBox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapperBox .wrapper{
+  width: 638rpx;
+  background: #ffffff;
+  position: relative;
+}
+.wrapperBox .wrappers{
+  width: 638rpx;
+}
+.wrapperBox .wrapper .close{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-end;
+}
+.wrapperBox .wrapper .close image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.wrapper .content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 60rpx 0 60rpx;
+  color: #000;
+}
+.wrapper .cenBox{
+  padding-top: 110rpx;
+}
+.wrapper .cenBox .title{
+  margin-bottom: 80rpx;
+}
+.wrapper .content .title{
+  font-size: 48rpx;
+  text-align: center;
+}
+.wrapper .content .conBox{
+  font-size: 28rpx;
+  color: #333333;
+  width: 508rpx;
+  height: 70%;
+  margin: 30rpx auto 20rpx;
+}
+.wrapper .content .conBox .item{
+  width: 522rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .content .conBox .item image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.wrapper .content .conBox .item .itemL{
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: bold;
+  color: #ff7500;
+}
+.wrapper .content .conBox .item .itemL image{
+  width: 72rpx;
+  height: 72rpx;
+  background: #d8d8d8;
+  margin-right: 20rpx;
+}
+.wrapper .content .btnBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 72rpx;
+}
+.wrapper .content .btn{
+  width: 240rpx;
+  height: 96rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+.wrapper .content .btn:first-child{
+  margin-right: 40rpx;
+  border: 2rpx solid #333333;
+  color: #000000;
+  background: #fff;
+}

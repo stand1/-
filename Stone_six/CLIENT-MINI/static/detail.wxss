@@ -1,0 +1,255 @@
+.detail swiper image {
+  width: 100%;
+  height: 370px;
+}
+
+.detail .return {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  left: 10rpx;
+  z-index: 3;
+  /* top: 4%; */
+}
+
+.detail .useCard image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.detail .useCard {
+  display: flex;
+  align-items: center;
+  padding: 36rpx 32rpx;
+}
+
+.detail .useCard .tit {
+  font-size: 30rpx;
+  color: #3D3D3D;
+}
+
+.detail .useCard .time {
+  color: #999999;
+  font-size: 24rpx;
+}
+
+.detail .dep {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #3D3D3D;
+  line-height: 56rpx;
+  padding: 36rpx 32rpx;
+}
+
+.detail .more {
+  font-size: 28rpx;
+  color: #5194E3;
+  text-align: center;
+}
+
+.detail .status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 64rpx;
+}
+
+.detail .status .like {
+  margin-right: 114rpx;
+
+}
+
+.detail .status .name {
+  text-align: center;
+  color: #999999;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+}
+
+.detail .status .name text {
+  color: #000000;
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+
+.detail .status .like .img {
+  width: 192rpx;
+
+}
+
+.detail .status .img {
+  height: 92rpx;
+  border-radius: 53rpx;
+  background: #F2F3F5;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.detail .status .remove .img {
+  width: 92rpx;
+
+}
+
+.detail .status image {
+  width: 56rpx;
+  height: 56rpx;
+  margin: auto;
+}
+
+.detail .line {
+  width: 100%;
+  height: 20rpx;
+  background: #F4F4F4;
+}
+
+.detail .about {
+  padding: 40rpx 32rpx;
+}
+
+.detail .about .desp {
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.detail .about .card {
+  display: flex;
+  align-items: center;
+  /* width: 686rpx; */
+  height: 138rpx;
+  background: #FFFFFF;
+  padding: 16rpx;
+  box-shadow: 0px 2rpx 4rpx 0px rgba(0, 0, 0, 0.3), 0px 2rpx 4rpx 0px rgba(0, 0, 0, 0.04), 0px 4rpx 16rpx 0px rgba(0, 0, 0, 0.09);
+  border-radius: 32rpx;
+  margin: 32rpx auto;
+}
+
+.detail .about .card image {
+  width: 160rpx;
+  height: 106rpx;
+  border-radius: 24rpx;
+  margin-right: 20rpx;
+}
+
+.detail .about .card .tit {
+  color: #010101;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.detail .about .card .desp {
+  width: 466rpx;
+}
+
+.detail .about .video {
+  margin: 32rpx auto;
+  /* height: 156rpx; */
+  background: #280BDD;
+  border-radius: 48rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx 40rpx;
+}
+
+.detail .about .video .lf image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+
+}
+
+.detail .about .video .lf {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.detail .about .video .lf .img {
+  position: relative;
+  margin-right: 20rpx;
+}
+
+.detail .about .video .lf .img .tag {
+  color: #fff;
+  background-color: #BC252A;
+  font-size: 16rpx;
+  width: 64rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  border-radius: 28rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -32rpx;
+}
+
+.detail .hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail .video .lf .tit {
+  width: 336rpx;
+  font-size: 28rpx;
+
+}
+
+.detail .video .lf .desp {
+  font-size: 24rpx;
+}
+
+.detail .video .rt {
+  width: 120rpx;
+  height: 56rpx;
+  background: #FFC514;
+  border-radius: 28rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 56rpx;
+}
+
+.detail .dWatch {
+  position: relative;
+  margin-bottom: 64rpx;
+}
+.detail .header image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.detail .header {
+  padding-left: 24rpx !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+}
+.detail .dWatch image {
+  width: 686rpx;
+  height: 240rpx;
+  background: linear-gradient(188deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.61) 100%);
+  box-shadow: 0px 2rpx 4rpx 0px rgba(0, 0, 0, 0.3), 0px 2rpx 4rpx 0px rgba(0, 0, 0, 0.04), 0px 4rpx 16rpx 0px rgba(0, 0, 0, 0.09);
+  border-radius: 48rpx;
+  margin: auto;
+  display: block;
+}
+
+.detail .dWatch .title {
+  position: absolute;
+  bottom: 40rpx;
+  left: 60rpx;
+}
+.detail .dWatch .title .tit{
+  color: #fff;
+  font-size: 48rpx;
+}
+.detail .dWatch .title .desp{
+  color: #8B8B8B;
+  font-size: 24rpx;
+  width: 304rpx;
+}

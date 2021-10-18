@@ -1,0 +1,7 @@
+{
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "ab-label-flow":"/components/ab-label-flow/ab-label-flow",
+    "headers":"../../components/tabHeader/tabHeader"
+  }
+}

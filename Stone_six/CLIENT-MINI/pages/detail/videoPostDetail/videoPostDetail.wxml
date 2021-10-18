@@ -1,0 +1,93 @@
+<view class="detail">
+  <view class="videobg1" ></view>
+  <view class="videobg2"></view>
+  <image src="/static/img/return.png" class="return" style="top:{{top}}rpx"></image>
+<video autoplay controls src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/1602576024560797017968_1_0.mp4" poster="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/1602576024560797017968_1_0.mp4?x-oss-process=video/snapshot,t_10,f_jpg,w_375,h_0,m_fast"></video>
+
+  <view class="useCard">
+    <image
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/15793271872057E6A241F-8446-4D47-8876-AC2B73958EF0.jpeg">
+    </image>
+    <view class="rt">
+      <view class="tit">谢谢谢谢</view>
+      <view class="time">2020/01/01 9345次浏览</view>
+    </view>
+  </view>
+
+  <view class="dep">
+    XXXXXXX
+  </view>
+  <view class="more">查看全部内容</view>
+
+  <view class="status">
+    <view class="like">
+      <view class="img">
+        <image src="/static/img/iconZan.png"></image>
+      </view>
+
+      <view class="name"><text>23</text>收藏</view>
+    </view>
+    <view class="remove">
+      <view class="img">
+        <image src="/static/img/random_while.png"></image>
+      </view>
+
+      <view class="name">转发</view>
+    </view>
+  </view>
+  <!-- <view class="line"></view> -->
+
+  <view class="about">
+    <view class="desp">文章里提到的相关链接</view>
+
+    <view class="card">
+      <image
+        src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/1602493424945Lark20201012-170033.jpeg">
+      </image>
+      <view class="rt">
+        <view class="tit">全新雷凌</view>
+        <view class="desp hidden">最近东京车展，丰田展出了ssssssssssssadasdasdsadsadadadad</view>
+      </view>
+    </view>
+
+    <view class="video">
+      <view class="lf">
+        <view class="img">
+          <image
+            src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/1602493424945Lark20201012-170033.jpeg">
+          </image>
+          <view class="tag">直播中</view>
+        </view>
+        <view>
+          <view class="tit hidden">买哪款更合适？主播帮你…</view>
+          <view class="desp">车手课堂</view>
+        </view>
+
+      </view>
+
+      <view class="rt">看直播</view>
+    </view>
+  </view>
+
+  <view class="title-bar">
+    <view class="title">关联应用</view>
+    <view class="right-option">
+    </view>
+  </view>
+
+  <view class="dWatch">
+    <image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/1602493424945Lark20201012-170033.jpeg"></image>
+
+    <view class="title">
+      <view class="tit">3D看车</view>
+      <view class="desp hidden">通过3维技术真是体验车辆…</view>
+    </view>
+  </view>
+
+  <view class="title-bar">
+    <view class="title">相关推荐</view>
+    <view class="right-option">
+    </view>
+  </view>
+  <recommend></recommend>
+</view>

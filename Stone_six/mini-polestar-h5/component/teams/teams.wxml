@@ -1,0 +1,77 @@
+<!--component/teams/teams.wxml-->
+<view class="teams">
+  <view class="titles" wx:if="{{myTeam.length != 0}}">已加入的团队</view>
+  <view class="contentBox">
+    <view class="item" bindtap="checkDetail" wx:for="{{myTeam}}" wx:key="index" data-id="{{item.id}}">
+      <view class="itemTop">
+         <view class="itemTopL">
+           <image src="{{item.avatar}}"></image>
+           <view class="itemTopLtxt">
+             <view class="title">{{item.teamName}}</view>
+             <view class="captainBox">
+               <text class="captain">队长</text>
+               <text>{{item.captain.nickName}}</text>
+             </view>
+           </view>
+         </view>
+         <view class="itemTopR" wx:if="{{item.teamWork.workType == 0}}">HMI</view>
+         <view class="itemTopR" wx:if="{{item.teamWork.workType == 1}}">智能出行</view>
+         <view class="itemTopR" wx:if="{{item.teamWork.workType == 2}}">智能座舱</view>
+      </view>
+      <view class="itemCent">
+        <view class="title txtShow">{{item.worksName}}</view>
+        <view class="itemCentImg">
+          <image mode="aspectFill" src="{{item.teamWork.imgUrl}}"></image>
+        </view>
+        <view class="txtShow">{{item.teamWork.workContent}}</view>
+      </view>
+      <view class="itemB">
+         <view class="itemBL">
+           <view class="imgList" wx:for="{{item.userWorkVos}}" wx:key="index" wx:for-item="x">
+             <image src="{{x.avatar}}"></image>
+           </view>
+           <view> <text>{{item.userWorkVos.length}}</text> 人参与</view>
+         </view>
+         <view class="itemBR" wx:if="{{item.teamApplyingStatus == 0}}">申请中</view>
+         <view class="itemBR" wx:if="{{item.teamApplyingStatus == 1}}">已加入</view>
+         <view class="itemBR" wx:if="{{item.teamApplyingStatus == 2}}">拒绝</view>
+         <view class="itemBR" wx:if="{{item.teamApplyingStatus == 3 || item.teamApplyingStatus == 5 || item.teamApplyingStatus == 6}}">已退出</view>
+         <view class="itemBR" wx:if="{{item.teamApplyingStatus == 4}}">已取消</view>
+      </view>
+    </view>
+  </view>
+  <view class="titles" wx:if="{{teamList.length != 0}}">队伍申请</view>
+  <view class="contentBox">
+    <view class="item" wx:for="{{teamList}}" wx:key="index" data-id="{{item.id}}">
+      <view class="itemTop">
+         <view class="itemTopL">
+           <image src="{{item.userWorkVo.avatar}}"></image>
+           <view class="itemTopLtxt">
+             <view>
+               <text>{{item.userWorkVo.nickName}}</text>
+             </view>
+           </view>
+         </view>
+         <view class="itemTopR" wx:if="{{item.teamWork.workType == 0}}">HMI</view>
+         <view class="itemTopR" wx:if="{{item.teamWork.workType == 1}}">智能出行</view>
+         <view class="itemTopR" wx:if="{{item.teamWork.workType == 2}}">智能座舱</view>
+      </view>
+      <view class="itemCent">
+        <view class="title txtShow">个人简介</view>
+        <view class="itemCentImg">
+          <image mode="aspectFill" src="{{item.userWorkVo.resume.imgResumeUrl}}"></image>
+        </view>
+        <view class="txtShow">{{item.userWorkVo.resume.resumeDescription}}</view>
+      </view>
+      <view class="itemB">
+         <view class="itemBL">
+           <view class="itemBLApply">新的申请</view>
+         </view>
+         <view class="itemBR">
+           <view class="refuse" bindtap="changeJoin" data-type="2" data-id="{{item.teamId}}" data-joinuserid="{{item.userId}}">拒绝</view>
+           <view bindtap="changeJoin" data-type="1" data-id="{{item.teamId}}" data-joinuserid="{{item.userId}}">同意</view>
+         </view>
+      </view>
+    </view>
+  </view>
+</view>

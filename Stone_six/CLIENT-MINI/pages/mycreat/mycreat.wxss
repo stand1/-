@@ -1,0 +1,98 @@
+.page {
+  /* background: #F6F8FC; */
+}
+
+.sort {
+  margin-left: 32rpx;
+  margin-top: 24rpx;
+  width: 72rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #9B9B9B;
+  display: flex;
+  /* 居中对其div内的任何元素，水平对齐 */
+  align-items: center;
+}
+.sort image{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.set {
+  /* margin-right: 32rpx; */
+  display: flex;
+  /* 居中对其div内的任何元素，水平对齐 */
+  align-items: center;
+  float: right;
+  margin-top: -34rpx;
+  width: 167rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #A7A7AA;
+  /* background-color: red; */
+}
+.set image{
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  /* margin: 20rpx; */
+  margin: 20rpx 0 32rpx 32rpx;
+  overflow: hidden;
+}
+
+.left {
+  width: 326rpx;
+}
+
+.right {
+  width: 326rpx;
+  margin-left: 34rpx;
+}
+
+.pic {
+  border-radius: 16rpx;
+  width: 326rpx;
+  margin-bottom: 20rpx;
+}
+
+.tag {
+  /* position: relative;
+  margin-top: 0; */
+  margin-left: 0;
+  width: 108rpx;
+  height: 50rpx;
+  background: #FFC514;
+  border-radius: 0px 0px 19rpx 0px;
+  /* 文字垂直水平居中*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+}
+
+.time {
+  margin-left: 14rpx;
+  width: 130rpx;
+  height: 50rpx;
+  background: #000000;
+  border-radius: 25rpx;
+  opacity: 0.59;
+  color: white;
+  /* 文字垂直水平居中*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+}

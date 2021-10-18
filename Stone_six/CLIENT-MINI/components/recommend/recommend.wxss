@@ -1,0 +1,7 @@
+.card{
+  column-count: 2;
+  column-gap: 0.5;
+  padding: 0 32rpx;
+  /* padding-left: 30rpx;
+  padding-right: 30rpx; */
+}

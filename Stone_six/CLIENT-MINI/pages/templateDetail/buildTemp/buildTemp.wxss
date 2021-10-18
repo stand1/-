@@ -1,0 +1,128 @@
+/* pages/templateDetail/buildTemp/buildTemp.wxss */
+.buildTemp{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: #000;
+}
+.buildTemp .content{
+  width: 100%;
+  box-sizing: border-box;
+}
+.content_top{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 50rpx 112rpx 54rpx;
+}
+.content_top .content_top_left{
+  display: flex;
+  align-items: center;
+}
+.content_top_left view{
+  margin-right: 52rpx;
+  display: flex;
+  align-items: centera;
+}
+.content view text{
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(255,255,255,.6);
+}
+.content_top_left image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 14rpx;
+}
+.content_top .content_top_right{
+  width: 108rpx;
+  height: 50rpx;
+  background: #3366FF;
+  border-radius: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content_img{
+  width: 580rpx;
+  height: 816rpx;
+  position: relative;
+  margin: 0 auto;
+}
+.content .content_img image{
+  width: 580rpx;
+  height: 816rpx;
+}
+.content .content_img .img_box{
+  width: 580rpx;
+  height: 816rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.content .content_img .img_box image{
+  width: 580rpx;
+  height: 816rpx;
+}
+.content_footer{
+  padding: 124rpx 0 116rpx;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_footer .item{
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  text-align: center;
+}
+.content_footer .item text{
+  color: #FFFFFF;
+}
+.content_footer .items{
+  margin: 0 110rpx;
+}
+.content_footer .item .imgs{
+  width: 128rpx;
+  height: 128rpx;
+  background: #191C24;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.content_footer .item .imgs image{
+  width: 68rpx;
+  height: 68rpx;
+}
+.content_footer .items .imgs image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.content_footer .newItem{
+  width: 360rpx;
+  height: 128rpx;
+  background: #191C24;
+  border-radius: 64rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.content_footer .newItem image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 24rpx;
+}

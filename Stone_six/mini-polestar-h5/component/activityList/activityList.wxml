@@ -1,0 +1,22 @@
+<!--component/activityList/activityList.wxml-->
+<view class="activityList">
+  <view class="item" bindtap="goDetail" wx:for="{{activityList}}" wx:key="index" data-id="{{item.id}}">
+    <view class="itemTop">
+      <view class="itemTopL">
+        <view class="title">{{item.title}}</view>
+        <view>{{item.beginTime}} ~ {{item.endTime}}</view>
+      </view>
+      <view class="itemTopR">
+         <view class="txtBox notice" wx:if="{{item.status == 0}}">预告</view>
+         <view class="txtBox conduct" wx:if="{{item.status == 1}}">进行中</view>
+         <view class="txtBox end" wx:if="{{item.status == 2}}">已结束</view>
+      </view>
+    </view>
+    <view class="itemCent">
+      <image mode="aspectFill" src="{{item.imgUrl}}"></image>
+    </view>
+    <view class="itemB">
+      {{item.description}}
+    </view>
+  </view>
+</view>

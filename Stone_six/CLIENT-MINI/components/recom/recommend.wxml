@@ -1,0 +1,84 @@
+<!--pages/recommend/recommend.wxml-->
+<view class="recomm">
+	<!-- 轮播 -->
+	<view class="header">
+		<swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
+			<block wx:for="{{navList}}" wx:key="*this">
+				<swiper-item>
+					<view class="swiper-item">
+						<image src="{{item}}"></image>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 模板类型 -->
+	<view class="tempType">
+		<view class="title">
+			<text>模版类型</text>
+			<!-- <view class="titleRight">
+				<text>更多</text>
+				<image src="/static/img/arrow_right.png"></image>
+			</view> -->
+		</view>
+		<view class="content">
+			<scroll-view class="recently-box" scroll-x="true" style="width: 100%" enhanced="true" paging-enabled="true"  scroll-into-view="{{toView}}">
+				<view class="item-box" wx:for="{{navTempList}}" wx:key="index" bindtap="changePoster" data-i="{{index}}">
+					<image src="{{item.image}}"></image>
+					<view class="item-box-txt">{{item.name}}</view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+	<!-- 活动海报 -->
+	<view class="eventPoster">
+		<view class="title">
+			<text>活动海报</text>
+			<view class="titleRight">
+				<text>更多</text>
+				<image src="/static/img/arrow_right.png"></image>
+			</view>
+		</view>
+		<view class="content">
+			<scroll-view class="event-box" scroll-x="true" style="width: 100%" enhanced="true" paging-enabled="true"  scroll-into-view="{{toView}}">
+				<view class="item-box" wx:for="{{5}}" wx:key="index">
+					<image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/160125618074502.png"></image>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+  <!-- 营销 H5 -->
+	<view class="eventPoster">
+		<view class="title">
+			<text>营销 H5</text>
+			<view class="titleRight">
+				<text>更多</text>
+				<image src="/static/img/arrow_right.png"></image>
+			</view>
+		</view>
+		<view class="content">
+			<scroll-view class="event-box" scroll-x="true" style="width: 100%" enhanced="true" paging-enabled="true"  scroll-into-view="{{toView}}">
+				<view class="item-box" wx:for="{{5}}" wx:key="index">
+					<image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/160125618074502.png"></image>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+  <!-- 个人名片 -->
+	<view class="businessCard">
+		<view class="title">
+			<text>个人名片</text>
+			<view class="titleRight">
+				<text>更多</text>
+				<image src="/static/img/arrow_right.png"></image>
+			</view>
+		</view>
+		<view class="content">
+			<scroll-view class="businessCard-box" scroll-x="true" style="width: 100%" enhanced="true" paging-enabled="true"  scroll-into-view="{{toView}}">
+				<view class="item-box" wx:for="{{5}}" wx:key="index">
+					<image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/160125618074502.png"></image>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+</view>

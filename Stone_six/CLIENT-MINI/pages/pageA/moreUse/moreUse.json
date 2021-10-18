@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "recommend":"../../../components/recommend/recommend"
+  },
+  "navigationBarTitleText": "最近使用",
+  "navigationStyle": "default"
+}

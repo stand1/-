@@ -1,0 +1,57 @@
+<!--pages/detail/teamDetail/teamDetail.wxml-->
+<view class="teamDetails">
+  <view class="header">
+    <view class="headerL">
+      <view class="item" bindtap="goMyTeam" wx:for="{{datas.userWorkVos}}" wx:key="index" data-userId="{{item.id}}" data-teamId="{{datas.id}}">
+         <image src="{{item.avatar}}"></image>
+         <view class="txt">{{item.nickName}}</view>
+      </view>
+    </view>
+    <view class="headerR">
+      <button open-type="share" hover-class="none" plain="true" size="mini">分享</button>
+    </view>
+  </view>
+  <view class="teamBox">
+    <image class="teamImgs" src="{{datas.avatar}}"></image>
+    <view class="teamBoxs">
+      <view class="title">{{datas.teamName}}</view>
+      <view class="txt, {{isShow?'':'txtActive'}}">{{datas.description}}</view>
+      <view class="isShow" bindtap="changeShow">{{isShow?'收起':'展开'}}</view>
+    </view>
+  </view>
+  <view class="teamContent">
+    <view class="teamTxt">招募要求</view>
+    <view class="teamTxt">{{datas.projectDesc}}</view>
+    <view class="teamTxt">{{isDetail?'作品':'我的创意'}}</view>
+    <view class="title">{{datas.teamWork.workName}}</view>
+    <view class="teamTxt">{{datas.teamWork.workContent}}</view>
+    <view class="imgList" wx:for="{{datas.teamWork.imgUrls}}" wx:key="index">
+      <image mode="widthFix" src="{{item}}"></image>
+    </view>
+    <view class="enclosure">
+      <!-- <view>附件</view>
+      <view class="enclosureList">
+        <view class="item">作品.PDF</view>
+      </view> -->
+    </view>
+  </view>
+  <view class="footer">
+    <view class="footerBox" wx:if="{{datas.teamApplyStatus != 0 && datas.teamApplyStatus != 1 && datas.teamApplyStatus != 101}}">
+      <view class="footerL">
+        <!-- <view class="footerLFabulous">
+          <image src="/static/img/icon_comment.png"></image>
+          <text>350</text>
+        </view>
+        <image src="/static/img/icon_fabulous.png"></image> -->
+      </view>
+      <view class="footerR" data-teamId="{{datas.id}}" bindtap="join">申请加入</view>
+    </view>
+    <view class="footerBox footerBoxs" wx:if="{{datas.teamApplyStatus == 0 || datas.teamApplyStatus == 1 || datas.teamApplyStatus == 101}}">
+      <view class="btn" wx:if="{{datas.teamApplyStatus == 0}}">申请中</view>
+      <view class="btn" bindtap="changeOut" wx:if="{{datas.teamApplyStatus == 1}}">退出团队</view>
+      <view class="btn" wx:if="{{datas.teamApplyStatus == 101}}">已满员</view>
+      <!-- <view class="btn btns">编辑</view> -->
+    </view>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

@@ -1,0 +1,26 @@
+/* pages/templateDetail/tempCard/tempCardA/tempCardA.wxss */
+.tempCard{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+  padding-bottom: 100rpx;
+}
+.tempCard .content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 80rpx 0;
+}
+.tempCard .footer{
+  width: 650rpx;
+  height: 96rpx;
+  background: #3366FF;
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,139 @@
+<!--pages/route/joinInfo/joinInfo.wxml-->
+<view class="joinInfo">
+  <view class="info">
+     <view class="title">个人信息（必填）</view>
+     <view class="infoImg">
+        <image src="{{userInfo.avatar}}"></image>
+     </view>
+     <view class="inps">
+       <input type="text" placeholder="姓名" bindinput="changeInfoName" value="{{infoName}}"/>
+     </view>
+     <view class="inps">
+       <input type="text" placeholder="手机" bindinput="changeInfoPhone" value="{{infoPhone}}"/>
+     </view>
+     <view class="inps">
+       <input type="text" placeholder="邮箱" bindinput="changeInfoEmail" value="{{infoEmail}}"/>
+     </view>
+     <view class="inps">
+       <input type="text" placeholder="所在公司" bindinput="changeInfoWx" value="{{infoWeChat}}"/>
+     </view>
+     <view class="inps">
+       <input type="text" placeholder="所在城市" bindinput="changeInfoCity" value="{{infoCity}}"/>
+     </view>
+  </view>
+  <view class="joinInfoNav">
+     <view class="item, {{isNav == 1 ? 'active' : ''}}" data-nav="1" bindtap="changeNav">
+        个人简历
+     </view>
+     <view class="item, {{isNav == 2 ? 'active' : ''}}" data-nav="2" bindtap="changeNav">
+        创意作品
+     </view>
+  </view>
+  <view class="content">
+    <view class="infoResume" wx:if="{{isNav == 1}}">
+      <view class="conInfo">
+        <view class="inpTxt">
+          <textarea placeholder="简要说明自己的履历，以及与本次参赛相关的过往作品，吸引其他人与你组队" bindinput="changeInfoResume" value="{{infoResume}}"></textarea>
+        </view>
+        <view class="imgList">
+           <view class="item" wx:for="{{InfoImgList}}" wx:key="index" bindtap="delInfoImg" data-index="{{index}}">
+             <image src="{{item}}"></image>
+             <view>删除</view>
+           </view>
+        </view>
+        <view class="uploads">
+          <view class="item" bindtap="uploadInfoImg">+添加图片</view>
+          <text class="txts">*上传简历或作品相关图片，吸引其他人与你组队</text>
+          <!-- <view class="item">+上传附件</view> -->
+        </view>
+        <view class="works">*参赛作品请提交至邮箱polestarhackathon@163.com，并备注自己的姓名和手机</view>
+      </view>
+      <view class="teamInfo" wx:if="{{types == 0}}">
+        <view class="title">团队信息</view>
+        <view class="infoImg infoImgTxt">
+            <image src="{{teamInfoImg}}"></image>
+            <view class="txt" bindtap="uploadUser">上传头像</view>
+        </view>
+        <view class="inps">
+            <input type="text" placeholder="团队名称" bindinput="changeTeamName" value="{{teamName}}"/>
+        </view>
+        <view class="inpTxt">
+            <textarea placeholder="简要说明希望组建什么样的团队" bindinput="changeTeamIntroduce" value="{{teamIntroduce}}"></textarea>
+        </view>
+        <view class="title titles">招募要求</view>
+        <view class="inpTxt">
+            <textarea placeholder="请文字描述你希望招募的团队成员要求，例如：有车机设计经验的交互设计师" bindinput="changeProjectIntroduce" value="{{projectIntroduce}}"></textarea>
+        </view>
+        <!-- <view class="title titles">团队项目</view>
+        <view class="inpTxt">
+            <textarea placeholder="项目介绍" bindinput="changeProjectIntroduce" value="{{projectIntroduce}}"></textarea>
+        </view> -->
+        <view class="imgList">
+           <view class="item" wx:for="{{teamImgList}}" wx:key="index" bindtap="delTeamImg" data-index="{{index}}">
+             <image src="{{item}}"></image>
+             <view>删除</view>
+           </view>
+        </view>
+        <!-- <view class="uploads">
+          <view class="item" bindtap="uploadTeamImg">+添加图片</view>
+          <text class="txts">*上传简历或作品相关图片，吸引其他人与你组队</text> -->
+          <!-- <view class="item">+上传附件</view> -->
+        <!-- </view>
+        <view class="works">*参赛作品请提交至邮箱polestarhackathon@163.com，并备注自己的姓名和手机</view> -->
+      </view>
+    </view>
+    <view class="creativeWorks" wx:if="{{isNav == 2}}">
+      <view class="pickerBox">
+        <picker bindchange="changeTypes" value="{{typeIndex}}" range="{{typeArr}}">
+          <view class="picker">
+            <text wx:if="{{workType==null}}">请选择作品类型</text>
+            <text class="colors" wx:if="{{workType!=null}}"> {{typeArr[typeIndex]}} </text>
+            <image class="inpImg" src="/static/img/icon_buttom.png"></image>
+          </view>
+        </picker>
+      </view>
+      <view class="inps">
+        <input type="text" placeholder="作品名称" bindinput="changeWorksName" value="{{worksName}}"/>
+      </view>
+      <view class="inpTxt">
+        <textarea placeholder="简要说明自己本次参赛作品的创意" bindinput="changeWorksDetails" value="{{worksDetails}}"></textarea>
+      </view>
+      <view class="imgList">
+           <view class="item" wx:for="{{worksImgList}}" wx:key="index" bindtap="delWorksImg" data-index="{{index}}">
+             <image src="{{item}}"></image>
+             <view>删除</view>
+           </view>
+        </view>
+      <view class="uploads">
+          <view class="item" bindtap="uploadWorksImg">+添加图片</view>
+          <text class="txts">*提交图片辅助说明本次参赛创意</text>
+          <!-- <view class="item">+上传附件</view> -->
+        </view>
+      <view class="works">*参赛作品请提交至邮箱polestarhackathon@163.com，并备注自己的姓名和手机</view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <!-- <view class="btn">保存</view> -->
+    <view class="btn btns" bindtap="save">提交</view>
+  </view>
+
+  <!-- 审核中 -->
+  <van-overlay show="{{ showExamine }}" z-index="999">
+    <view class="wrapperBox">
+      <view class="wrapper wrappers">
+         <view class="close" bindtap="onTeamClickHide">
+            <image src="/static/img/icon_close.png"></image>
+         </view>
+         <view class="content cenBox">
+            <view class="title">审核中</view>
+            <view class="txt">
+              审核会在2个工作日内完成， 请耐心等候 ^_^</view>
+            <view class="btn" bindtap="onTeamClickHide">
+              <text>确定</text>
+            </view>
+         </view>
+      </view>
+    </view>
+  </van-overlay>
+</view>

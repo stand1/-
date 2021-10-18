@@ -1,0 +1,22 @@
+.moreUse{
+  padding: 0 32rpx;
+}
+.moreUse .search image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.search text{
+  color: #AFAFAF;
+}
+.moreUse .search{
+  /* width: 100%; */
+height: 64rpx;
+background: #F2F2F2;
+border-radius: 36px;
+font-size: 29rpx;
+margin-bottom: 38rpx;
+display: flex;
+align-items: center;
+padding-left: 184rpx;
+}

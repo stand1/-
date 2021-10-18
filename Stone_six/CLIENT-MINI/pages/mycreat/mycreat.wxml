@@ -1,0 +1,60 @@
+<view class="page">
+  <!-- <view class="page__bd">
+        <mp-searchbar bindselectresult="selectResult" search="{{search}}" cancel="false" focus="true" cancelText="cancel"></mp-searchbar>
+    </view> -->
+  <!-- background="#4fc08d" -->
+  <headers titleStr="我的创作" startBarHeight="{{heights}}" navHeight="{{navHeight}}" style="background:#fff"></headers>
+  <van-search value="{{ value }}" shape="round" placeholder="在当前场景下搜索" />
+  <van-tabs sticky animated="true" swipeable="true" active="{{ active }}" bind:change="onChange">
+    <!-- color="#8F92A1" -->
+    <van-tab title="最近使用">
+      <view class="sort">
+        <view>排序</view>
+        <image src="/icons/usercenter/down@2x.png"></image>
+      </view>
+      <view class="set">
+        <image src="/icons/usercenter/set@2x.png"></image>
+        <view style="width:12rpx"></view>
+        <view>批量操作</view>
+      </view>
+      <view class='content'>
+        <view class='left'>
+          <block wx:for="{{leftList}}" wx:key="index">
+            <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'>
+              <view class="tag" style="margin-top:{{item.pCoverHeight}}">{{item.tag}}</view>
+              <view class="time" style="margin-top:{{item.timetop}}">{{item.time}}</view>
+            </image>
+          </block>
+        </view>
+        <view class='right'>
+          <block wx:for="{{rightList}}" wx:key="index">
+            <image class='pic' style='height:{{item.CoverHeight}}' src='{{item.Cover}}'>
+              <view class="tag" style="margin-top:{{item.pCoverHeight}}">{{item.tag}}</view>
+              <!-- <view class="tag" style="margin-top:{{item.pCoverHeight}}rpx">{{item.tag}}</view> -->
+              <view class="time" style="margin-top:{{item.timetop}}">{{item.time}}</view>
+            </image>
+          </block>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="图片（16）">内容 2</van-tab>
+    <van-tab title="图文（20）">内容 3</van-tab>
+    <van-tab title="图库（43）">内容 4</van-tab>
+  </van-tabs>
+
+  <!-- <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick"
+    bindchange="onChange" activeClass="tab-bar-title__selected">
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick">
+        <image src="{{item.img}}" mode="widthFix"></image>
+        <view class="item-title">
+          {{item.title2}}
+        </view>
+        <view class="item-desc">
+          {{item.desc}}
+        </view>
+      </view>
+    </block>
+  </mp-tabs> -->
+
+</view>

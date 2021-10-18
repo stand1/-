@@ -1,0 +1,13 @@
+var array = require('./array.wxs');
+function isActive (activeList, itemId) {
+  if (array.isArray(activeList)) {
+    // console.log("activeList:"+activeList)
+    // console.log("itemId:"+itemId)
+    // console.log(activeList.indexOf(itemId) > -1)
+    return activeList.indexOf(itemId) > -1;
+  }
+
+  return activeList === itemId;
+}
+
+module.exports.isActive = isActive;

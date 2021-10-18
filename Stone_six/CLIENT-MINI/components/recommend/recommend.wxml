@@ -1,0 +1,3 @@
+<view class="card" >
+  <card wx:for="{{list}}"  obj="{{item}}" favoriteType="{{favoriteType}}" data-item="{{item}}" className="{{index==0? 'className':''}}" bindtap="handleDetail"></card>
+</view>

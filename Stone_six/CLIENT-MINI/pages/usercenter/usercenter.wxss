@@ -1,0 +1,225 @@
+
+.avatar {
+  width: 128rpx;
+  height: 128rpx;
+  /* border: 1rpx solid #eee; */
+  border-radius: 50%;
+}
+
+.outer {
+  margin-top: 60rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  height: 128rpx;
+  /* background-color: rebeccapurple; */
+  /* display: flex; */
+}
+
+.nickName {
+  margin-left: 162rpx;
+  margin-top: -134rpx;
+  width: 248rpx;
+  font-size: 18px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+}
+
+.introduction {
+  margin-left: 162rpx;
+  margin-top: 4rpx;
+  width: 300rpx;
+
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #D2D3D9;
+}
+
+.edit {
+  float: right;
+  /* position: absolute; */
+  margin-top: -45rpx;
+  margin-right: 272rpx;
+  width: 36rpx;
+  height: 36rpx;
+  /* left: 410rpx;
+  top: 78rpx; */
+  /* background-image: url("/icons/cart.png"); */
+}
+
+.card {
+  /* position: absolute; */
+  float: right;
+  margin-top: -80rpx;
+  margin-right: 32rpx;
+  width: 148rpx;
+  height: 64rpx;
+  /* right: 32rpx;
+  top: 262rpx; */
+  border-radius: 35rpx;
+  background-color: #3366FF;
+  color: white;
+  font-size: 28rpx;
+  /* 文字垂直水平居中*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.cards {
+  margin-top: 40rpx;
+  overflow: hidden;
+  /*最外层设置  溢出隐藏  */
+  /* background-color: red; */
+  /* height: 140rpx;
+  width: 100%; */
+}
+
+.cards-nei {
+  white-space: nowrap;
+  /*第二层设置  不换行  */
+  overflow-y: auto;
+  /*      溢出框 提供滚动机制 */
+}
+
+.cards-nei .img {
+  background: #5C5C5C;
+  width: 260rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  /* text-align: center;
+  font-size: 14px; */
+  /* color: #FFFFFF; */
+  display: inline-block;
+  /*最内层div设置inline-block*/
+  border-radius: 18rpx;
+}
+
+.cards-nei .blank {
+  background: white;
+  width: 30rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  /* text-align: center;
+  font-size: 14px; */
+  /* color: #FFFFFF; */
+  display: inline-block;
+  /*最内层div设置inline-block*/
+}
+
+/**
+去除横向滚动条
+*/
+.cards-nei::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+
+.page-section-spacing {
+  margin-top: 48rpx;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+  /* background-color: red; */
+  width: 100%;
+  height: 136rpx;
+}
+
+
+.scroll-view-item_H {
+  display: inline-block;
+  width: 254rpx;
+  height: 100%;
+  /* background-color: blue; */
+  border-radius: 32rpx;
+}
+
+.blank {
+  background: white;
+  width: 36rpx;
+  height: 136rpx;
+  display: inline-block;
+  /*最内层div设置inline-block*/
+}
+
+.bottomCard {
+  height: 744rpx;
+  width: 686rpx;
+  margin-top: 60rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  /* background-color: red; */
+
+  box-shadow: 0rpx 10rpx 40rpx 0rpx rgba(0, 0, 0, 0.1);
+  border-radius: 16rpx;
+}
+
+.placeholder {
+  height: 60rpx;
+}
+
+.commonSetting {
+  /* margin-top: 30rpx; */
+  margin-left: 32rpx;
+  padding-top: 42rpx;
+  padding-bottom: 10rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #4A4A4A;
+}
+
+.mycell {
+  display: flex;
+  /* 居中对其div内的任何元素，水平对齐 */
+  align-items: center;
+  height: 88rpx;
+  /* background-color: red; */
+}
+
+.leftTitle {
+  margin-left: 32rpx;
+  padding: 20rpx 0;
+
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #4A4A4A;
+}
+
+.rightImg {
+  /* display: block;
+  float: right; */
+  /* margin-right: 30rpx;
+  padding-right: 30rpx; */
+  width: 36rpx;
+  height: 36rpx;
+  /* background-image: url('/icons//cart.png'); */
+  position: absolute;
+  right: 64rpx;
+}
+
+.exit {
+  /* position: absolute; */
+  /* bottom: 40rpx; */
+  margin-top: 65rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 92rpx;
+  background: #F0F4FD;
+  border-radius: 46rpx;
+  color: black;
+  /* 文字垂直水平居中*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+}

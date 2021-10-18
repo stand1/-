@@ -1,0 +1,241 @@
+/* pages/route/joinInfo/joinInfo.wxss */
+.joinInfo{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+  padding: 74rpx 30rpx 200rpx;
+}
+.joinInfo .info{
+  width: 100%;
+  box-sizing: border-box;
+}
+.infoImg{
+  margin: 24rpx 0;
+}
+.infoImg image{
+  width: 120rpx;
+  height: 120rpx;
+  background: #f7f7f7;
+}
+.joinInfo .inps input{
+  width: 690rpx;
+  height: 100rpx;
+  background: #f7f7f7;
+  margin-bottom: 24rpx;
+  box-sizing: border-box;
+  padding-left: 38rpx;
+}
+.joinInfoNav{
+  padding: 10rpx 0 28rpx;
+  display: flex;
+  align-items: center;
+}
+.joinInfoNav .item{
+  margin-right: 40rpx;
+}
+.joinInfoNav .active{
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: bold;
+  border-bottom: 4rpx solid #ff7500;
+}
+.inpTxt textarea{
+  width: 690rpx;
+  height: 234rpx;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  padding: 30rpx 34rpx 30rpx 38rpx;
+}
+.uploads{
+  display: flex;
+  align-items: center;
+  margin: 24rpx 0;
+}
+.uploads .item{
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #f7f7f7;
+  color: #adadad;
+  font-size: 24rpx;
+  margin-right: 24rpx;
+}
+.uploads .txts{
+  font-size: 20rpx;
+  color: #adadad;
+}
+.works{
+  color: #adadad;
+  font-size: 24rpx;
+}
+.pickerBox{
+  width: 690rpx;
+  height: 100rpx;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  margin-bottom: 24rpx;
+}
+.pickerBox .picker{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(173,173,173,1);
+}
+.pickerBox .picker .colors{
+  color: #000;
+}
+.pickerBox .picker image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.teamInfo{
+  margin-top: 48rpx;
+}
+.teamInfo .titles{
+  padding: 40rpx 0 28rpx;
+}
+.infoImgTxt{
+  display: flex;
+  align-items: center;
+}
+.infoImgTxt .txt{
+  font-size: 24rpx;
+  color: #ff7500;
+  margin-left: 36rpx;
+}
+.joinInfo .footer{
+  width: 750rpx;
+  height: 168rpx;
+  background: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2rpx solid #e2e3e5;
+}
+.joinInfo .footer .btn{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  border: 2rpx solid #333333;
+  background: #53565a;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+.joinInfo .footer .btns{
+  background-color: #fff;
+  color: #000000;
+  margin-left: 48rpx;
+}
+/* 遮罩层 */
+.wrapperBox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapperBox .wrapper{
+  width: 638rpx;
+  height: 90%;
+  background: #ffffff;
+  position: relative;
+}
+.wrapperBox .wrappers{
+  width: 638rpx;
+  height: 678rpx;
+}
+.wrapperBox .wrapper .close{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-end;
+}
+.wrapperBox .wrapper .close image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.wrapper .content{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 60rpx 0 0;
+  color: #000;
+}
+.wrapper .cenBox{
+  padding-top: 110rpx;
+}
+.wrapper .cenBox .title{
+  margin-bottom: 80rpx;
+}
+.wrapper .content .title{
+  font-size: 48rpx;
+  text-align: center;
+}
+.wrapper .content .conBox{
+  font-size: 28rpx;
+  color: #333333;
+  width: 508rpx;
+  height: 70%;
+  margin: 30rpx auto 20rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+}
+.wrapper .content .txt{
+  width: 390rpx;
+  padding-bottom: 100rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper .content .btn{
+  width: 280rpx;
+  height: 96rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 auto 40rpx;
+}
+.imgList{
+  width: 100%;
+  box-sizing: border-box;
+}
+.imgList .item{
+  width: 690rpx;
+  height: 414rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.imgList .item image{
+  width: 690rpx;
+  height: 414rpx;
+}
+.imgList .item view{
+  position: absolute;
+  right: 32rpx;
+  bottom: 32rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #f33434;
+}

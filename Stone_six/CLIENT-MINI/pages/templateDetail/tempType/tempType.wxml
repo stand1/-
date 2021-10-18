@@ -1,0 +1,49 @@
+<!--pages/tempType/tempType.wxml-->
+<view class="tempType">
+	<headers titleStr="{{titles}}"></headers>
+	<view class="search">
+		<image src="../../../static/img/search.png"></image>
+		<input value="{{keys}}" placeholder="在当前场景下搜索" placeholder-class="phcolor" bindinput="search"></input>
+	</view>
+	<!-- <view class="top">
+		<view class="topLeft">
+			<switchBar bind:setHot="changeBar"></switchBar>
+		</view>
+		<view class="topRight">
+			<picker bindchange="bindPickerChange" value="{{i}}" range="{{arrList}}">
+				<view class="picker">
+          {{arrList[i]}}<image src="../../../static/img/iconButtom.png"></image>
+        </view>
+			</picker>
+		</view>
+	</view> -->
+  <view class="itemBox">
+    <view class="item {{(index+1)%2==0?'itemActive':''}}" wx:for="{{imgList}}" wx:key="index" bindtap="changeDetail" data-i="{{index}}">
+      <image src="{{item.cover}}"></image>
+    </view>
+  </view>
+	<!-- 预览 -->
+	<view class="previewBox" wx:if="{{isShow}}" style="top:{{navHeight}}px;">
+	  <!-- 海报预览 -->
+	  <view class="previewPoster">
+		  <image src="{{previewPosterUrl}}"></image>
+		</view>
+		<!-- 名片预览 -->
+		<!-- <view class="care" wx:if="{{type == 3}}">
+		  <care></care>
+		</view> -->
+		<!-- 收藏 立即使用 -->
+		<view class="previewFooter">
+		  <view class="item itemImg" bindtap="like">
+			   <image src="{{isLive?'../../../static/img/iconLike.png':'../../../static/img/iconLikeNo.png'}}"></image>
+				 <text>收藏</text>
+			</view>
+			<view class="item" bindtap="useNext">
+				 <text>立即使用</text>
+			</view>
+		</view>
+		<view class="close">
+		  <view bindtap="closeShow"><image src="../../../static/img/iconClose.png"></image></view>
+		</view>
+	</view>
+</view>

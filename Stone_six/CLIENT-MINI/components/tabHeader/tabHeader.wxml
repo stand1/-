@@ -1,0 +1,24 @@
+<!--components/tabHeader/tabHeader.wxml-->
+<view class="tabHeader" style="height:{{navHeight}}px;background-color: {{transparent}}">
+  <view class="content"
+    style="padding-top:{{startBarHeight}}px;height:{{navHeight}}px;background-color:{{transparent}}">
+    <view class="contentLeft">
+      <view class="back" bindtap="goBack" wx:if="{{backIsShow}}">
+        <image src="../../static/tabs/iconBack.png"></image>
+      </view>
+
+      <view class="home" bindtap="goHome" wx:if="{{isShow}}">
+        <image src="../../static/tabs/iconHome.png"></image>
+      </view>
+    </view>
+    <picker bindchange="bindPickerChange" disabled="{{!isdown}}" value="{{0}}" range="{{carTypeList}}" range-key="carName">
+      <view class="contentTxt" >
+        <text>{{titleStr}}</text>
+
+        <view class="picker" wx:if="{{isdown}}">
+          <image src="/static/img/down_icon.png"></image>
+        </view>
+  </view>
+</picker>
+</view>
+</view>

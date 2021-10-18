@@ -1,0 +1,127 @@
+/* pages/teams/teams.wxss */
+.teams{
+  width: 100%;
+}
+.nav{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0,0,0,0.85);
+  border-bottom: 2rpx solid #979797;
+  padding:26rpx 0 32rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+}
+.nav .navItem{
+  width: 221rpx;
+  text-align: center;
+}
+.nav .navActive{
+  font-weight: bold;
+  position: relative;
+}
+.navActive view{
+  width: 221rpx;
+  height: 4rpx;
+  background-color: #000000;
+  position: absolute;
+  top: 86rpx;
+  left: 0;
+}
+.concent{
+  padding-top: 120rpx;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #d8d8d8;
+}
+.concent .competition{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.concent .competition .item{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 22rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+  margin-bottom: 40rpx;
+}
+.competition .itemT{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.competition .itemT .itemTL{
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  color: #000000;
+}
+.competition .itemT .itemTL .imgUser{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.competition .itemT .itemTL .imgLeft{
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+}
+.competition .itemT .itemTR{
+  color: #000000;
+  font-size: 50rpx;
+}
+.competition .itemT .timers{
+  color: rgba(0,0,0,0.5);
+  font-size: 20rpx;
+}
+.competition .itemT .itemTL .itemTLtype{
+  border: 4rpx solid rgba(0,0,0,0.5);
+  opacity: 0.5;
+  padding: 0rpx 22rpx;
+  margin-right: 16rpx;
+  font-size: 24rpx;
+}
+.competition .itemT .itemTL .title{
+  width: 300rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 26rpx;
+}
+.itemB{
+  font-size: 22rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  color: #000000;
+}
+.itemB .imgList image{
+  width: 690rpx;
+  height: 310rpx;
+  margin-bottom: 20rpx;
+}
+.itemB .isShow{
+  font-size: 28rpx;
+  text-align: center;
+  color: #ff7500;
+  padding: 16rpx 0;
+}

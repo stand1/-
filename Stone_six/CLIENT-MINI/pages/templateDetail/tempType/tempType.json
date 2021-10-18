@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "headers":"../../../components/tabHeader/tabHeader",
+    "switchBar":"../../../components/switchBar/switchBar",
+    "care":"../../canvasTest/index"
+  },
+  "navigationBarTitleText": "手机海报",
+  "navigationStyle":"custom"
+}

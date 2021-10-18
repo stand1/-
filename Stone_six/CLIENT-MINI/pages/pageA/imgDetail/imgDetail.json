@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tabHeader":"../../../components/tabHeader/tabHeader"
+  }
+}

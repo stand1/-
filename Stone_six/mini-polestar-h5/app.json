@@ -1,0 +1,83 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/my/my",
+    "pages/teams/teams",
+    "pages/activity/activity",
+    "pages/phonebind/phonebind",
+    "component/teams/teams"
+  ],
+  "tabBar": {
+    "custom": false,
+    "color": "#D9D9D9",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/icon/indexA.png",
+        "selectedIconPath": "static/icon/indexB.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "iconPath": "static/icon/activityA.png",
+        "selectedIconPath": "static/icon/activityB.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/teams/teams",
+        "iconPath": "static/icon/teamA.png",
+        "selectedIconPath": "static/icon/teamB.png",
+        "text": "团队"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/icon/myA.png",
+        "selectedIconPath": "static/icon/myB.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "subPackages": [
+    {
+      "root": "pages/detail",
+      "pages": [
+        "teamDetail/teamDetail",
+        "activityDetail/activityDetails",
+        "answerDetails/answerDetails"
+      ]
+    },
+    {
+      "root": "pages/route",
+      "pages": [
+        "join/join",
+        "answer/answer",
+        "myQuestion/myQuestion",
+        "questions/questions",
+        "joinInfo/joinInfo",
+        "myTeam/myTeam",
+        "newAnswer/newAnswer",
+        "mySign/mySign",
+        "test/test",
+        "imgDetail/imgDetail"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "极星黑客松",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff"
+  },
+  "darkmode": false,
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

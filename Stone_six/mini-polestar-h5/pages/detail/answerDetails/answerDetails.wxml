@@ -1,0 +1,15 @@
+<!--pages/detail/answerDetails/answerDetails.wxml-->
+<view class="answerDetails">
+  <view class="title">{{title}}</view>
+  <view class="txt">
+    <text wx:if="{{answers}}">{{answers}}</text>
+    <text wx:else>暂无回答，请耐心等待。。。</text>
+  </view>
+  <view class="imgList">
+    <!-- <image src=""></image> -->
+  </view>
+  <!-- <view class="footer">
+    <view class="item">没帮助</view>
+    <view class="item active">有帮助</view>
+  </view> -->
+</view>

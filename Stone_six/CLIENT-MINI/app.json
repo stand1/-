@@ -1,0 +1,134 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/test/index",
+    "pages/cropper/cropper",
+    "pages/businesscard/businesscard",
+    "pages/infocard/infocard",
+    "pages/test/picker/picker",
+    "pages/mysource/mysource",
+    "pages/mycreat/mycreat",
+    "pages/usercenter/usercenter",
+    "pages/logs/logs",
+    "components/tabbar1/tabbar",
+    "pages/banner/banner",
+    "pages/sourcelib/sourcelib",
+    "pages/personnalPhotoLib/personnalPhotoLib",
+    "components/fyitem/fyitem",
+    "components/ab-label-flow/ab-label-flow",
+    "pages/canvasTest/index",
+    "pages/tempbox/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/1.png",
+        "selectedIconPath": "static/tabs/select1.png",
+        "text": "素材"
+      },
+      {
+        "pagePath": "pages/tempbox/index",
+        "iconPath": "static/tabs/2.png",
+        "selectedIconPath": "static/tabs/2-select.png",
+        "text": "模板"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "iconPath": "static/tabs/3.png",
+        "selectedIconPath": "static/tabs/3-select.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {
+    "tabHeader": "./components/tabHeader/tabHeader",
+    "recommend": "/components/recommend/recommend"
+  },
+  "subPackages": [
+    {
+      "root": "pages/search",
+      "pages": [
+        "index/searchList"
+      ]
+    },
+    {
+      "root": "pages/pageA",
+      "pages": [
+        "searchResult/searchResult",
+        "moreUse/moreUse",
+        "imgDetail/imgDetail",
+        "materialLibrary/materialLibrary",
+        "viewWeb/viewWeb"
+      ]
+    },
+    {
+      "root": "pages/detail",
+      "pages": [
+        "imgDetail/imgDetail",
+        "videoPostDetail/videoPostDetail",
+        "postDetail/postDetail"
+      ]
+    },
+    {
+      "root": "pages/Home",
+      "pages": [
+        "3Dwatch/3Dwatch",
+        "imgWatch/imgWatch",
+        "videoWatch/videoWatch"
+      ]
+    },
+    {
+      "root": "pages/publish",
+      "pages": [
+        "image/index",
+        "video/index",
+        "article/index"
+      ]
+    },
+    {
+      "root": "pages/build",
+      "pages": [
+        "choseCar/choseCar"
+      ]
+    },
+    {
+      "root": "pages/templateDetail",
+      "pages": [
+        "list/list",
+        "tempType/tempType",
+        "addTemp/addTemp",
+        "buildTemp/buildTemp",
+        "fileList/fileList",
+        "savedSuccess/savedSuccess",
+        "tempCard/tempCardA/tempCardA",
+        "tempCard/tempCardB/tempCardB",
+        "tempCard/tempCardC/tempCardC",
+        "tempCard/tempCardD/tempCardD",
+        "tempCard/tempCardE/tempCardE",
+        "tempCard/tempCardF/tempCardF",
+        "tempCard/tempCardG/tempCardG"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff",
+    "navigationStyle": "custom"
+  },
+  "darkmode": false,
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

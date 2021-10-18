@@ -1,0 +1,405 @@
+/* pages/index/index.wxss */
+.index{
+  width: 100%;
+  background: #FBFBFB;
+  font-size: 22rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #000000;
+}
+.indexs{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.indexTop{
+  width: 100%;
+  /* display: flex;
+  justify-content: center; */
+  /* padding-top: 46rpx; */
+}
+.indexTop .swiper{
+  width: 750rpx;
+  height: 440rpx!important;
+  background: #ffffff;
+  /* border-radius: 16rpx;
+  box-shadow: 0px 2rpx 34rpx 0px #d8d8d8;  */
+}
+.indexTop .swiper swiper{
+  width: 750rpx;
+  height: 440rpx!important;
+}
+.indexTop .swiper image{
+  width: 750rpx;
+  height: 440rpx;
+}
+.userList{
+  width: 100%;
+  box-sizing: border-box;
+  /* display: flex;
+  justify-content: center; */
+  /* margin-top: 32rpx; */
+  font-size: 16rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #6d7278;
+}
+.userList .userListBox{
+  width: 750rpx;
+  /* height: 274rpx; */
+  box-sizing: border-box;
+  background: #ffffff;
+  /* border-radius: 16rpx; */
+  /* box-shadow: 0px 2rpx 34rpx 0px #d8d8d8;  */
+}
+.userList .userListBox .title{
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0,0,0,0.85);
+  padding: 30rpx 0 29rpx 30rpx;
+}
+.userList .userListBox swiper{
+  height: 282rpx!important;
+}
+.userListBoxTop{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+.userListBoxTop swiper-item{
+  width: 256rpx!important;
+  height: 282rpx!important;
+  padding-right: 40rpx;
+}
+.userListBoxTop .userItem{
+  width: 256rpx;
+  height: 280rpx;
+  background: #f2f2f2;
+}
+.userListBoxTop .userItem image{
+  width: 256rpx;
+  height: 190rpx;
+  /* border-radius: 8rpx; */
+}
+.userListBoxTop .userItem .txt{
+  text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;    
+  white-space: nowrap;
+}
+.userListBoxTop .userItem .txts{
+  color: #000000;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.userListBoxTop .userItem .txts text{
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0,0,0,0.5);
+}
+.userListBoxB{
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  /* margin-top: 20rpx; */
+  width: 690rpx;
+  box-sizing: border-box;
+  height: 100rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+  margin: 36rpx auto 0;
+}
+.userListBoxB image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.testDrive{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #000000;
+  font-weight: bold;
+  margin: 40rpx 0;
+}
+.testDrive .testDrives{
+  width: 750rpx;
+  height: 120rpx;
+  display: flex;
+  background: #ffffff;
+}
+.testDrive .testDriveBox{
+  /* border-radius: 16rpx; */
+  /* box-shadow: 0px 2rpx 34rpx 0px #d8d8d8;  */
+  margin-top: 20rpx; 
+}
+.testDrive .testDrives .driveImg image{
+  width: 450rpx;
+  height: 120rpx;
+}
+.testDrive .testDrives .driveR{
+  width: 300rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.testDrive .testDrives .driveRs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testDrive .testDrives .driveRs image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.newTestDrive{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32rpx 30rpx;
+}
+.newTestDrive .item{
+  width: 690rpx;
+  height: 280rpx;
+  position: relative;
+  margin-bottom: 64rpx;
+}
+.newTestDrive .item image{
+  width: 690rpx;
+  height: 280rpx;
+}
+.newTestDrive .item .txtBox{
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+}
+.newTestDrive .item .txtBoxs{
+  position: absolute;
+  left: 50rpx;
+  bottom: 28rpx;
+}
+.newTestDrive .item .colors{
+  color: #0d1722;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+}
+.newTestDrive .item .txtBox image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 16rpx;
+}
+
+/* 遮罩层 */
+.wrapperBox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapperBox .wrapper{
+  width: 638rpx;
+  height: 90%;
+  background: #ffffff;
+  position: relative;
+}
+.wrapperBox .wrappers{
+  width: 638rpx;
+  height: 720rpx;
+}
+.wrapperBox .wrapper .close{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-end;
+}
+.wrapperBox .wrapper .close image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.wrapper .content{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 60rpx 0 0;
+  color: #000;
+}
+.wrapper .cenBox{
+  padding-top: 110rpx;
+}
+.wrapper .cenBox .title{
+  margin-bottom: 80rpx;
+}
+.wrapper .content .title{
+  font-size: 48rpx;
+  text-align: center;
+}
+.wrapper .content .conBox{
+  font-size: 28rpx;
+  color: #333333;
+  width: 508rpx;
+  height: 70%;
+  margin: 30rpx auto 20rpx;
+  overflow: auto;
+  display: block;
+}
+.wrapper .content .conBox image{
+  width: 508rpx;
+}
+.wrapper .content .agreementBox{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+.wrapper .content .agreementBox image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 16rpx;
+}
+.wrapper .content .btn{
+  width: 360rpx;
+  height: 96rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 auto 40rpx;
+}
+.wrapper .content .btn:last-child{
+  margin-bottom: 0;
+}
+.wrapper .content .btn image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 18rpx;
+}
+.content .txts{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  color: #adadad;
+  font-size: 24rpx;
+}
+
+.model{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modelBox{
+  width: 600rpx;
+  height: 700rpx;
+  background-color: #fff;
+  overflow: auto;
+}
+.btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn button{
+  border: none;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #57be69;
+  margin-top: 20rpx;
+}
+/* 遮罩层 */
+.wrapperBox{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapperBox .wrapper{
+  width: 690rpx;
+  /* height: 90%; */
+  background: #ffffff;
+  position: relative;
+}
+.top{
+  width: 690rpx;
+  height: 350rpx;
+  background: #53565a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top image{
+  width: 116rpx;
+  height: 120rpx;
+}
+.btm{
+  width: 690rpx;
+  height: 480rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+  position: relative;
+  padding-top: 88rpx;
+}
+.btm .userImg{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: -29rpx;
+  left: 296rpx;
+}
+.btm .userName{
+  text-align: center
+}
+.btm .txt{
+  color: #000;
+  font-size: 28rpx;
+  margin: 48rpx 60rpx 64rpx;
+}
+.btm .txt text{
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Semibold;
+  font-weight: bold;
+  color: #000000;
+}
+.btm .btn button{
+  width: 570rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  background: #1aad19;
+  margin: 0 auto;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+}

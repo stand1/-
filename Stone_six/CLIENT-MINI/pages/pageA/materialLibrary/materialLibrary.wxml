@@ -1,0 +1,56 @@
+<!--pages/pageA/materialLibrary/materialLibrary.wxml-->
+<view class="materialLibrary" style="padding-top:{{navHeight}}px;">
+	<view class="header" style="padding-top:{{startBarHeight}}px;height:{{navHeight}}px;">
+		<view class="back" bindtap="back">
+			<image src="../../../static/tabs/iconBack.png"></image>
+		</view>
+		<view class="nav">
+			<!-- <view class="navItem {{types==1?'itemActive':''}}" data-types="1" bindtap="changeNav">
+           <text>最近项目</text>
+        </view> -->
+			<view class="navItem {{types==2?'itemActive':''}}" data-types="2" bindtap="changeNav">
+				<text>素材库</text>
+			</view>
+		</view>
+	</view>
+	<view class="box">
+		<view class="search">
+			<image src="../../../static/img/search.png"></image>
+			<input value="{{keys}}" placeholder="在当前场景下搜索" placeholder-class="phcolor"></input>
+		</view>
+		<!-- <view class="navBox">
+			<view class="item {{navNum==1?'itemActive':''}}" data-num="1" bindtap="changeNavNum">
+				<text>图片</text>
+			</view>
+			<view class="item {{navNum==2?'itemActive':''}}" data-num="2" bindtap="changeNavNum">
+				<text>视频</text>
+			</view>
+		</view> -->
+		<view class="setting">
+			<view class="item">
+				<picker mode="multiSelector" bindchange="changeModel" bindcolumnchange="changeVehicle" value="{{i}}"
+					range="{{vehicleList}}">
+					<view class="picker">
+						{{ param.carStyleName || "请选择车型"}}
+						<image src="../../../static/img/iconButtom.png"></image>
+					</view>
+				</picker>
+			</view>
+			<view class="item" wx:for="{{searchList}}" wx:for-index="sindex">
+				<picker bindchange="bindPickerChange" data-typecode="{{item.typeCode}}" data-items="{{sindex}}" data-item="{{item.sysDictList}}" value="{{0}}" range="{{item.sysDictList}}" range-key="dictName">
+					<image src="../../../static/img/iconSetting.png"></image><text>{{item.sysDictList[index[sindex]].dictName}}</text>
+				</picker>
+			</view>
+			<!-- <view class="item">
+				<image src="../../../static/img/iconSetting.png"></image><text>全部类型</text>
+			</view>
+			<view class="item">
+				<image src="../../../static/img/iconSetting.png"></image><text>排序</text>
+			</view> -->
+		</view>
+		<view class="content">
+
+			<imgListArray imgList="{{getMaterialList}}"></imgListArray>
+		</view>
+	</view>
+</view>

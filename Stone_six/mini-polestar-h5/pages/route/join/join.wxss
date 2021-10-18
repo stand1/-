@@ -1,0 +1,42 @@
+/* pages/route/join/join.wxss */
+.join{
+  width: 100%;
+  box-sizing: border-box;
+}
+.joinBox{
+  width: 690rpx;
+  height: 294rpx;
+  background: #f7f7f7;
+  border-radius: 16rpx;
+  margin: 54rpx auto 0;
+}
+.joinBox{
+  width: 690rpx;
+  height: 294rpx;
+  box-sizing: border-box;
+  padding: 32rpx 38rpx;
+}
+.footer{
+  width: 100%;
+  box-sizing: border-box;
+  height: 158rpx;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2rpx solid #e2e3e5;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.footer .apply{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  background: #53565a;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}

@@ -1,0 +1,196 @@
+/* pages/detail/teamDetail/teamDetail.wxss */
+.teamDetails{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+  padding-bottom: 200rpx;
+}
+.teamDetails .header{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48rpx 0 48rpx 40rpx;
+}
+.teamDetails .header .headerL{
+  display: flex;
+  align-items: center;
+}
+.teamDetails .header .headerL .item{
+  width: 78rpx;
+  text-align: center;
+  margin-right: 32rpx;
+}
+.teamDetails .header .headerL .item:last-child{
+  margin-right: 0rpx;
+}
+.teamDetails .header .headerL .item image{
+  width: 48rpx;
+  height: 48rpx;
+  background: #d8d8d8;
+  border-radius: 4rpx;
+  text-align: center;
+}
+.teamDetails .header .headerR button{
+  border: none;
+  font-size: 28rpx;
+  color: #ff7500;
+}
+.teamBox{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 30rpx;
+}
+.teamBox .teamImgs{
+  width: 120rpx;
+  height: 120rpx;
+  background: #d8d8d8;
+  border-radius: 8rpx;
+  margin-right: 24rpx;
+}
+.teamBoxs{
+  font-size: 28rpx;
+  color: #666666;
+}
+.teamBoxs .title{
+  width: 546rpx;
+  box-sizing: border-box;
+  font-size: 48rpx;
+  color: #000000;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.teamBoxs .txt{
+  width: 546rpx;
+  box-sizing: border-box;
+}
+.teamBoxs .txtActive{
+  overflow: hidden;      
+  text-overflow: ellipsis;      
+  display: -webkit-box;   
+  -webkit-line-clamp: 3;     
+  -webkit-box-orient: vertical; 
+}
+.teamBoxs .isShow{
+  font-size: 24rpx;
+  color: #ff7500;
+  margin-top: 24rpx;
+}
+.teamContent{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 42rpx 30rpx;
+  border-bottom: 2rpx solid rgba(151,151,151,0.3);
+}
+.teamContent .teamTxt{
+  font-size: 28rpx;
+  color: #666666;
+}
+.teamContent .title{
+  width: 690rpx;
+  font-size: 48rpx;
+  color: #000000;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  margin: 40rpx 0 20rpx;
+}
+.teamContent .imgList{
+  margin: 20rpx 0 32rpx;
+}
+.teamContent .imgList image{
+  width: 690rpx;
+  /* border: 2rpx solid #979797; */
+  margin-bottom: 20rpx;
+}
+.teamContent .enclosure{
+  font-size: 28rpx;
+  color: #666666;
+}
+.teamContent .enclosure .enclosureList{
+  font-size: 24rpx;
+  color: #ff7500;
+}
+.teamContent .enclosure .enclosureList .item{
+  margin-bottom: 30rpx;
+}
+.teamContent .enclosure .enclosureList .item:last-child{
+  margin-bottom: 0;
+}
+.footer{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 70rpx 0 40rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 2rpx solid #e2e3e5;
+}
+.footerBox{
+  width: 100%;
+  height: 168rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footerL{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #000000;
+}
+.footerLFabulous{
+  display: flex;
+  align-items: center;
+  margin-right: 48rpx;
+}
+.footer .footerL image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.footer .footerR{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  background: #53565a;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+.footerBoxs{
+  justify-content: center;
+}
+.footerBox .btn{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  border: 2rpx solid #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #000000;
+}
+.footerBox .btns{
+  background: #53565a;
+  color: #fff;
+  margin-left: 48rpx;
+}
+.van-popup--center{
+  border-radius: 0!important;
+}
+.van-dialog__message-text{
+  font-weight: bold;
+  color: #000;
+}

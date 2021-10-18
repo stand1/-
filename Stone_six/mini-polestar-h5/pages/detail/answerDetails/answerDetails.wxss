@@ -1,0 +1,59 @@
+/* pages/detail/answerDetails/answerDetails.wxss */
+.answerDetails{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 48rpx 56rpx 200rpx 50rpx;
+}
+.title{
+  width: 644rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: bold;
+  color: rgba(0,0,0,1);
+  margin-bottom: 48rpx;
+}
+.answerDetails .txt{
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0,0,0,0.85);
+  line-height: 1.2;
+}
+.answerDetails .imgList{
+  margin-top: 20rpx;
+}
+.answerDetails .imgList image{
+  width: 644rpx;
+  height: 414rpx;
+  background: #d8d8d8;
+  margin-bottom: 20rpx;
+}
+.footer{
+  width: 750rpx;
+  height: 168rpx;
+  background: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: 2rpx solid #e2e3e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .item{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  border: 2rpx solid #333333;
+  font-size: 32rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: bold;
+  color: #000000;
+}
+.footer .active{
+  background: #53565a;
+  border: none;
+  color: #ffffff;
+  margin-left: 40rpx;
+}

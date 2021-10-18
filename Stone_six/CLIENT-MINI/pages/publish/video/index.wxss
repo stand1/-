@@ -1,0 +1,325 @@
+/* pages/publish/video/index.wxss */
+page{
+  padding: 24rpx 32rpx 30rpx 32rpx;
+  box-sizing: border-box;
+}
+.flex{
+  display: flex;
+}
+.header{
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header button{
+  font-size: 32rpx;
+  padding: 0;
+  font-weight: 400;
+}
+.header .save{
+  /* display: inline-block; */
+  /* width: 80rpx; */
+  width: auto;
+  color: #f81e36;
+  margin-left: 0;
+  margin-right: 50rpx;
+}
+.header .publish{
+  width: 104rpx;
+  height: 56rpx;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 56rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #f81e36;
+  border-radius: 28rpx;
+}
+.video_box  .videoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.videoList  .video_item {
+  width: 180rpx;
+  height: 264rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius:16rpx;
+  margin-right: 24rpx;
+  box-shadow:0rpx 4rpx 28rpx 0rpx rgba(0,0,0,0.06);
+  border-radius:16rpx;
+  position: relative;
+}
+.videoList  .video_item.horizontal{
+  width: 498rpx;
+  height: 260rpx;
+}
+.videoList  .video_item.nomr {
+  margin-right: 0;
+}
+.video_item  video {
+  width: 180rpx;
+  height: 264rpx;
+  border-radius:16rpx;
+}
+.video_item  .img_close {
+  position: absolute;
+  width: 34rpx;
+  height: 34rpx;
+  top: 10rpx;
+  right: 10rpx;   
+  background-image: url("https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0227_redt_close@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.video_item  .play_btn{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: calc(50% - 40rpx);
+  top: calc(50% - 40rpx);
+  z-index: 999;
+  background-image: url("https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0311_redt_play@2x.png");
+  background-repeat: no-repeat;  
+  background-size: 100% 100%;
+}
+.video_item  .change_btn{
+  position: absolute;
+  left: 8rpx;
+  bottom: 8rpx;
+  width:140rpx;
+  height:56rpx;
+  line-height: 56rpx;
+  color: #fff;
+  text-align: center;
+  background:rgba(0,0,0,0.5);
+  border-radius:28rpx;
+}
+.video_box  .add_img {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius:16rpx;
+  /* background-image: url("~@/assets/images/add_img_icon.png"); */
+  background-image: url("https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_add@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 24rpx;
+  position: relative;
+}
+.video_box  .add_img  button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180rpx;
+  height: 180rpx;
+  opacity: 0;
+  font-size: 56rpx;
+  color: #a5a5a5;
+}
+
+.title_box{
+  padding-top: 32rpx;
+  padding-bottom: 36rpx;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  text-align: left;
+  border-bottom: 2rpx solid #F2F3F5;
+}
+.title_box  input{
+  display: block;
+  width: 100%;
+}
+.title_box  input::-webkit-input-placeholder {
+  color: #999;
+}
+.text_box {
+  position: relative;
+  border-bottom: 2rpx solid #F2F3F5;
+}
+.text_box  textarea {
+  width: 100%;
+  border: none;
+  font-size: 32rpx;
+  line-height: 52rpx;
+  padding: 4rpx;
+}
+.text_box  textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.text_box  .num_tip{
+  font-size: 24rpx;
+  color: #999;
+  position: absolute;
+  right: 0;
+  bottom: 20rpx;
+}
+
+.part_row  .icon{
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icons/publish_video/video_icon_select.png');
+}
+.part_row  .icon.part{
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/video_part_select_1.png');
+}
+
+.select_row{
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #F2F3F5;
+}
+.select_row  .icon{
+  flex: none;
+  width: 48rpx;
+  height: 48rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+}
+.select_row  .label{
+  width: 1rpx;
+  flex: 1;
+  font-size:32rpx;
+  color: #999;
+  line-height: 44rpx;
+  text-align: left;
+}
+.select_row  .right{
+  flex: none;
+  display: flex;
+  align-items: center;
+}
+.select_row  .right  .select_value{
+  line-height: 34rpx;
+  font-size: 24rpx;
+  color: #9B9B9B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300rpx;
+}
+.select_row  .right  .select_icon{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 12rpx;
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icons/publish_video/right_icon_select.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.tag_box  .select_row  .icon{
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icons/publish_video/tag_icon_select.png');
+}
+  /* text-align: left; */
+.tag_box  .title{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 52rpx;
+  margin-bottom: 20rpx;
+}
+.tag_box  .tag_wrap{
+  color: #000;
+  padding-bottom: 36rpx;
+  border-bottom: 2rpx solid #F2F3F5;
+  overflow-x: scroll;
+}
+.tag_box  .tag_wrap  .tag_tiem{
+  height: 48rpx;
+  line-height: 48rpx;
+  background: #fff;
+  border-radius: 25rpx;
+  border: 2rpx solid rgba(242,243,245,1);
+  margin-left: 8rpx;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+.tag_box  .tag_wrap  .tag_tiem:nth-child(1){
+  margin-left: 0;
+}
+.tag_box  .tag_wrap  .tag_tiem  .btn_rm{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 8rpx;
+  background: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_close_bluck@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.tag_box.no_border  .select_row{
+  border-bottom: none;
+}
+
+.dialog{
+  display: flex;
+  flex-direction: column;
+}
+scroll-view{
+  height: 2rpx;
+  flex: 1;
+}
+.dialogHeader{
+  height: 88rpx;
+  flex: none;
+  align-items: center;
+}
+.dialogHeader image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 8rpx;
+}
+.dialogHeader text{
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.videoType{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+  /* height: 100vh; */
+  /* min-height: 100vh; */
+  background: #ffffff;
+  /* overflow-y: auto; */
+  /* flex-direction: column; */
+  padding: 0 32rpx;
+}
+.selectTribeBox{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  /* height: 100vh; */
+  /* min-height: 100vh; */
+  background: #ffffff;
+  /* overflow-y: auto; */
+  /* flex-direction: column; */
+  padding: 0 32rpx;
+}
+.selectItem{
+  height: 96rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #F2F3F5;
+
+    margin-bottom: 10rpx;
+}
+.selectItem  .text{
+  font-size: 32rpx;
+  color: #4A4A4A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.selectItem  image{
+  flex: none;
+  width: 30rpx;
+  height: 32rpx;
+}
+.fixed .btn{
+  justify-content: center;
+}

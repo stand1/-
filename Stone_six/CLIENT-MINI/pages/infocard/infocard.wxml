@@ -1,0 +1,194 @@
+<view class="background">
+  <headers transparent="transparent"></headers>
+  <image class="header" src="http://dashus.oss-cn-shenzhen.aliyuncs.com/DefaultImage/Game/20190313090409/完美9.png"
+    style="margin-top:-{{navHeight}}rpx;">
+  </image>
+  <!-- <image class="header" src="http://dashus.oss-cn-shenzhen.aliyuncs.com/DefaultImage/Game/20190313090409/完美9.png"
+    style="margin-top:-{{startBarHeight+navHeight+40}}rpx;">
+  </image> -->
+  <view class="personalPhoto" bindtap="personalPhoto">
+    <image src="/icons/usercenter/phoneDown.png"></image>
+    个人相册
+  </view>
+
+  <view class="telephone">
+    <image src="/icons/usercenter/phone@3x.png"></image>
+  </view>
+  <view class="name">王磊</view>
+  <view class="title">销售顾问</view>
+
+  <view class="details">
+    <view class="detail">
+      <image src="/icons/usercenter/PhoneBlack@2x.png"></image>
+      136 9482 4093
+    </view>
+    <view class="detail">
+      <image src="/icons/usercenter/littlehome.png"></image>广汽丰田深圳兆方店
+    </view>
+    <view class="detail">
+      <image src="/icons/usercenter/location.png"></image>广东省深圳市南山区丽水路1052号
+    </view>
+  </view>
+  <view class="sharecard" bindtap="businesscard">分享名片</view>
+  <!-- 圆角 -->
+  <view class="knowmebg"></view>
+  <view class="knowme">认识一下我！</view>
+  <view wx:if="{{!edit}}">
+    <image class="imgedit" src="/icons/usercenter/writegray.png" bindtap="edit"></image>
+    <view class="introduce">大家好，我是来自广汽丰田深圳兆方店的销售顾问，我主要负责销售广汽丰田新车，二手车回购，如果您有需要，请直接联系我或者添加我的微信！谢谢您的支持！</view>
+    <!-- 家乡 从业时间 -->
+    <view style="display:flex;margin-left: 32rpx;margin-top: 36rpx;width: 686rpx;">
+      <view class="hometown">
+        <view class="ititle">家乡</view>
+        <view class="idetail">广东省 广州市</view>
+      </view>
+      <view class="worktime">
+        <view class="ititle">从业时间</view>
+        <view class="idetail">3年</view>
+      </view>
+    </view>
+    <view class="flowlabels">
+      <ab-label-flow class="label-flow" src="{{labels}}" bindlabeltap="labelTap" />
+    </view>
+  </view>
+
+  <block wx:else>
+    <view class="save" bindtap="save">保存</view>
+    <view class="cancel" bindtap="cancel">取消</view>
+    <!-- 可自动增高  -->
+    <textarea class="inputtext textarea-placeholder" placeholder="撰写个人简介让更多人知道你！"></textarea>
+    <view style="display:flex;margin-left: 52rpx;margin-top: 36rpx;width: 646rpx;">
+      <view class="hometown">
+        <view class="ititle">家乡</view>
+        <view class="select">
+
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="textarea-placeholder selectdetail">
+              {{region[0]}}，{{region[1]}}
+            </view>
+          </picker>
+        </view>
+        <!-- <view class="idetail">广东省 广州市</view> -->
+      </view>
+      <view class="worktime">
+        <view class="ititle">从业时间</view>
+        <view class="select">
+          <textarea class="timeselectdetail textarea-placeholder" placeholder="输入从业时间"></textarea>
+        </view>
+        <!-- <view class="idetail">3年</view> -->
+      </view>
+    </view>
+    <view class="flowlabels">
+      <ab-label-flow class="label-flow" src="{{labels}}" bindlabeltap="labelTap" />
+    </view>
+  </block>
+
+  <!-- 地图 -->
+  <view class="mapBg">
+    <view class="sectiontitle">关于深圳悦享店</view>
+    <view class="mapGroup">
+      <view style="display:flex;align-items: center;">
+        <image class="mapLogo" mode="aspectFit" src="/icons/usercenter/set@2x.png"></image>
+        <view class="mapTitle">广汽丰田悦享店</view>
+      </view>
+      <view
+        style="font-size: 22rpx;font-family: PingFangSC-Regular, PingFang SC;font-weight: 400;color: rgba(0, 0, 0, 0.5);margin-left:32rpx;margin-top:18rpx;margin-bottom:18rpx">
+        经营品牌：进口丰田、广汽丰田、广汽丰田新能源</view>
+      <map longitude="113.324520" latitude="23.099994" scale="14" markers="{{markers}}" show-location
+        style="width: 100%; height: 396rpx;"></map>
+
+      <view class="mapBottom">
+        <view class="mapleft">
+          <view class="maplefttitle">广东省广州市黄埔区G4(火村立交)</view>
+          <view class="mapleftdetail">(020)89858800</view>
+        </view>
+        <view class="mapright" bindtap="nav">
+          导航
+          <image class="maprightimg" src="/icons/usercenter/daohang.png"></image>
+        </view>
+      </view> 
+    </view>
+  </view>
+  <!-- 热销车型 -->
+  <view class="section">
+    <image class="sectionimage" src="/icons/usercenter/set@2x.png"></image>热销车型
+  </view>
+  <div class="flex-container">
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="title">新建文件夹</view>
+      <view class="price">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="title">新建文件夹</view>
+      <view class="price">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="title">新建文件夹</view>
+      <view class="price">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="title">新建文件夹</view>
+      <view class="price">2020-09-15</view>
+      <view class="youhui">
+        <image src="/icons/usercenter/pricedown.png"></image>
+        最高优惠2.50万</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="title">新建文件夹</view>
+      <view class="price">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="title">新建文件夹</view>
+      <view class="price">2020-09-15</view>
+    </div>
+  </div>
+
+  <view class="zixunyuyue">咨询预约</view>
+  <view class="yuyues">
+    <view class="LEFT">
+      <view class="yuyue">
+        <image src="/icons/E3001.png"></image>
+        <view class="right">
+          <view class="rightTitle">3D看车</view>
+          <view class="rightDetail">3D买点展示</view>
+        </view>
+      </view>
+      <view class="yuyue">
+        <image src="/icons/E3001.png"></image>
+        <view class="right">
+          <view class="rightTitle">金融试算</view>
+          <view class="rightDetail">线上、线下预约试驾</view>
+        </view>
+      </view>
+      <view class="yuyue">
+        <image src="/icons/E3001.png"></image>
+        <view class="right">
+          <view class="rightTitle">二手置换</view>
+          <view class="rightDetail">线上、线下预约试驾</view>
+        </view>
+      </view>
+    </view>
+    <view class="RIGHT">
+      <view class="yuyue">
+        <image src="/icons/E3001.png"></image>
+        <view class="right">
+          <view class="rightTitle">预约试驾</view>
+          <view class="rightDetail">线上、线下预约试驾…</view>
+        </view>
+      </view>
+      <view class="yuyue">
+        <image src="/icons/E3001.png"></image>
+        <view class="right">
+          <view class="rightTitle">保险服务</view>
+          <view class="rightDetail">线上、线下预约试驾</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view class="addCard" wx:if="{{isCard}}">
+  <view class="box">
+    <view bindtap="editFn" data-type="img">
+      <view class="img">
+        <image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/img.png"></image>
+
+      </view>
+      <view class="tit">图集</view>
+    </view>
+    <view bindtap="editFn" data-type="video">
+      <view class="video">
+        <image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/video.png"></image>
+
+      </view>
+      <view class="tit">视频</view>
+    </view>
+    <view bindtap="editFn" data-type="article">
+      <view class="alt">
+        <image src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/alt.png"></image>
+
+      </view>
+      <view class="tit">图文</view>
+    </view>
+
+    
+  </view>
+  <image bindtap="close" class="close" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/close.png"></image>
+</view>

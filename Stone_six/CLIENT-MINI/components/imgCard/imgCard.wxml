@@ -1,0 +1,110 @@
+<wxs module="filter" src="../../api/filter.wxs"></wxs>
+<view class="title-bar">
+  <view class="title">
+    {{detail.title}}
+  </view>
+  <view class="right-option" bindtap="moreFn">
+      <text>更多</text>
+      <image src="/static/img/arrow_right.png"></image>
+  </view>
+</view>
+<!-- 模板1-1张图 -->
+<view class="watImg" wx:if="{{detail.jsStyle==1}}">
+  <view class="img" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}">
+    <image mode="aspectFill"   data-url="{{item.url}}" data-id="{{item.id}}" data-item="{{item}}" data-title ="{{item.title}}"  bindtap="godetail" class="first" src="{{item.url}}">
+    </image>
+    <!-- type 1 图 2 视频 3文章 -->
+    <image wx:if="{{item.type ==2}}" class="videoIcon"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+    </image>
+  </view>
+</view>
+<!-- 模板2-2张图 -->
+<view class="watImg box_two" wx:if="{{detail.jsStyle==2}}">
+  <view class="img" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}">
+    <image mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}"  data-item="{{item}}"  bindtap="godetail" class="two" src="{{item.url}}">
+    </image>
+    <image class="videoIcon" wx:if="{{item.type ==2}}"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+    </image>
+  </view>
+
+</view>
+
+<!-- 模板3-3张图 -->
+<view class="watImg" wx:if="{{detail.jsStyle==3}}">
+  <view class="img lf" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}" wx:if="{{index==0}}">
+    <image mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}"  data-item="{{item}}"  bindtap="godetail" class="three" src="{{item.url}}">
+    </image>
+    <image class="videoIcon" wx:if="{{item.type ==2}}"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+    </image>
+  </view>
+
+  <view class="rt box">
+    <view class="img" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}" wx:if="{{index !=0}}">
+      <image mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}"  data-item="{{item}}"  bindtap="godetail" class="three" src="{{item.url}}">
+      </image>
+      <image class="videoIcon" wx:if="{{item.type ==2}}"
+        src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+      </image>
+    </view>
+  </view>
+</view>
+<!-- 模板4-4张图 -->
+<view class="watImg box_f" wx:if="{{detail.jsStyle==4}}">
+  <view class="img lf" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}" wx:if="{{index ==0}}">
+    <image mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}"  data-item="{{item}}"  bindtap="godetail" class="three" src="{{item.url}}">
+    </image>
+    <image class="videoIcon" wx:if="{{item.type ==2}}"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+    </image>
+  </view>
+
+  <view class="rt">
+    <view class="img" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}" wx:if="{{index !=0}}">
+      <image mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}" data-item="{{item}}"  bindtap="godetail" class="three" src="{{item.url}}">
+      </image>
+      <image class="videoIcon" wx:if="{{item.type ==2}}"
+        src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+      </image>
+    </view>
+
+  </view>
+</view>
+
+<!-- 模板5-5张图 -->
+<view class="watImg box_f five" wx:if="{{detail.jsStyle==5}}">
+  <view class="img lf" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}" wx:if="{{index ==0}}">
+    <image mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}" data-item="{{item}}" bindtap="godetail" class="three" src="{{item.url}}">
+    </image>
+    <image class="videoIcon" wx:if="{{item.type ==2}}"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+    </image>
+  </view>
+
+  <view class="rt">
+    <view class="img" wx:for="{{filter.changeLength(detail.resourceInfoList,detail.jsStyle) }}" wx:if="{{index !=0}}">
+      <image mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}"  data-item="{{item}}"  bindtap="godetail" class="three" src="{{item.url}}">
+      </image>
+      <image class="videoIcon" wx:if="{{item.type ==2}}"
+        src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+      </image>
+        <view class="txt" wx:if="{{index==3}}">
+          +42
+        </view>
+    </view>
+  </view>
+</view>
+<!-- 6 -->
+<scroll-view wx:if="{{detail.jsStyle==6}}" scroll-x="true" style="width: 100%;margin-bottom: 64rpx;" enhanced="true"
+  paging-enabled="true" show-scrollbar="{{false}}">
+  <view class="pimg">
+    <view class="video" wx:for="{{detail.resourceInfoList}}">
+      <image class="videoIcon" wx:if="{{item.type ==2}}"
+        src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/20200311/icon-Play_1_zcymzky.svg">
+      </image>
+      <image src="{{item.url}}" mode="aspectFill"   data-url="{{item.url}}" data-title ="{{item.title}}"  data-item="{{item}}"  bindtap="godetail" ></image>
+    </view>
+  </view>
+</scroll-view>

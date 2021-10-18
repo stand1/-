@@ -1,0 +1,58 @@
+<view class="container">
+
+  <view class="search">
+    <view class="leftTitle">素材</view>
+    <view class="searchBody">
+      <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" shape="round" bind:search="onSearch"
+        input-align="center" />
+    </view>
+  </view>
+</view>
+<!-- banner -->
+<view class='banner_warp'>
+  <swiper class='banner' autoplay='false' circular='true' indicator-dots='true' interval="300000000"
+    indicator-active-color="#fff" indicator-color="#aaa" duration="2000">
+    <block wx:for='{{3}}' wx:key='*this'>
+      <swiper-item>
+        <view class='li '>
+          <image class="myImg" src='/icons/E300.png' mode='aspectFill'></image>
+          <!-- src='https://hbimg.huabanimg.com/9abd8e7d768e6bb070de86c09671b73c81de118d43df2-xahAjO_fw658'
+            mode='aspectFill'></image> -->
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- banner 上图下字 -->
+</view>
+<swiper class='banner1' autoplay='false' circular='true' indicator-dots='true' interval="150000000"
+  indicator-active-color="#fff" indicator-color="#aaa">
+  <block wx:for='{{2}}' wx:key='*this'>
+    <swiper-item class="carType">
+      <block wx:for='{{2}}' wx:key='*this'>
+        <!-- 有几个row 就有几行 -->
+        <view class="row">
+          <view class='left myItem'>
+            <!-- <fyitem inner-text="left" innerImage="/icons/E300.png" bindtap="customMethod"></fyitem> -->
+          </view>
+          <view class='middle myItem'>
+            <!-- <fyitem innerText="middle" innerImage="/icons/E300.png" bindtap="customMethod"></fyitem> -->
+          </view>
+          <view class='right myItem'>
+            <!-- <fyitem innerText="right" innerImage="/icons/E300.png" bindtap="customMethod"></fyitem> -->
+          </view>
+        </view>
+      </block>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <view class="imgView">
+  <image class="imgtest" src='/icons/E300.png' mode='aspectFill'></image> -->
+  <!-- <van-image class="imgtest" fit="cover" src="/icons/E3001.png" /> -->
+  <!-- <van-image
+  height="100%"
+  fit="cover"
+  src="/icons/E3001.png"
+/> -->
+  <!-- <van-image src="/icons/E3001.png"> </van-image> -->
+<!-- </view> -->

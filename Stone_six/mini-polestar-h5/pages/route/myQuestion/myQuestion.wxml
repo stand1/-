@@ -1,0 +1,30 @@
+<!--pages/route/myQuestion/myQuestion.wxml-->
+<view class="myQuestion">
+  <view class="content" wx:if="{{isShow == 1}}">
+    <view class="contentBox">
+      <view class="item" wx:for="{{dataList}}" wx:key="index" bindtap="goAnswerDetails" data-str="{{item.answer}}" data-title="{{item.title}}">
+        <view class="itemT">
+           <view class="title">{{item.title}}</view>
+           <text>{{item.typeName}}</text>
+        </view>
+        <view class="itemB">
+           <text></text>
+           <text>{{item.createTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="noData" wx:if="{{isShow == 2}}">
+    <view>暂无提问</view>
+    <!-- <view class="btn" bindtap="goQuestions">
+      <text>去提问</text>
+      <image src="/static/icon/arrowW.png"></image>
+    </view> -->
+  </view>
+  <view class="footer">
+    <view class="footerBtn" bindtap="goQuestions">
+      <text>提问</text>
+      <image src="/static/icon/arrowW.png"></image>
+    </view>
+  </view>
+</view>

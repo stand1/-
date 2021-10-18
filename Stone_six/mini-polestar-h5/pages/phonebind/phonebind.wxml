@@ -1,0 +1,17 @@
+
+    <view class="wrapperBox">
+      <view class="wrapper">
+        <view style="height: 100rpx"></view>
+        <view class="top">
+          <image src="/static/img/logoC.png"></image>
+        </view>
+        <view class="btm">
+           <view class="txt" style="width:auto;">
+             <text>极星黑客松</text> 报名参与活动需要您点击授权使用微信绑定的手机号，用于登录/注册极星黑客松
+           </view>
+           <view class="btn" style="text-align:center">
+            <button hover-class="none" plain="true" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键获取手机号</button>
+           </view>
+        </view>
+      </view>
+    </view>

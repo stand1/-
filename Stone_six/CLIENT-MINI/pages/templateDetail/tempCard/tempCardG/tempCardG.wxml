@@ -1,0 +1,9 @@
+<!--pages/templateDetail/tempCard/tempCardG/tempCardG.wxml-->
+<view class="tempCard">
+  <tabHeader titleStr="个人名片" isShow="{{true}}"></tabHeader>
+  <view class="content">
+     <canvas style="width:96%;height:{{contentHeight}}px" canvas-id="myCanvas"bindlongpress="savePic"> 
+     </canvas>
+  </view>
+  <view class="footer" bindtap="savePic"> <text>保存</text> </view>
+</view>

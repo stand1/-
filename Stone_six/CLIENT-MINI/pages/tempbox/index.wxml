@@ -1,0 +1,21 @@
+<!--pages/temp/index.wxml-->
+<view class="temp" style="padding-top:{{statusBarHeight+80}}px;">
+	<view class="contentBox" style="padding-top:{{statusBarHeight}}px;">
+		<view class="search_bar" bindtap="goSearch">
+			<image src="/static/img/search.png"></image>
+			<text>全民改装行动</text>
+		</view>
+		<view class="nav">
+			<view wx:for="{{list}}" wx:key="index" bindtap="changeNav" data-index="{{index}}" class="navItem, {{index == i?'navActive':''}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="add" bindtap="goUrls">+</view>
+  <!-- 最新 -->
+  <view class="new" wx:if="{{i == 0}}">
+	   最新
+	</view>
+  <!-- 推荐 -->
+  <view class="recommend" wx:if="{{i == 1}}">
+    <recommend navTempList="{{navTempList}}"></recommend>
+  </view>
+</view>

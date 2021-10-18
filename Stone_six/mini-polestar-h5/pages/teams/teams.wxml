@@ -1,0 +1,43 @@
+<!--pages/teams/teams.wxml-->
+<view class="teams">
+  <view class="nav">
+    <view class="navItem, {{navNum==1?'navActive':''}}" bindtap="changeNum" data-num="1">全部团队<view></view></view>
+    <view class="navItem, {{navNum==3?'navActive':''}}" bindtap="changeNum" data-num="3">参赛名单<view></view></view>
+    <view class="navItem, {{navNum==2?'navActive':''}}" bindtap="changeNum" data-num="2">我的团队<view></view></view>
+  </view>
+  <view class="concent">
+    <teamList teamList="{{teamList}}" wx:if="{{navNum==1}}"></teamList>
+    <newTeam teamList="{{teamList}}" myTeam="{{myTeams}}" wx:if="{{navNum==2}}" bind:changeJoins="changeJoin"></newTeam>
+    <view class="competition" wx:if="{{navNum == 3}}">
+      <view class="item" wx:for="{{competitionList}}" wx:key="index">
+        <view class="itemT">
+          <view class="itemTL" catchtap="" data-id="{{item.id}}" data-teamid="{{item.teamId}}">
+           <image class="imgUser" src="{{item.avatar}}"></image>
+           <text>{{item.nickName}}</text>
+           <image class="imgLeft" src="/static/img/icon_right.png"></image>
+          </view>
+          <view class="itemTR timers">{{item.createTime}}</view>
+        </view>
+        <view class="itemT">
+          <view class="itemTL">
+           <view class="itemTLtype" wx:if="{{item.works[0].workType == 0}}">HMI</view>
+           <view class="itemTLtype" wx:if="{{item.works[0].workType == 1}}">智能出行</view>
+           <view class="itemTLtype" wx:if="{{item.works[0].workType == 2}}">智能座舱</view>
+           <view class="title">{{item.works[0].workName}}</view>
+          </view>
+          <view class="itemTR" catchtap="changeShow" data-num="{{index}}" wx:if="{{!item.isShow}}">+</view>
+          <view class="itemTR" catchtap="changeShow" data-num="{{index}}" wx:if="{{item.isShow}}">-</view>
+        </view>
+        <view class="itemB"  wx:if="{{item.isShow}}">
+          <view class="imgList" wx:for="{{item.resume.imgResumeUrls}}" wx:key="index" wx:for-item="x">
+            <image  mode="widthFix" src="{{x}}"></image>
+          </view>
+          <view class="txt">{{item.works[0].workContent}}</view>
+          <view class="isShow" data-num="{{index}}" catchtap="changeShow">收起</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{isData}}" style="text-align:center;font-size: 32rpx;color: #D8D8D8;padding-top: 200rpx;">暂无团队</view>
+</view>

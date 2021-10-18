@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "myTeamList": "../../../component/myTeamList/myTeamList"
+  },
+  "navigationBarTitleText": "我的报名"
+}

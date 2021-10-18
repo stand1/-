@@ -1,0 +1,27 @@
+<!--component/phoneEmpower/phoneEmpower.wxml-->
+<!-- 手机号授权 -->
+<view class="phoneEmpower">
+  <van-overlay show="{{ isShow }}">
+    <view class="wrapperBox">
+      <view class="wrapper">
+        <view class="top">
+          <image src="/static/img/logoC.png"></image>
+        </view>
+        <view class="btm">
+          <view class="userImg">
+            <image src="{{userInfo.avatar}}"></image>
+          </view>
+          <view class="userName">
+            <text>{{userInfo.nickName}}</text>
+          </view>
+           <view class="txt">
+             <text>极星黑客松</text> 报名参与活动需要您点击授权使用微信绑定的手机号，用于登录/注册极星黑客松
+           </view>
+           <view class="btn">
+            <button hover-class="none" plain="true" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">一键获取手机号</button>
+           </view>
+        </view>
+      </view>
+    </view>
+  </van-overlay>
+</view>

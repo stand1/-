@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "素材库",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-image": "@vant/weapp/image/index",
+
+    "fyitem": "../../components/fyitem/fyitem"
+  }
+}

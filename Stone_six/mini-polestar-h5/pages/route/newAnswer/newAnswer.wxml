@@ -1,0 +1,38 @@
+<!--pages/route/newAnswer/newAnswer.wxml-->
+<view class="newAnswer">
+   <view class="title">常见疑问解答</view>
+   <view class="answerCont">
+      <view class="nav">
+        <view class="item" wx:for="{{dataList}}" wx:key="index" data-id="{{item.type}}" data-i="{{index}}" bindtap="changeType">
+          <text class="txt,{{item.type == types ? 'actvie' : ''}}">{{item.name}}</text>
+        </view>
+      </view>
+      <view class="answer">
+         <view class="item" bindtap="goAnswerDetails" wx:for="{{answerList}}" wx:key="index" data-str="{{item.answer}}" data-title="{{item.title}}">
+           <view class="top">
+              <view class="topTxt">{{item.title}}</view>
+              <text wx:if="{{!item.isShow}}" data-show="{{item.isShow}}" data-index="{{index}}" catchtap="changeShow">+</text>
+              <text wx:if="{{item.isShow}}" data-show="{{item.isShow}}"  data-index="{{index}}" catchtap="changeShow">-</text>
+           </view>
+           <view class="btm" wx:if="{{item.isShow}}">
+             {{item.answer}}
+           </view>
+         </view>
+      </view>
+   </view>
+   <!-- <view class="title">大家在问</view>
+   <view class="content">
+     <view class="item" wx:for="{{askedList}}" wx:key="index" data-str="{{item.answer}}" data-title="{{item.title}}" bindtap="goAnswerDetails">
+       {{item.title}}
+     </view>
+   </view> -->
+   <!-- <view class="footer">
+     <view bindtap="goAnswer">我的提问</view>
+   </view> -->
+   <view class="email">
+     <view class="emailBox">
+       <view class="emailBoxL">咨询邮箱</view>
+       <view>Polestarhackathon@163.com</view>
+     </view>
+   </view>
+</view>

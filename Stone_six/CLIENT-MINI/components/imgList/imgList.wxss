@@ -1,0 +1,131 @@
+/* components/imgList/imgList.wxss */
+.imgList {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.imgList .seva {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imgList .seva view {
+  width: 280rpx;
+  height: 96rpx;
+  background: #3366FF;
+  border-radius: 56rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgList .videoIcon {
+  width: 40rpx !important;
+  height: 40rpx !important;
+  position: absolute;
+  top: 50%;
+  margin-top: -20rpx;
+  left: 50%;
+  margin-left: -20rpx;
+}
+
+.imgList .itemBox {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.imgList .itemBox .item {
+  width: 184rpx;
+  height: 300rpx;
+  margin-left: 15rpx;
+  margin-top: 36rpx;
+  position: relative;
+
+}
+
+.imgList .itemBox .itemActive {
+  margin-right: 0rpx;
+}
+
+.imgList .itemBox .item image {
+  width: 184rpx;
+  height: 184rpx;
+  border-radius: 28rpx;
+}
+
+.imgList .tag {
+  width: 108rpx;
+  color: #000000;
+  font-size: 24rpx;
+  height: 50rpx;
+  background: #FFC514;
+  border-radius: 28rpx 0px 28rpx 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 50rpx;
+}
+.imgList .itemBox .name{
+color: #000000;
+text-align: center;
+font-size: 28rpx;
+}
+.imgList .itemBox .time{
+  color: #D2D3D9;
+  font-size: 24rpx;
+  text-align: center;
+}
+.imgList .itemBox .item .unchecked {
+  width: 34rpx;
+  height: 34rpx;
+  border: 2rpx solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: 10rpx;
+  right: 14rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgList .itemBox .item .checked {
+  width: 34rpx;
+  height: 34rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 14rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgList .itemBox .item .checked image {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+}
+
+.imgList .itemBox .item .checked .text {
+  color: #fff;
+  font-size: 24rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}

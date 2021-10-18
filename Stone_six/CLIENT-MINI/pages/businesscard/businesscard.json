@@ -1,0 +1,7 @@
+{
+  "navigationStyle":"custom",
+  "backgroundColor": "#000",
+  "usingComponents": {
+    "headers":"../../components/tabHeader/tabHeader"
+  }
+}

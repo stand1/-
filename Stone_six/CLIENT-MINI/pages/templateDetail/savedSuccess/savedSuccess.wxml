@@ -1,0 +1,21 @@
+<!--pages/templateDetail/savedSuccess/savedSuccess.wxml-->
+<view class="saved">
+  <tabHeader isShow="{{true}}"></tabHeader>
+  <view class="top">
+    <view class="imgs">
+      <image src="../../../static/img/tick.png"></image>
+      <text>保存成功</text>
+    </view>
+    <view class="txt"><text>设计已保存到我的创作</text></view>
+  </view>
+  <view class="images">
+     <image src='{{imgUrl}}' bindtap="chekeImg"></image>
+  </view>
+  <view class="footer">
+    <view><text>—— 点击图片，长按可分享给好友 ——</text></view>
+    <view class="but">
+       <view class="item" bindtap="chekeImg"><text>立即使用</text></view>
+       <view class="item itemActive" bindtap="goMy"><text>查看设计</text></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,71 @@
+.relation .task {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.relation {
+  position: relative;
+}
+
+.relation .box {
+  position: fixed;
+  bottom: 14%;
+  left:32rpx;
+  width: 686rpx;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 48rpx;
+  z-index:1111;
+}
+
+.relation .box .title {
+  padding: 61rpx 0 52rpx 0;
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+
+.relation .box .block {
+  display: flex;
+  align-items: center;
+  padding: 0 48rpx;
+  margin-bottom: 56rpx;
+}
+
+.relation .block image {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 29rpx;
+  margin-right: 32rpx;
+}
+
+.relation .block .tit {
+  font-size: 36rpx;
+  margin-bottom: 4rpx;
+  font-weight: 600;
+  color: #000000;
+}
+
+.relation .block .desp {
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #9B9B9B;
+}
+
+.close {
+  width: 64rpx;
+  height: 64rpx;
+  position: fixed;
+  bottom: 70rpx;
+  left: 50%;
+  margin-left: -32rpx;
+  z-index:1111;
+}

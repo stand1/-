@@ -1,0 +1,10 @@
+<!--pages/cropper/cropper.wxml-->
+<import src="../../plugins/we-cropper/we-cropper.wxml" />
+
+<view class="cropper-wrapper">
+  <tabHeader titleStr="图片裁剪" isShow="{{true}}" ></tabHeader>
+  <template is="we-cropper" data="{{...cropperOpt}}" />
+  <cover-view class="cropper-buttons" bindtap="getCropperImage">
+    确定
+  </cover-view>
+</view>

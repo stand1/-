@@ -1,0 +1,149 @@
+/* pages/route/answer/answer.wxss */
+.answer{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0,0,0,0.85);
+  padding-top: 82rpx;
+  padding-bottom: 200rpx;
+}
+.answerTop{
+  width: 100%;
+  box-sizing: border-box;
+}
+.title{
+  font-size: 28rpx;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24rpx;
+}
+.answerTop .answerTopCen{
+  width: 100%;
+  height: 364rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-top: 2rpx solid rgba(16,24,32,0.15);
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+}
+.answerTop .answerTopCen .answerTopCenL{
+  width: 218rpx;
+  height: 364rpx;
+  box-sizing: border-box;
+  border-right: 2rpx solid rgba(16,24,32,0.15);
+  padding: 30rpx 0 0 30rpx;
+}
+.answerTopCenL .item{
+  font-size: 24rpx;
+  color: #ff7500;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.answerTopCenL .active{
+  font-size: 20rpx;
+  color: #000000;
+}
+.answerTopCenR{
+  width: 530rpx;
+  height: 364rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.answerTopCenR .item{
+  padding: 16rpx 0rpx;
+  margin: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+}
+.answerTopCenR .answerTopCenRBox .item:last-child{
+  border: none;
+}
+.answerTopCenR .answerTopCenRBox{
+  width: 530rpx;
+  height: 304rpx;
+  overflow: auto;
+}
+.answerTopCenR .item .txt{
+  width: 428rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.answerTopCenR .item image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.answerTopCenR .itemChange{
+  width: 530rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-top: 2rpx solid rgba(16,24,32,0.15);
+  position: absolute;
+  left: 0;
+  bottom: 4rpx;
+  background-color: #fff;
+}
+.answerBom{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 46rpx 30rpx;
+}
+.answerBomCen{
+  width: 690rpx;
+  box-sizing: border-box;
+}
+.answerBomCen .item{
+  width: 690rpx;
+  padding: 20rpx 0;
+  font-size: 20rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+  border-bottom: 2rpx solid rgba(16,24,32,0.15);
+}
+.answerBomCen .item:last-child{
+  border: none;
+}
+.answerBomCen .item .itemT, .answerBomCen .item .itemB{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.answerBomCen .item .itemT .txt{
+  width: 588rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  color: #000;
+  font-weight: 500;
+}
+.footer{
+  width: 750rpx;
+  height: 168rpx;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: 2rpx solid #e2e3e5;
+}
+.footer view{
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  background: #53565a;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+}

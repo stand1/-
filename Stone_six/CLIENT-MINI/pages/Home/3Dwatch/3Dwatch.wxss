@@ -1,0 +1,136 @@
+.contain {
+  padding: 0 32rpx;
+}
+
+.nav image {
+  width: 44rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.nav {
+  display: flex;
+
+}
+
+.nav .block {
+  display: flex;
+  flex-shrink: 0;
+  width: auto;
+  align-items: center;
+  margin-right: 32rpx;
+  padding-bottom: 20rpx;
+}
+
+.nav .act {
+  color: #3370FF;
+  position: relative;
+}
+
+.nav .act i {
+  display: inline-block;
+  position: absolute;
+  width: 52rpx;
+  height: 4rpx;
+  bottom: 0;
+  left: 50%;
+  margin-left: -26rpx;
+  background-color: #3370FF;
+}
+
+.dImg {
+  height: 500rpx;
+}
+
+.color .tit {
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+
+.color b {
+  width: 0;
+  height: 0;
+  border-top: 12rpx solid black;
+  border-right: 12rpx solid transparent;
+  border-left: 12rpx solid transparent;
+  display: inline-block;
+  margin-left: 16rpx;
+}
+
+.color .select {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color .block {
+  /* background-color: red; */
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 74rpx;
+  margin-top: 10rpx;
+}
+.color .block image{
+  width: 58rpx;
+  height: 58rpx;
+}
+.color {
+  margin-bottom: 86rpx;
+}
+
+.watImg {
+  padding: 0 32rpx;
+  display: flex;
+  margin-bottom: 64rpx;
+}
+
+.watImg .first {
+  width: 336rpx;
+  height: 336rpx;
+  background: #D8D8D8;
+  border-radius: 29rpx;
+  flex-shrink: 0;
+}
+
+.watImg .rt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.watImg .two{
+  flex-flow: column;
+  margin-left: 20rpx
+}
+.watImg .rt image {
+  width: 158rpx;
+  height: 158rpx;
+  border-radius: 29rpx;
+  /* margin-left: 20rpx; */
+}
+.watImg .three:first-child image{
+  width: 336rpx;
+}
+.watImg .rt image.one{
+  width: 336rpx;
+  height: 336rpx;
+  margin-left: 20rpx
+}
+.watImg .rt .txt {
+  position: absolute;
+  top: 0;
+  width: 158rpx;
+  height: 158rpx;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 29rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,146 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: white;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+ .image2{
+  height: 89rpx !important;
+  width: 105rpx !important;
+}
+.tab-bar-border {
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-bar-item cover-image {
+  width: 34.55rpx;
+  height: 34.55rpx;
+}
+
+.tab-bar-item cover-view {
+  font-size: 10px;
+}
+/* 遮罩 */
+.shadow{
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  /* position: absolute; */
+  height: 100vh;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+/* 上滑高度 */
+.choosen{
+  width: 100%;
+  height: 100%; 
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 98;
+  background-image: url(https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0306_redt_fa%402x.jpg)!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 内容 */
+.container-box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  z-index: 98;
+  padding-left:67rpx;
+  padding-top: 18%;
+}
+.close{
+  width: 625rpx;
+  position: absolute;
+  bottom: 100rpx;
+}
+.img{
+  width: 64rpx;
+height: 64rpx;
+border-radius: 50%;
+/* border: 2rpx solid  #a7a7a7; */
+padding:10rpx;
+margin: auto;
+
+}
+.close image{
+  width: 64rpx;
+  height: 64rpx;
+  display: block;
+margin: auto;
+}
+.cgx {
+  margin-top: 65rpx;
+}
+.cgx image{
+  width: 142rpx;
+  height: 44rpx;
+}
+.container-box .tit{
+  font-size: 46rpx;
+  color: #4e4d4d;
+  line-height: 80rpx;
+  font-size: 56rpx;
+  font-family: STSongti-SC-Bold, STSongti-SC;
+  font-weight: bold;
+  color: #4E4D4D;
+}
+.container-box .ptag{
+  margin-top:13rpx;
+  font-size: 30rpx;
+  color: #7b7b7b;
+}
+.upload{
+  display: block;
+  width: 604rpx;
+  height: 256rpx;
+  margin: 64rpx 0 51rpx 0;
+  /* opacity: 0; */
+}
+.taglist image{
+  width: 128rpx;
+  height: 128rpx;
+}
+.taglist{
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  margin-top: 454rpx;
+}
+.taglist view{
+  width: 128rpx;
+  text-align: center;
+}
+.taglist .blck{
+  width: 33.33%;
+display: flex;
+flex-flow: column;
+  color: #2c3e50;
+  font-size: 23rpx;
+}

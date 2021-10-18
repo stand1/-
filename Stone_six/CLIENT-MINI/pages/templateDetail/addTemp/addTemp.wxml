@@ -1,0 +1,13 @@
+<!--pages/templateDetail/addTemp/addTemp.wxml-->
+<view class="addTemp">
+  <tabHeader></tabHeader>
+  <view class="content">
+     <view class="item {{(index+1)%2==0?'itemActive':''}}" wx:for="{{imgList}}" wx:key="index" bindtap="goUrl" data-i="{{index}}">
+        <image class="{{index>1?'imgs':''}}" src="{{item.url}}"></image>
+        <view><text>{{item.name}}</text></view>
+     </view>
+  </view>
+  <view class="footer">
+    <view bindtap="backs"><image src="../../../static/tabs/close.png"></image></view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="item-box {{className}}" style="width:{{width}}">
+  <image class="img" mode="aspectFill" src="{{obj.url}}">
+  </image>
+  <view class="label"># {{obj.resourceName}}</view>
+  <view class="icon">
+    <image mode="widthFix" wx:if="{{obj.type==1}}"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/imgIcon.png"></image>
+    <image mode="widthFix" wx:if="{{obj.type==2}}"
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/videoIcon.png"></image>
+    <text wx:if="{{obj.type==3}}">文章</text>
+  </view>
+  <view class="like" wx:if="{{obj.type!=3}}">
+    <view class="use">
+      <image src="{{obj.createAvatar}}"></image>
+      {{obj.createName}}
+    </view>
+    <image wx:if="{{obj.isFavorite==0}}" catchtap="favriteFn" src="/static/img/iconZan.png"></image>
+    <image wx:if="{{obj.isFavorite==1}}" catchtap="favriteFn" src="/static/img/iconLike.png"></image>
+  </view>
+  <!-- 文章 -->
+  <view style="background:#000;  padding:0 4px 4px ;" wx:if="{{obj.type==3}}">
+    <view class="article">
+      <view class="tit">xxxx</view>
+      <view class="desp">号的阿松大</view>
+      <image wx:if="{{obj.isFavorite==0}}" src="/static/img/like_gray.png"  catchtap="favriteFn"></image>
+      <image wx:if="{{obj.isFavorite==1}}" src="/static/img/iconLike.png"  catchtap="favriteFn"></image>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,11 @@
+<!--pages/route/mySign/mySign.wxml-->
+<view class="mySign">
+  <view class="nav">
+    <view class="navItem, {{navNum==1?'navActive':''}}" bindtap="changeNum" data-num="1">个人报名<view></view></view>
+    <view class="navItem, {{navNum==2?'navActive':''}}" bindtap="changeNum" data-num="2">团队报名<view></view></view>
+  </view>
+  <myTeamList teamList="{{teamList}}"></myTeamList>
+
+  <view wx:if="{{teamList.length == 0}}" style="text-align:center;font-size: 32rpx;color: #D8D8D8;padding-top: 200rpx;">还没有进行报名</view>
+  <view wx:if="{{teamList.length == 0}}" style="margin: 100rpx auto;width: 300rpx;line-height: 80rpx;color:#fff;font-size:28rpx;background:#333;text-align:center;" bindtap="goBaoming">去报名</view>
+</view>

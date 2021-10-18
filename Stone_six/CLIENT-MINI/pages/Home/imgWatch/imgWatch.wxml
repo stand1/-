@@ -1,0 +1,2 @@
+<tabHeader titleStr="{{title}}" isShow="{{false}}"></tabHeader>
+<recommend favoriteType="1" list="{{Morelist}}"></recommend>

@@ -1,0 +1,63 @@
+<!--pages/route/myTeam/myTeam.wxml-->
+<view class="myTeam">
+  <view class="myTeamTop">
+     <view class="userImg">
+       <image src="{{datas.avatar}}"></image>
+     </view>
+     <view class="myTeamTopL">
+        <view class="title">
+          <view>{{datas.nickName}}</view>
+          <view class="titleCaptain" wx:if="{{datas.captain}}">队长</view>
+        </view>
+        <text>手机：{{datas.mobile}}</text>
+        <text>邮箱：{{datas.resume.email}}</text>
+        <text>公司：{{datas.resume.wx}}</text>
+     </view>
+  </view>
+  <view class="myTeamTitle">作品</view>
+  <view class="nav">
+    <view class="item, {{navNum == 1 ? 'active' : ''}}" bindtap="changeNum" data-num="1">个人简历</view>
+    <view class="item, {{navNum == 2 ? 'active' : ''}}" bindtap="changeNum" data-num="2">创意作品</view>
+  </view>
+  <view class="content">
+    <view class="title" wx:if="{{navNum == 2}}">{{datas.userWorks[0].workName}}</view>
+    <view wx:if="{{navNum == 1}}">{{datas.resume.resumeDescription}}</view>
+    <view wx:if="{{navNum == 2}}">{{datas.userWorks[0].workContent}}</view>
+    <view class="imgList" wx:for="{{imgList}}" wx:key="index">
+      <image mode="widthFix" src="{{item}}"></image>
+    </view>
+  </view>
+
+  <view class="footer" wx:if="{{datas.canTransfer}}">
+    <!-- <view class="btn" bindtap="changeCaptain">转移队长</view> -->
+    <view class="btn" bindtap="kickTeam" wx:if="{{datas.id != userInfo.id}}">移出队伍</view>
+  </view>
+  <van-dialog id="van-dialog" />
+  <!-- 转移队长 -->
+  <van-overlay show="{{ showCaptain }}">
+    <view class="wrapperBox">
+      <view class="wrapper">
+         <view class="content">
+            <view class="title">把队长转移给</view>
+            <view class="conBox">
+               <view class="item" wx:for="{{teamList}}" wx:key="index">
+                 <view class="itemL">
+                   <image src=""></image>
+                   <text>队员A</text>
+                 </view>
+                 <image src="/static/img/icon_right.png"></image>
+               </view>
+            </view>
+            <view class="btnBox">
+              <view class="btn" bindtap="changeTeam">
+                 <text>确定</text>
+              </view>
+              <view class="btn" bindtap="onClickHide">
+                 <text>取消</text>
+              </view>
+            </view>
+         </view>
+      </view>
+    </view>
+  </van-overlay>
+</view>

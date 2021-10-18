@@ -1,0 +1,319 @@
+/* pages/publish/article/index.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.header {
+  height: 90rpx;
+  flex: none;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header button {
+  font-size: 32rpx;
+  padding: 0;
+  font-weight: 400;
+}
+
+.header .save {
+  /* display: inline-block; */
+  /* width: 80rpx; */
+  width: auto;
+  color: #f81e36;
+  margin-left: 0;
+  margin-right: 50rpx;
+}
+
+.header .publish {
+  width: 104rpx;
+  height: 56rpx;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 56rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #f81e36;
+  border-radius: 28rpx;
+}
+
+scroll-view {
+  height: 2rpx;
+  flex: 1;
+}
+
+.post_cover_box {
+  width: 100%;
+  width: 750rpx;
+  /* height: 560rpx; */
+  height: 500rpx;
+  background-color: #F2F3F5;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+}
+
+.post_cover_box .upload_box {
+  position: relative;
+  text-align: center;
+}
+
+.post_cover_box .upload_box image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 10rpx;
+}
+
+.post_cover_box .upload_box .tip {
+  font-size: 30rpx;
+  color: #999;
+  line-height: 42rpx;
+}
+
+.edit_wrap {
+  padding: 0rpx 32rpx 30rpx 32rpx;
+}
+
+.edit_wrap .title_box {
+  padding-top: 34rpx;
+  padding-bottom: 36rpx;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  text-align: left;
+  border-bottom: 2rpx solid #F2F3F5;
+}
+
+.edit_wrap .title_box input {
+  display: block;
+  width: 100%;
+}
+
+.edit_wrap .title_box input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.edit_wrap .editor_box {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.edit_wrap .editor_box .ql-container {
+  height: auto;
+  min-height: 100px;
+}
+
+.tag_box {
+  flex: none;
+  height: 154rpx;
+  width: 100%;
+  background: #fff;
+  /* position: fixed;
+  left: 0;
+  bottom: 128rpx; */
+  text-align: left;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  box-sizing: border-box;
+}
+
+.tag_box.no_border .select_row {
+  border-bottom: none;
+}
+
+.tag_box .select_row {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #F2F3F5;
+}
+
+.tag_box .select_row .icon {
+  flex: none;
+  width: 48rpx;
+  height: 48rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-right: 20rpx;
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icons/publish_video/tag_icon_select.png');
+}
+
+.tag_box .select_row .label {
+  width: 1rpx;
+  flex: 1;
+  font-size: 32rpx;
+  color: #999;
+  line-height: 44rpx;
+  text-align: left;
+}
+
+.tag_box .select_row .right {
+  flex: none;
+  display: flex;
+  align-items: center;
+}
+
+.select_row .right .select_value {
+  line-height: 34rpx;
+  font-size: 24rpx;
+  color: #9B9B9B;
+}
+
+.select_row .right .select_icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 12rpx;
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/icons/publish_video/right_icon_select.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.tag_box .title {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 52rpx;
+  margin-bottom: 20rpx;
+}
+
+.tag_box .tag_wrap {
+  color: #000;
+  /* padding-bottom: 36rpx; */
+  padding-bottom: 20rpx;
+  /* border-bottom: 2rpx solid #F2F3F5; */
+  overflow-x: scroll;
+}
+
+.tag_box .tag_wrap .tag_tiem {
+  height: 48rpx;
+  line-height: 48rpx;
+  background: #fff;
+  border-radius: 25rpx;
+  border: 2rpx solid rgba(242, 243, 245, 1);
+  margin-left: 8rpx;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+
+.tag_wrap .tag_tiem:nth-child(1) {
+  margin-left: 0;
+}
+
+.tag_wrap .tag_tiem .btn_rm {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 8rpx;
+  background: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_close_bluck@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.foot_row {
+  flex: none;
+  height: 98rpx;
+  height: 128rpx;
+  width: 100%;
+  background: #fff;
+  /* position: fixed;
+  left: 0;
+  bottom: 30rpx;
+  bottom: 0rpx; */
+  padding-left: 32rpx;
+  border-top: 2rpx solid #F2F3F5;
+  padding-bottom: 30rpx;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.foot_row .btn {
+  width: 48rpx;
+  height: 48rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-right: 40rpx;
+  position: relative;
+}
+
+.foot_row .btn:nth-child(4) {
+  margin-right: 0;
+}
+
+.foot_row .btn.active {
+  background-color: rgb(221, 221, 221);
+}
+
+.foot_row .btn.btn_text {
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_icon-p@2x.png');
+}
+
+.foot_row .btn.btn_img {
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_icon-tupian@2x.png');
+}
+
+.foot_row .btn.btn_video {
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_icon-shipin@2x.png');
+}
+
+.foot_row .btn.btn_label {
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_icon-ziti@2x.png');
+}
+
+.foot_row .btn.btn_addr {
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0224_redt_icon-map@2x.png');
+}
+
+.foot_row .btn_select {
+  width: 280rpx;
+  height: 68rpx;
+  background: #4a4a4a;
+  border-radius: 34rpx;
+  align-items: center;
+  color: #fff;
+  font-size: 32rpx;
+  margin-left: 86rpx;
+  margin-left: auto;
+  margin-right: 32rpx;
+  padding-left: 30rpx;
+  padding-right: 24rpx;
+  box-sizing: border-box;
+}
+
+.foot_row .btn_select .text {
+  width: 1rpx;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.foot_row .btn_select .icon {
+  width: 24rpx;
+  height: 18rpx;
+  flex: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url('https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/0225_redt_pull@2x.png');
+}
+
+.fixed {
+  position: static;
+}
+
+.Bbtn {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  /* justify-content: flex-end; */
+}
+.Bbtn .push{
+  color: rgba(116, 176, 229, 1);
+}

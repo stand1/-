@@ -1,0 +1,82 @@
+<wxs src="./mysource.wxs" module="wxs"></wxs>
+<view class="page">
+  <headers titleStr="我的素材"></headers>
+  <view style="z-index:100;position: fixed;width:100%;height:96rpx;background-color:white">
+    <van-search style="z-index:100;position: fixed;width:686rpx;height:72rpx;margin-left:32rpx;margin-top:12rpx"
+      value="{{ value }}" shape="round" placeholder="在当前场景下搜索" />
+  </view>
+
+  <view class="titles">
+    <view class="titleItem" bindtap="onClickShow">
+      <view class="title">全部车系</view>
+      <image src="{{show ? '/icons/usercenter/up.png': '/icons/usercenter/downblack.png'}}"></image>
+    </view>
+    <view class="titleItem">
+      <view class="title">文件类型</view>
+      <image src="/icons/usercenter/downblack.png"></image>
+    </view>
+    <view class="titleItem">
+      <view class="title">全部类型</view>
+      <image src="/icons/usercenter/downblack.png"></image>
+    </view>
+    <view class="titleItem">
+      <view class="title">排序</view>
+      <image src="/icons/usercenter/downblack.png"></image>
+    </view>
+    <!-- <van-dropdown-menu>
+    <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" title-class="hhh"/>
+  </van-dropdown-menu> -->
+  </view>
+  <view class="overlay" wx:if="{{show}}" bindtap="onClickHide">
+    <scroll-view scroll-y="true" enhanced="true" show-scrollbar="false" class="left">
+      <view wx:for="{{navSrc}}" wx:for-index="index" wx:for-item="item" wx:key="index" data-methodType="{{item.id}}"
+        catchtap="onClickLeftItem" class="leftItem {{(selectNavId == item.id) ? 'selectNavBg' : ''}}"
+        data-index="{{index}}" data-item="{{item}}">
+        <view class="leftTitle">{{item.name}}</view>
+        <view class="leftDetail">{{item.detail}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y="true" enhanced="true" show-scrollbar="false" class="right">
+      <view wx:for="{{rightItems}}" wx:for-index="index" wx:for-item="item" wx:key="index" data-methodType="{{item.id}}"
+        catchtap="onClickRightItem" class="rightItem " data-index="{{index}}" data-item="{{item}}">
+        <view class="rightTitle">{{item.carType}}</view>
+        <image class="selectImage {{(wxs.isActive(selectedRightIds, item.id)) ?  'selectRightItem' : ''}}"
+          src="/icons/usercenter/selected@2x.png"></image>
+      </view>
+    </scroll-view>
+  </view>
+  <div class="flex-container">
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="sourceTag">#外观</view>
+      <view class="title">新建文件夹</view>
+      <view class="date">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="sourceTag">#外观</view>
+      <view class="title">新建文件夹</view>
+      <view class="date">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="sourceTag">#外观</view>
+      <view class="title">新建文件夹</view>
+      <view class="date">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="sourceTag">#外观</view>
+      <view class="title">新建文件夹</view>
+      <view class="date">2020-09-15</view>
+    </div>
+    <div class="flex-item">
+      <image src="/icons/E3001.png"></image>
+      <view class="sourceTag">#外观</view>
+      <view class="title">新建文件夹</view>
+      <view class="date">2020-09-15</view>
+    </div>
+  </div>
+  
+</view>

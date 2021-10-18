@@ -1,0 +1,4 @@
+<view class="watch"  bindtouchstart='touchStart' bindtouchmove="touchEnd">
+<!-- display:{{index==sindex?'block':'none'}} -->
+  <image wx:for="{{imgSrc}}" style="width: 100%;display:{{index==sindex?'block':'none'}}" src="{{item.imgUrl}}"></image>
+</view>

@@ -1,0 +1,46 @@
+<!-- <tabHeader titleStr="选择车型" isShow="{{false}}"></tabHeader> -->
+<view class="choseType">
+  <view class="type">
+    一文一车，如有多车请另起文章
+  </view>
+  <view class="title">选择关联的车型</view>
+  <view class="block" bindtap="openTask" wx:for="{{carList}}" data-id="{{item.carId}}" data-name="{{item.carName}}">
+    <image mode="aspectFill" src="{{item.picUrl}}">
+    </image>
+    <view class="rt">
+      <view class="carTit">{{item.carName}}</view>
+      <view class="desp">{{item.carLevel}}</view>
+    </view>
+  </view>
+</view>
+<view class="car" wx:if="{{isTask}}">
+  <view class="task" bindtap="noSure"></view>
+  <view class="box">
+    <view class="btn">
+      <view bindtap="noSure"> 取消</view>
+      <view bindtap="sure" class="sure">确认</view>
+    </view>
+
+    <view class="tit">
+      {{carName}}
+    </view>
+    <view class="ctit">{{options.length}}款配置车型可选择</view>
+
+    <view class="alltit">
+      <text>全部车系</text>
+      <!-- <image src="/static/img/tick.png"></image> -->
+    </view>
+
+
+
+    <view class="select__nav" style="height:60%">
+      <view class="alltit" wx:for="{{options}}" data-index="{{index}}" bindtap="chosefn">
+        <view class="name"> {{item.name}}</view>
+        <image wx:if="{{sindex == index}}" src="/static/img/tick.png"></image>
+      </view>
+
+
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/route/questions/questions.wxml-->
+<view class="questions">
+  <!-- <view class="inp">
+    <picker bindchange="bindQuestions" value="{{questionsIndex}}" range="{{questionsArr}}">
+      <view class="picker">
+        <text class="colors" wx:if="{{types == -1}}">问题类型</text>
+        <text wx:if="{{types > -1}}">{{questionsArr[questionsIndex]}}</text>
+        <image class="inpImg" src="/static/img/icon_buttom.png"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="inp">
+    <input type="text" bindinput="changeTitle" value="{{inputKeys}}" placeholder="标题"/>
+  </view>
+  <view class="inp inps">
+    <textarea type="text" bindinput="changeTxt" value="{{txtVal}}" placeholder="问题详情"></textarea>
+  </view>
+  <view class="footer" bindtap="sub">
+    <view>提交</view>
+  </view> -->
+</view>

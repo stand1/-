@@ -1,0 +1,29 @@
+.label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 100%;
+}
+
+.label-item {
+  position: relative;
+  height: 48rpx;
+  line-height: 51rpx;
+  padding-left: 21rpx;
+  padding-right: 21rpx;
+  margin-right: 24rpx;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  
+font-weight: 600;
+  color: #4A4A4A;
+  text-align: center;
+  background-color: #F0F4FD;
+  border-radius: 25rpx;
+}
+
+.label-item__hover {
+  /* color: white;
+  background-color: #F0F4FD; */
+}

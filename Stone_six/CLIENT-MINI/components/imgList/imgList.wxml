@@ -1,0 +1,29 @@
+<!--components/imgList/imgList.wxml-->
+<view class="imgList">
+   <view class="seva" bindtap="seva">
+     <view>确定</view>
+   </view>
+   <view class="itemBox">
+      <view class="item {{(index+1)%4==0?'itemActive':''}}" wx:for="{{imgList}}" wx:key="index" bindtap="checkedImg" data-i="{{index}}">
+      <view class="tag">{{item.labelName}}</view>
+      <view style="    position: relative;">
+               <image src="{{item.imgUrl || item.url}}"></image>
+          <!-- 如果是视频的话 -->
+        <image wx:if="{{item.type==2}}" class="videoIcon" src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/mini/videoIcon.png"></image>
+      </view>
+ 
+        <view class="checked" wx:if="{{item.isChecked}}">
+          <image src="../../static/img/checked.png"></image>
+          <view class="text"><text>{{item.num}}</text></view>
+        </view>
+        <view class="unchecked" wx:else></view>
+
+        <view class="name">
+          {{item.title}}
+        </view>
+        <view class="time">
+          {{item.createTime}}
+        </view>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/pageA/imgDetail/imgDetail.wxml-->
+<view class="imgDetail">
+  <tabHeader titleStr="{{title}}" isShow="{{true}}"></tabHeader>
+  <view class="content">
+    <image wx:if="{{imgSrc}}" src="{{imgSrc}}"></image>
+    <video wx:if="{{videoSrc}}"
+      id="myVideo" 
+      src="{{videoSrc}}"
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+    ></video>
+    <!-- <video 
+      id="myVideo" 
+      src="https://sixeco-redt.oss-cn-shenzhen.aliyuncs.com/redt-user-files/15790595003531539597100847.mp4" 
+      binderror="videoErrorCallback" 
+      danmu-list="{{danmuList}}" 
+      enable-danmu 
+      danmu-btn 
+      show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video> -->
+    <view class="contentBtn">
+       <view class="item {{(index+1)%5==0?'itemActive':''}}" wx:for="{{imgList}}" wx:key="index" bindtap="handleBtn" data-item="{{item}}"> 
+          <image src="{{item.imgUrl}}"></image>
+          <view>{{item.name}}</view>
+       </view>
+    </view>
+  </view>
+</view>

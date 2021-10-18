@@ -1,0 +1,39 @@
+<!--component/myTeamList/myTeamList.wxml-->
+<view class="contentBox">
+    <view class="item" wx:for="{{teamList}}" wx:key="index" data-id="{{item.id}}">
+      <view class="itemTop">
+         <view class="itemTopL">
+           <image src="{{item.isPersonal?item.userWorkVo.avatar:item.teamVo.captain.avatar}}"></image>
+           <view class="itemTopLtxt">
+             <view class="title" wx:if="{{!item.isPersonal}}">{{item.teamVo.teamName}}</view>
+             <view>
+               <text class="captain" wx:if="{{!item.isPersonal}}">队长</text>
+               <text>{{item.isPersonal?item.userWorkVo.nickName:item.teamVo.captain.nickName}}</text>
+             </view>
+           </view>
+         </view>
+         <view class="itemTopR" wx:if="{{item.teamVo.teamWork.workType == 0}}">HMI</view>
+         <view class="itemTopR" wx:if="{{item.teamVo.teamWork.workType == 1}}">智能出行</view>
+         <view class="itemTopR" wx:if="{{item.teamVo.teamWork.workType == 2}}">智能座舱</view>
+      </view>
+      <view class="itemCent">
+        <view class="title txtShow">{{item.isPersonal?'个人简历':item.teamVo.teamWork.workName}}</view>
+        <view class="itemCentImg">
+          <image mode="aspectFill" src="{{item.isPersonal?item.userWorkVo.resume.imgResumeUrls[0]:item.teamVo.teamWork.imgUrl}}"></image>
+        </view>
+        <view class="txtShow">{{item.isPersonal?item.userWorkVo.resume.resumeDescription:item.teamVo.description}}</view>
+      </view>
+      <view class="itemB">
+         <view class="itemBs" wx:if="{{item.teamVo.status == 0}}">
+           <view class="btn btnA">审核中</view>
+         </view>
+         <view class="itemBs" wx:if="{{item.teamVo.status == 1}}">
+           <view class="btn btnB">报名成功</view>
+         </view> 
+         <view class="itemBs" wx:if="{{item.teamVo.status == 2 || item.teamVo.status == 3 || item.teamVo.status == 4}}">
+           <view class="btn">审核未通过</view>
+           <view>{{item.teamVo.approvalComment}}</view>
+         </view>
+      </view>
+    </view>
+  </view>

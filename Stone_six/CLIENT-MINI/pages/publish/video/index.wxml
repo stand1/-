@@ -1,0 +1,54 @@
+<!--pages/publish/video/index.wxml-->
+<view>
+
+  <view class="video_box">
+    <view class="videoList">
+      <view wx:if="{{videoList.length>0}}" class="video_item {{direction}}"
+        style="background-image: url({{postCoverSrc}})">
+        <view class="play_btn" bindtap="showShadow = true"></view>
+        <view class="img_close" bindtap="removeVideo"></view>
+        <!-- <view class="change_btn" bindtap="changePostCover">修改封面</view> -->
+      </view>
+      <view class="add_img" wx:if="{{videoList.length<1}}">
+        <button bindtap="addVideo"></button>
+      </view>
+    </view>
+  </view>
+  <view class="title_box">
+    <input wx:if="{{!isapp}}" type="text" placeholder="输入标题，6到30字(必填)" maxlength="30" value="{{title}}" bindblur="titleInputBlur"></input>
+  </view>
+  <view class="text_box">
+    <textarea wx:if="{{!isapp}}" name="text_content" value="{{textContent}}" placeholder="释放你思想的火花" cols="30" rows="5"
+      bindinput="textNumInput" maxlength="100" bindblur="textInputBlur"></textarea>
+    <view class="num_tip">
+      {{textLength}}/100
+    </view>
+  </view>
+
+
+  <view class="fixed">
+    <view class="block" bindtap="openApp">
+      <view class="lf">
+        <image src="/static/img/appIcon.png"></image>
+         {{Appobj.appName||'关联应用'}} 
+      </view>
+      <view class="rt">
+        <image src="/static/img/arrow_right.png"></image>
+      </view>
+    </view>
+    <view class="block">
+      <view class="lf">
+        <image src="/static/img/ticop.png"></image>
+        关联直播
+      </view>
+      <view class="rt">
+        <image src="/static/img/arrow_right.png"></image>
+      </view>
+    </view>
+    <view class="btn">
+      <!-- <view class="save">保存</view> -->
+      <view class="push" bindtap="publish">发布</view>
+    </view>
+  </view>
+  <applications isapp="{{isapp}}"  bind:close="closefn" bind:chosefn="chosefn"></applications>
+</view>
