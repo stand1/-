@@ -1,0 +1,107 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1048857",
+      "name": "账号",
+      "font_class": "icon_account",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "2678623",
+      "name": "人员管理",
+      "font_class": "renyuanguanli",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "4182913",
+      "name": "AK-IN睁眼",
+      "font_class": "in_zhengyan",
+      "unicode": "e55f",
+      "unicode_decimal": 58719
+    },
+    {
+      "icon_id": "4765896",
+      "name": "eye",
+      "font_class": "eye",
+      "unicode": "e78f",
+      "unicode_decimal": 59279
+    },
+    {
+      "icon_id": "4936668",
+      "name": "eye-fill",
+      "font_class": "eye-fill",
+      "unicode": "e869",
+      "unicode_decimal": 59497
+    },
+    {
+      "icon_id": "6282756",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "6844457",
+      "name": "睁眼",
+      "font_class": "zhengyan",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "7162358",
+      "name": "闭眼2",
+      "font_class": "biyan",
+      "unicode": "e746",
+      "unicode_decimal": 59206
+    },
+    {
+      "icon_id": "8092166",
+      "name": "eye close-fill",
+      "font_class": "eyeclose-fill",
+      "unicode": "e8ff",
+      "unicode_decimal": 59647
+    },
+    {
+      "icon_id": "8092167",
+      "name": "eye-close",
+      "font_class": "eye-close",
+      "unicode": "e900",
+      "unicode_decimal": 59648
+    },
+    {
+      "icon_id": "9575925",
+      "name": "闭眼",
+      "font_class": "biyan1",
+      "unicode": "e6a8",
+      "unicode_decimal": 59048
+    },
+    {
+      "icon_id": "14401729",
+      "name": "hash",
+      "font_class": "hash",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "14666097",
+      "name": "云",
+      "font_class": "yun",
+      "unicode": "e733",
+      "unicode_decimal": 59187
+    },
+    {
+      "icon_id": "14871841",
+      "name": "润桐医药 [已恢复]_闭眼",
+      "font_class": "runtongyiyaoyihuifu_biyan",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    }
+  ]
+}

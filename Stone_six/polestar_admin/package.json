@@ -1,0 +1,53 @@
+{
+    "name": "gtmc-iclubst_order-center",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve --open",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "dev": "vue-cli-service serve --open"
+    },
+    "dependencies": {
+        "ali-oss": "^6.3.1",
+        "axios": "^0.19.0",
+        "better-editor": "^0.1.3",
+        "better-scroll": "^1.15.2",
+        "core-js": "^2.6.5",
+        "echarts": "^4.6.0",
+        "element-china-area-data": "^4.1.2",
+        "element-ui": "^2.13.1",
+        "es6-promise": "^4.2.8",
+        "nprogress": "^0.2.0",
+        "screenfull": "^3.3.3",
+        "vue": "^2.6.10",
+        "vue-awesome-swiper": "^3.1.3",
+        "vue-axios": "^2.1.4",
+        "vue-clipboard2": "^0.3.1",
+        "vue-count-to": "^1.0.13",
+        "vue-cropper": "^0.5.2",
+        "vue-loading-template": "^1.3.2",
+        "vue-router": "^3.0.3",
+        "vuex": "^3.0.1",
+        "xgplayer": "^2.7.1",
+        "xgplayer-hls.js": "^2.2.2"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.11.0",
+        "@vue/cli-plugin-eslint": "^3.8.0",
+        "@vue/cli-service": "^3.11.0",
+        "amfe-flexible": "^2.2.1",
+        "babel-eslint": "^10.0.1",
+        "babel-polyfill": "^6.26.0",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "less": "^3.10.3",
+        "less-loader": "^5.0.0",
+        "node-sass": "^4.14.1",
+        "normalize.css": "^8.0.1",
+        "sass-loader": "^8.0.2",
+        "style-resources-loader": "^1.3.2",
+        "vue-cli-plugin-style-resources-loader": "^0.1.4",
+        "vue-template-compiler": "^2.6.10"
+    }
+}

@@ -1,0 +1,70 @@
+// 侧边栏
+.menu-wrapper{
+  text-align: center;
+  @include clearfix;
+  //.index_icon{
+  //  background: url('~@/assets/img/home_icon.png') no-repeat;
+  //  background-size:100% 100%;
+  //}
+  //.add_icon{
+  //  background: url('~@/assets/img/add_icon.png') no-repeat;
+  //  background-size:100% 100%;
+  //}
+  //.management_icon{
+  //  background: url('~@/assets/img/management_icon.png') no-repeat;
+  //  background-size:100% 100%;
+  //}
+  //.res_icon{
+  //  background: url('~@/assets/img/res_icon.png') no-repeat;
+  //  background-size:100% 100%;
+  //}
+  .logo{
+    height: 300px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    img{
+      width:76px;
+      height:48px;
+    }
+  }
+  .submenu{
+    text-align: center;
+    margin-bottom: 20px;
+    .icon_box{
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      .iconfont{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        font-size: 30px;
+        color: #fff;
+      }
+      .title{
+        margin-left: 28px;
+        line-height: 40px;
+        opacity: 0.5;
+        font-size: 18px;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: 400;
+        text-align: left;
+        color: #000;
+      }
+      &.active .title{
+        //background: url('~@/assets/img/select_active.png') no-repeat;
+        //background-size:100% 100%;
+        font-family: PingFangSC, PingFangSC-Semibold;
+        font-weight: bold;
+        opacity: 1;
+      }
+    }
+    span.title{
+      font-size: 14px;
+      color: #8F92A1;
+      line-height: 15px;
+    }
+  }
+}
+

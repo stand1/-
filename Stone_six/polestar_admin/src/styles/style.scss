@@ -1,0 +1,297 @@
+ //覆盖一些element-ui样式
+
+//  .queue-user-container,.historical-talk-container,.online-user-container,.user-container{
+//   min-height: calc(100vh - 58px);
+//   background: #FFFFFF;
+//   border-radius: 6px 0 0 6px;
+//   .filter-container{
+//     .el-form-item{
+//       margin-bottom: 10px;
+//     }
+//   }
+//   .search-form{
+//     padding:20px 20px 0 0;
+//     .reset-btn{
+//       color: $main;
+//       border-color:$main;
+//     }
+//     .el-form-item {
+//       margin-bottom: 0;
+//     }
+//     .el-form-item__label{
+//       width: 105px;
+//       text-align: right;
+//     }
+//   }
+// }
+// 知识库
+// .library-container,.organization-container{
+//   min-height: calc(100vh - 58px);
+//   .library-wrapper{
+//     height:48px;
+//     padding-top: 8px;
+//     background-color: #ffffff;
+//     border-radius: 6px 0 0 6px;
+//   }
+//     .el-tabs__header{
+//       margin-bottom: 8px;
+//     }
+//     .el-tabs__nav{
+//       margin-left: 20px
+//     }
+//     .el-tabs--card > .el-tabs__header,.el-tabs--card > .el-tabs__header .el-tabs__item,.el-tabs--card > .el-tabs__header .el-tabs__nav {
+//       border: none;
+//     }
+//     .el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
+//       background-color: #f4f4ff;
+//     }
+//     .el-aside{
+//       height: calc(100vh - 58px - 55px);
+//       margin-right: 8px;
+//       width:calc(20% - 8px);
+//       background-color: #ffffff;
+//       float:left;
+//       overflow: auto;
+//       border-radius: 6px;
+//     }
+//     .el-tree{
+//       margin:10px;
+//       min-width: 200px;
+//     }
+//     .library-content{
+//       height: calc(100vh - 58px - 55px);
+//       background-color: #ffffff;
+//       border-radius: 6px 0 0 6px;
+//       width:80%;
+//       float: left;
+//       overflow-y: auto;
+//       .search{
+//         display:inline-bolck;
+//         float: left;
+//         width:230px; 
+//         height:40px;
+//         margin:10px 0 10px 24px;
+//         .el-input,.el-button{
+//           float: left;
+//           margin-top: 4px;
+//         }
+//         .el-button{
+//           border: none;
+//           background: none;
+//           font-size: 14px;
+//           padding-right: 0;
+//         }
+//       }
+//       .btn-group{
+//         height:40px;
+//         margin:10px 30px 10px 0;
+//         width: 530px;
+//         float: right;
+//         .el-button{
+//           float: right;padding-left: 20px;
+//         }
+//         .el-upload{
+//           float: right;
+//         }
+//       }
+//       .btn-delete{
+//         color: $red;
+//       }
+//       .btn-edit{
+//         color: $yellow;
+//       }
+//     }
+//     // .search{
+//     //   display:inline-bolck;
+//     //   width:200px; 
+//     //   height:40px;
+//     //   right:30px; 
+//     //   top:8px; 
+//     //   position: absolute;
+//     //   .el-input,.el-button{
+//     //     float: right;
+//     //   }
+//     //   .el-button{
+//     //     border: none;
+//     //     background: none;
+//     //     font-size: 14px;
+//     //     padding-right: 0;
+//     //   }
+//     // }
+// }
+// .el-table,.el-button {
+//   font-size: 13px;
+// }
+// .import-result-box{
+//   text-align: center;
+//   .line{
+//     margin-bottom: 10px;
+//     height: 6px;
+//     background: #f5f4f7;
+//     border-radius: 3px;
+//   }
+//   .success{
+//     margin:30px 0 10px 0;
+//     .el-icon-success{
+//       color: $green;
+//       margin-right: 5px;
+//     }
+//   }
+//   .warning{
+//     margin: 10px 0;
+//     .el-icon-warning{
+//       color: $red;
+//       margin-right: 5px;
+//     }
+//   }
+// }
+// .organization-container{
+//   .el-aside{
+//     height: calc(100vh - 58px);
+//     .header{
+//       margin:20px;
+//     }
+//   }
+//   .library-content{
+//     height: calc(100vh - 58px);
+//     .header{
+//       margin:20px 0 20px 24px;
+//     }
+//   }
+//   .header{
+//     font-size: 16px;
+//     color: #333333;
+//     font-weight:500;
+//   }
+// }
+//全局样式
+// .el-date-editor .el-range-separator{
+//   width: 10%;
+// }
+// .search-form .el-form-item__content,.search-form .el-form-item__label{
+//   line-height: 32px;
+// }
+// .detailTitle {
+//   color:#333333;
+//   padding:17px 0;
+//   padding-left:54px;
+//   font-size:16px;
+//   font-family:PingFangSC-Medium;
+//   font-weight:600;
+// }
+// .search-form{
+//   width: 1133px;
+//   clear: both;
+//   .btn-group{
+//     float:right
+//   }
+  // .search-btn{
+  //   margin-right: 10px;
+  // }
+// }
+// .pagination-container{
+//   padding: 0 18px 0;
+//   margin-bottom: 20px;
+//   text-align: center;
+// }
+// .supplement-container{
+//   .title-line{
+//     height: 6px;
+//     background: #f5f4f7;
+//     margin-bottom: 20px;
+//     border-radius: 3px;
+//   }
+//   .el-dialog__body{
+//     padding-top: 15px;
+//   }
+// }
+
+// .detailTitleBox{
+//   background: $chatlightbg
+// }
+// .detailTitle {
+//   color:#333333;
+//   padding:17px 0;
+//   padding-left:54px;
+//   font-size:16px;
+//   font-weight:500;
+// }
+// .detailInfo{
+//   padding: 23px 54px 18px;
+//   box-sizing: border-box;
+// }
+// .infoItem{
+//   margin: 0;
+//   padding:10px 0 ;
+// }
+// .itemLabel{
+//   color:#333333;
+//   font-size:14px;
+//   font-weight:500;
+// }
+// .itemValue{
+//   padding-left:10px;
+//   color:#333232;
+//   font-size:14px;
+//   font-weight:400;
+// }
+// .editIcon {
+//   padding-left:10px;
+//   color:#4EB9FA;
+//   font-size: 17px;
+//   font-weight: 600
+// }
+// .detailContent{
+//   width:100%;
+//   height:auto;
+//   border-top:6px solid #f4f4ff;
+// }
+// .contentTitle{
+//   padding:17px 54px 7px;
+//   box-sizing: border-box
+// }
+// .titleText{
+//   margin: 0;
+//   color:#333333;
+//   padding: 10px 0;
+//   font-size:14px;
+//   font-weight:500;
+// }
+// .contentInfoBox{
+//   padding: 15px 54px 15px;
+//   box-sizing: border-box;
+//   border-bottom: 1px solid #f4f4ff
+// }
+// .contentItem{
+//   margin: 0;
+//   padding:4px 0 ;
+// }
+// .contentValue{
+//   line-height:1.3em;
+//   color:#333232;
+//   font-size:14px;
+//   font-weight:400;
+// }
+// .contentState{
+//   padding-left:25px;
+//   color:#4EB9FA;
+//   font-size:14px;
+//   font-weight:400;
+// }
+// .imgBox{
+//   list-style: none;
+//   display: inline-block;
+//   width:72px;
+//   height:67px;
+//   background:#ececec;
+//   margin-top: 10px;
+//   margin-right: 15px;
+//   overflow: hidden; 
+//   resize: both;
+// }
+// .imgBox img{
+//   width: 100%; height: 100%;
+// }
+// .imgInfo{
+//   object-fit: cover;
+// }
